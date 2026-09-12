@@ -89,9 +89,15 @@ def block(b, depth, inline=False):
                 % (pad(b, True), ratio, esc(b['embed']), esc(alt_from(b) or 'Video'), caption(b, depth)))
 
     if t == 'video':
-        return ('<div class="block"%s><div class="embed" style="padding-bottom:56.25%%">'
-                '<iframe src="%s" title="Video" loading="lazy" frameborder="0" allowfullscreen></iframe>'
-                '</div>%s</div>' % (pad(b, True), esc(b.get('embed') or b.get('video') or ''), caption(b, depth)))
+        poster = asset(b.get('poster'), p)
+        ratio = b.get('ratio') or 56.25
+        return ('<div class="block"%s><div class="embed" style="padding-bottom:%g%%">'
+                '<video controls preload="metadata" playsinline%s>'
+                '<source src="%s%s" type="video/mp4">'
+                '</video></div>%s</div>'
+                % (pad(b, True), ratio,
+                   ' poster="%s"' % poster['src'] if poster else '',
+                   p, esc(b['video']), caption(b, depth)))
 
     if t == 'grid':
         per = b.get('perRow')

@@ -1291,7 +1291,11 @@
     },
     {
      "type": "video",
-     "video": null
+     "video": "media/maybe-you-shouldve-swallowed-clip.mp4",
+     "poster": "media/maybe-you-shouldve-swallowed-clip-poster.webp",
+     "ratio": 56.25,
+     "pt": 40.0,
+     "pb": 40.0
     }
    ],
    "related": [

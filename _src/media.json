@@ -1279,5 +1279,12 @@
   "h": 700,
   "anim": false,
   "bytes": 33442
+ },
+ "maybe-you-shouldve-swallowed-clip-poster": {
+  "src": "media/maybe-you-shouldve-swallowed-clip-poster.webp",
+  "w": 1280,
+  "h": 720,
+  "anim": false,
+  "bytes": 10814
  }
 }
