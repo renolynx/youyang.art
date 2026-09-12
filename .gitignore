@@ -4,3 +4,6 @@ _originals/
 _originals-new/
 _src/_unused/
 .DS_Store
+# The CV ships encrypted; the readable source and the password stay local (copies live in the vault).
+_src/cv-password.txt
+_src/content/cv.html

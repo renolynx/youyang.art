@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build youyang.art from _src/content/site.json into static pages at the repo root."""
-import html, json, pathlib, re, shutil, sys
+import base64, hashlib, html, json, os, pathlib, re, secrets, shutil, subprocess, sys
 from urllib.parse import urlsplit
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -86,14 +86,14 @@ def block(b, depth, inline=False):
         return editorial_block(b, depth)
     if t == 'text':
         body = ''.join(
-            '<p%s>%s</p>' % (
+            (fix_links(q['html'], depth) if q['html'].lstrip().startswith('<p') else '<p%s>%s</p>' % (
                 ''.join(x for x in [
                     ' style="' + ';'.join(
                         ([('line-height:%gpx' % q['lh'])] if q.get('lh') else []) +
                         ([('text-align:%s' % q['align'])] if q.get('align') and q['align'] != 'left' else [])
                     ) + '"' if (q.get('lh') or (q.get('align') and q['align'] != 'left')) else ''
                 ]),
-                fix_links(q['html'], depth))
+                fix_links(q['html'], depth)))
             for q in b.get('paras', []))
         return '<div class="block block--text"%s>%s</div>' % (pad(b, True), body)
 
@@ -219,9 +219,16 @@ def editorial_image(b, depth, eager=False):
         img_tag(a, b.get('imageAlt') or caption_text, lazy=not eager),
         '<figcaption>%s</figcaption>' % esc(caption_text) if caption_text else '')
 
+def arrow(url):
+    """↗ means 'leaves the site'; internal links get →."""
+    return '↗' if (url or '').startswith(('http:', 'https:', '//')) else '→'
+
+def external_attrs(url):
+    return ' target="_blank" rel="noopener"' if (url or '').startswith(('http:', 'https:', '//')) else ''
+
 def editorial_links(links, depth):
     return '<div class="editorial-links">%s</div>' % ''.join(
-        '<a class="text-link" href="%s">%s<span aria-hidden="true"> ↗</span></a>' % (href(i['href'], depth), esc(i['label']))
+        '<a class="text-link" href="%s"%s>%s<span aria-hidden="true"> %s</span></a>' % (href(i['href'], depth), external_attrs(i['href']), esc(i['label']), arrow(i['href']))
         for i in links) if links else ''
 
 def editorial_block(b, depth):
@@ -231,18 +238,18 @@ def editorial_block(b, depth):
     if b['type'] == 'project_grid':
         cards = []
         for item in b.get('items', []):
-            a = asset(item.get('cover'), rel(depth))
-            if not a: continue
-            cards.append('<article class="project-card"><a href="%s">'
-                         '<div class="project-image">%s</div><div class="project-info">'
+            a = asset(item.get('cover'), rel(depth)) if item.get('cover') else None
+            cards.append('<article class="project-card%s"><a href="%s">'
+                         '%s<div class="project-info">'
                          '<h3>%s</h3><p class="project-meta">%s</p></div></a>%s</article>' % (
-                             href(item['href'], depth), img_tag(a, item.get('title', '')),
+                             '' if a else ' project-card--text', href(item['href'], depth),
+                             '<div class="project-image">%s</div>' % img_tag(a, item.get('title', '')) if a else '',
                              esc(item.get('title')), esc(item.get('meta')),
                              '<p class="project-description">%s</p>' % esc(item['description']) if item.get('description') else ''))
         return '<section class="editorial-section project-section"%s>%s%s<div class="project-grid">%s</div></section>' % (section_id, kicker, title, ''.join(cards))
     if b['type'] == 'link_list':
-        entries = ''.join('<li><a href="%s"><span class="list-meta">%s</span><h3>%s</h3><p>%s</p><span class="list-arrow" aria-hidden="true">↗</span></a></li>' % (
-            href(i['href'], depth), esc(i.get('meta')), esc(i.get('title')), esc(i.get('description'))) for i in b.get('items', []))
+        entries = ''.join('<li><a href="%s"><span class="list-meta">%s</span><h3>%s</h3><p>%s</p><span class="list-arrow" aria-hidden="true">%s</span></a></li>' % (
+            href(i['href'], depth), esc(i.get('meta')), esc(i.get('title')), esc(i.get('description')), arrow(i['href'])) for i in b.get('items', []))
         return '<section class="editorial-section"%s>%s%s<ul class="editorial-list">%s</ul></section>' % (section_id, kicker, title, entries)
     cls = 'editorial-section' + (' section-with-image' if b.get('image') else '')
     if b.get('id') == 'basecamp': cls += ' basecamp-section'
@@ -255,10 +262,43 @@ def editorial_hero(page, depth):
     cls = 'editorial-hero' + (' hero-with-image' if h.get('image') else '')
     return '<div class="%s"><div class="hero-copy">%s<h1>%s</h1>%s%s%s</div>%s</div>' % (
         cls, '<p class="eyebrow">%s</p>' % esc(h['eyebrow']) if h.get('eyebrow') else '',
-        esc(h.get('title') or page.get('title')),
+        re.sub(r'([\u3400-\u9fff]+)', r'<span class="nowrap">\1</span>', esc(h.get('title') or page.get('title'))),
         '<p class="hero-subtitle">%s</p>' % esc(h['subtitle']) if h.get('subtitle') else '',
         '<p class="hero-intro">%s</p>' % esc(h['intro']) if h.get('intro') else '',
         editorial_links(h.get('links'), depth), editorial_image(h, depth, eager=True))
+
+CV_SOURCE = ROOT / '_src/content/cv.html'
+CV_PASSWORD = ROOT / '_src/cv-password.txt'
+PBKDF2_ITER = 250000
+
+def encrypt_cv(password, plaintext):
+    """AES-256-CBC + HMAC-SHA256, keys from PBKDF2-SHA256 — decryptable with WebCrypto, no Python deps."""
+    salt = secrets.token_bytes(16)
+    keys = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, PBKDF2_ITER, 80)
+    key, iv, mac_key = keys[:32], keys[32:48], keys[48:]
+    ct = subprocess.run(['openssl', 'enc', '-aes-256-cbc', '-K', key.hex(), '-iv', iv.hex()],
+                        input=plaintext.encode(), capture_output=True, check=True).stdout
+    import hmac
+    tag = hmac.new(mac_key, ct, 'sha256').digest()
+    b64 = lambda b: base64.b64encode(b).decode()
+    return {'salt': b64(salt), 'iv': b64(iv), 'ct': b64(ct), 'tag': b64(tag), 'iter': PBKDF2_ITER}
+
+def cv_page(page, depth):
+    zh = LANG == 'zh'
+    if not (CV_SOURCE.exists() and CV_PASSWORD.exists()):
+        print('  ! cv: need _src/content/cv.html and _src/cv-password.txt (both untracked)', file=sys.stderr)
+        return '<div class="editorial-hero"><div class="hero-copy"><p class="eyebrow">CV</p><h1>Curriculum vitae</h1><p class="hero-intro">Available on request — <a href="mailto:%s">%s</a>.</p></div></div>' % (esc(S['email']), esc(S['email']))
+    blob = encrypt_cv(CV_PASSWORD.read_text().strip(), CV_SOURCE.read_text())
+    return (f'''<div class="editorial-hero cv-lock" id="cv-lock"><div class="hero-copy"><p class="eyebrow">CV · 2026</p>
+<h1>Curriculum vitae</h1>
+<p class="hero-intro">This page is shared on request. Enter the password, or <a href="mailto:{esc(S['email'])}?subject=CV">write to me</a> for one.</p>
+<form class="cv-form" id="cv-form" autocomplete="off"><label for="cv-pass" class="visually-hidden">Password</label>
+<input id="cv-pass" type="password" placeholder="Password" required autocomplete="current-password">
+<button type="submit" class="cv-button">Open CV</button><p class="cv-error" id="cv-error" role="alert" hidden>That password didn’t work.</p></form>
+</div></div>
+<article class="cv" id="cv-content" hidden></article>
+<script type="application/json" id="cv-blob">{json.dumps(blob)}</script>
+<script src="{rel(depth)}assets/js/cv.js" defer></script>''')
 
 def head(page, depth):
     p = rel(depth)
@@ -279,6 +319,7 @@ def head(page, depth):
 <meta name="description" content="{esc(desc)}">
 <meta name="keywords" content="{esc(S['keywords'])}">
 <link rel="canonical" href="{esc(canon)}">
+{'<meta name="robots" content="noindex, nofollow">' if page.get('noindex') else ''}
 {alternates}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{esc(title)}">
@@ -292,7 +333,7 @@ def head(page, depth):
 <link rel="preload" as="font" type="font/woff2" href="{p}assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="{p}assets/css/site.css">
 </head>
-<body class="{'editorial-page' if page['type'] == 'editorial' else 'archive-page'} page-{esc(slug)}">
+<body class="{'editorial-page' if page['type'] in ('editorial', 'cv') else 'archive-page'} page-{esc(slug)}">
 <a class="skip-link" href="#main">{'跳到正文' if LANG == 'zh' else 'Skip to content'}</a>
 <span id="top"></span>
 '''
@@ -301,7 +342,7 @@ def header(page, depth):
     p = rel(depth)
     current = page['slug']
     if current not in ('home', 'work', 'wilder-mountain-dojo', 'writing', 'about'):
-        current = 'writing' if page.get('type') == 'essay' else ('about' if current == 'about-archive' else 'work')
+        current = 'writing' if page.get('type') == 'essay' else ('about' if current in ('about-archive', 'cv') else 'work')
     links = ''.join(
         '<a href="%s"%s>%s</a>' % (href(n['href'], depth),
             ' aria-current="page"' if n['href'].strip('/') == current else '', esc(n.get('labelZh', n['label']) if LANG == 'zh' else n['label']))
@@ -313,7 +354,7 @@ def header(page, depth):
         'en' if LANG == 'zh' else 'zh-Hans', 'Read in English' if LANG == 'zh' else ('阅读中文版' if localized else '前往中文首页'), 'EN' if LANG == 'zh' else '中文')
     return f'''<header class="site-header">
 <button class="nav-toggle" aria-expanded="false" aria-label="{'菜单' if LANG == 'zh' else 'Menu'}" aria-controls="site-nav"><span></span><span></span><span></span></button>
-<nav class="site-nav" id="site-nav" data-open="false">{links}</nav>
+<nav class="site-nav" id="site-nav" data-open="false">{links}<div class="nav-extras">{language.replace('class="language-switch"', 'class="nav-language"')}<a class="header-contact" href="mailto:{esc(S['email'])}">{'联系' if LANG == 'zh' else 'Contact'}</a></div></nav>
 <div class="header-tools">{language}<a class="header-contact" href="mailto:{esc(S['email'])}">{'联系' if LANG == 'zh' else 'Contact'}</a></div>
 <div class="site-logo"><a href="{href('/', depth)}" aria-label="{'俞悠洋，首页' if LANG == 'zh' else 'Youyang Yu, home'}">{esc(S['logo'])}</a></div>
 </header>
@@ -369,6 +410,8 @@ def render(page, depth):
            '<div class="site-wrap"><main id="main" class="shell">']
     if page['type'] == 'editorial':
         out.append(editorial_hero(page, depth))
+    elif page['type'] == 'cv':
+        out.append(cv_page(page, depth))
     elif not page.get('masthead'):
         out.append('<h1 class="archive-title">%s</h1>' % esc(page.get('title') or page['slug']))
     if page['type'] == 'gallery':

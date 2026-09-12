@@ -104,11 +104,29 @@ Every substitute was measured against the original: all set widths land within
 
 Only after step 3 does the Adobe site stop being the one people see.
 
+## Editing without touching JSON
+
+    python3 _src/edit.py
+
+opens a local content desk at http://127.0.0.1:8766 (styled with the 野山 design
+tokens). Pick a page, edit any text, drop photos onto a slot — they are optimised
+into `media/` and written into `site.json` — then **保存并重建** (build + verify)
+and **发布到 GitHub** (commit + push). Nothing on the public site changes until
+you publish. A static site has no server, so this desk only runs on your own Mac.
+
+## The CV page (`/cv/`)
+
+`_src/content/cv.html` (the readable CV) and `_src/cv-password.txt` are **not**
+in git. `build.py` encrypts the CV with the password (AES-256-CBC + HMAC,
+PBKDF2 keys) and ships only the ciphertext; the browser decrypts it after the
+password is entered, so the password never leaves the visitor's machine. Change
+the password by editing the text file and rebuilding. Copies of both files live
+in the vault under `项目/youyang.art/`.
+
 ## Still to do
 
-- The contact form has no backend. It opens the visitor's mail app with the
-  message pre-filled. For a real form, sign up at formspree.io or web3forms.com
-  and put the endpoint in `site.json` as `"formAction"`.
+- Contact is a plain mailto link. For a real form, sign up at formspree.io or
+  web3forms.com and put the endpoint in `site.json` as `"formAction"`.
 - The 42-second clip at the foot of `/maybe-you-shouldve-swallowed` is now served
   from this repo (`media/maybe-you-shouldve-swallowed-clip.mp4`, 720p, 13MB),
   rescued off Adobe's CDN. It is the one film on the site that isn't on Vimeo —

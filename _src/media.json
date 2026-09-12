@@ -1286,5 +1286,26 @@
   "h": 720,
   "anim": false,
   "bytes": 10814
+ },
+ "cyc-community-2026": {
+  "src": "media/cyc-community-2026.webp",
+  "w": 1080,
+  "h": 1440,
+  "anim": false,
+  "bytes": 147942
+ },
+ "cyc-courtyard-2026": {
+  "src": "media/cyc-courtyard-2026.webp",
+  "w": 1080,
+  "h": 807,
+  "anim": false,
+  "bytes": 119590
+ },
+ "doujia-art-camp-2026": {
+  "src": "media/doujia-art-camp-2026.webp",
+  "w": 1441,
+  "h": 1080,
+  "anim": false,
+  "bytes": 130234
  }
 }
