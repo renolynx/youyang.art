@@ -79,7 +79,9 @@ Only after step 3 does the Adobe site stop being the one people see.
 - The contact form has no backend. It opens the visitor's mail app with the
   message pre-filled. For a real form, sign up at formspree.io or web3forms.com
   and put the endpoint in `site.json` as `"formAction"`.
-- One video on `/maybe-you-shouldve-swallowed` is still hosted on Adobe's own
-  player (`www-ccv.adobe.io`). Re-upload it to Vimeo and swap the embed URL.
+- The 42-second clip at the foot of `/maybe-you-shouldve-swallowed` is now served
+  from this repo (`media/maybe-you-shouldve-swallowed-clip.mp4`, 720p, 13MB),
+  rescued off Adobe's CDN. It is the one film on the site that isn't on Vimeo —
+  upload it there if you'd rather not carry the file.
 - The favicon only exists at 32×32 — Adobe never stored a bigger one. A larger
   source file would sharpen the phone home-screen icon.
