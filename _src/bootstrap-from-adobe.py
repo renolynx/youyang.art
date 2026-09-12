@@ -129,6 +129,17 @@ for slug in ['about', 'home', 'animation', 'sketch-book', 'inside-my-eyes', 'for
         if rel: page['related'] = rel
     pages.append(page)
 
+years = {c['href'].lstrip('/'): c['meta'] for pg in pages if pg['type'] == 'gallery'
+                                              for c in pg['items'] if c.get('meta')}
+titles = {c['href'].lstrip('/'): c['title'] for pg in pages if pg['type'] == 'gallery'
+                                              for c in pg['items'] if c.get('title')}
+covers = {c['href'].lstrip('/'): c['cover'] for pg in pages if pg['type'] == 'gallery'
+                                              for c in pg['items'] if c.get('cover')}
+for pg in pages:
+    if pg['slug'] in years: pg['year'] = years[pg['slug']]
+    if pg['slug'] in titles: pg['title'] = titles[pg['slug']]
+    if pg['slug'] in covers: pg['cover'] = covers[pg['slug']]
+
 site = {
   'site': {
     'name': 'Youyang Yu',

@@ -70,6 +70,9 @@ mountain = {
  'related': ['inside-my-eyes', 'begin-with-pieces', 'for-the-best'],
 }
 
+begin['cover'] = 'media/begin-with-pieces__crop.jpg'
+mountain['cover'] = 'media/inheriting-a-mountain__crop.jpg'
+
 for new in (begin, mountain):
     if new['slug'] in by:
         pages[[i for i, p in enumerate(pages) if p['slug'] == new['slug']][0]] = new
@@ -84,10 +87,10 @@ def put(gallery, item, before=None):
     at = next((n for n, i in enumerate(items) if i['href'] == before), 0) if before else 0
     items.insert(at, item)
 
-put('home', {'href': '/inheriting-a-mountain', 'cover': 'media/inheriting-a-mountain__crop.jpg',
-             'title': 'Inheriting a Mountain', 'meta': '2024'}, before='/inside-my-eyes')
 put('home', {'href': '/begin-with-pieces', 'cover': 'media/begin-with-pieces__crop.jpg',
-             'title': 'Begin with Pieces', 'meta': '2023'}, before='/inside-my-eyes')
+             'title': 'Begin with Pieces', 'meta': '2023'})
+put('home', {'href': '/inheriting-a-mountain', 'cover': 'media/inheriting-a-mountain__crop.jpg',
+             'title': 'Inheriting a Mountain', 'meta': '2024'})
 put('animation', {'href': '/begin-with-pieces', 'cover': 'media/begin-with-pieces__crop.jpg',
                   'title': 'Begin with Pieces', 'meta': '2023'}, before='/inside-my-eyes')
 

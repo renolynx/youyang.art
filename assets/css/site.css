@@ -124,6 +124,8 @@ main{ display:block }
 .block--text a:hover{ color:var(--accent) }
 
 figure{ margin:0 }
+figure.block > img,
+figure.block > a{ display:block; margin-left:auto; margin-right:auto }
 figcaption,
 .caption{
   font-family:var(--font-caption); font-stretch:88%;

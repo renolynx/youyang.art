@@ -36,8 +36,7 @@
   ],
   "footer": "©2026",
   "ogImage": "assets/og.jpg",
-  "home": "/about",
-  "customDomain": false
+  "home": "/about"
  },
  "pages": [
   {
@@ -518,12 +517,6 @@
    "masthead": "{Hello! It's Youyang Yu \\(0w0)x*} I'm a...",
    "items": [
     {
-     "href": "/feinaki-2020",
-     "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg",
-     "title": "",
-     "meta": ""
-    },
-    {
      "href": "/inheriting-a-mountain",
      "cover": "media/inheriting-a-mountain__crop.jpg",
      "title": "Inheriting a Mountain",
@@ -536,70 +529,76 @@
      "meta": "2023"
     },
     {
+     "href": "/feinaki-2020",
+     "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg",
+     "title": "Feinaki 2020",
+     "meta": "2022"
+    },
+    {
      "href": "/inside-my-eyes",
      "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
-     "title": "",
-     "meta": ""
+     "title": "Inside My Eyes",
+     "meta": "2023"
     },
     {
      "href": "/for-the-best",
      "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
-     "title": "",
-     "meta": ""
+     "title": "For the Best",
+     "meta": "2015"
     },
     {
      "href": "/i-love-you-forever-now",
      "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif",
-     "title": "",
-     "meta": ""
+     "title": "I Love You Forever Now",
+     "meta": "2016"
     },
     {
      "href": "/2014",
      "cover": "media/457afa33338245-56a82c299517e__crop.png",
-     "title": "",
-     "meta": ""
+     "title": "2014 turkey",
+     "meta": "2014"
     },
     {
      "href": "/maybe-you-shouldve-swallowed",
      "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "Maybe You Should've Swallowed",
+     "meta": "2014"
     },
     {
      "href": "/cwtch",
      "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "Cwtch",
+     "meta": "2015"
     },
     {
      "href": "/a-man-in-love",
      "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "A Man in Love",
+     "meta": "2014"
     },
     {
      "href": "/2014-1",
      "cover": "media/61b00f33339235-56a8342925abb__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "2014",
+     "meta": "2014"
     },
     {
      "href": "/2015",
      "cover": "media/dc4b1833339953-56a83b76543f7__crop.png",
-     "title": "",
-     "meta": ""
+     "title": "2015",
+     "meta": "2015"
     },
     {
      "href": "/2013",
      "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "2013",
+     "meta": "2013"
     },
     {
      "href": "/2010",
      "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "2010",
+     "meta": "2010"
     }
    ],
    "tagline": "Teaching Artist\nAnimation Filmmaker\nCurator↓"
@@ -619,38 +618,38 @@
     {
      "href": "/inside-my-eyes",
      "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
-     "title": "",
-     "meta": ""
+     "title": "Inside My Eyes",
+     "meta": "2023"
     },
     {
      "href": "/i-love-you-forever-now",
      "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif",
-     "title": "",
-     "meta": ""
+     "title": "I Love You Forever Now",
+     "meta": "2016"
     },
     {
      "href": "/for-the-best",
      "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
-     "title": "",
-     "meta": ""
+     "title": "For the Best",
+     "meta": "2015"
     },
     {
      "href": "/cwtch",
      "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "Cwtch",
+     "meta": "2015"
     },
     {
      "href": "/maybe-you-shouldve-swallowed",
      "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "Maybe You Should've Swallowed",
+     "meta": "2014"
     },
     {
      "href": "/a-man-in-love",
      "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "A Man in Love",
+     "meta": "2014"
     }
    ],
    "tagline": "Teaching Artist\nAnimation Filmmaker\nCurator↓"
@@ -664,32 +663,32 @@
     {
      "href": "/2015",
      "cover": "media/dc4b1833339953-56a83b76543f7__crop.png",
-     "title": "",
-     "meta": ""
+     "title": "2015",
+     "meta": "2015"
     },
     {
      "href": "/2014",
      "cover": "media/457afa33338245-56a82c299517e__crop.png",
-     "title": "",
-     "meta": ""
+     "title": "2014 turkey",
+     "meta": "2014"
     },
     {
      "href": "/2014-1",
      "cover": "media/61b00f33339235-56a8342925abb__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "2014",
+     "meta": "2014"
     },
     {
      "href": "/2013",
      "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "2013",
+     "meta": "2013"
     },
     {
      "href": "/2010",
      "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg",
-     "title": "",
-     "meta": ""
+     "title": "2010",
+     "meta": "2010"
     }
    ],
    "tagline": "Teaching Artist\nAnimation Filmmaker\nCurator↓"
@@ -768,7 +767,8 @@
     "inside-my-eyes",
     "for-the-best",
     "i-love-you-forever-now"
-   ]
+   ],
+   "cover": "media/begin-with-pieces__crop.jpg"
   },
   {
    "slug": "inheriting-a-mountain",
@@ -833,7 +833,8 @@
     "inside-my-eyes",
     "begin-with-pieces",
     "for-the-best"
-   ]
+   ],
+   "cover": "media/inheriting-a-mountain__crop.jpg"
   },
   {
    "slug": "inside-my-eyes",
@@ -1061,7 +1062,9 @@
     "i-love-you-forever-now",
     "2010",
     "2014"
-   ]
+   ],
+   "year": "2023",
+   "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png"
   },
   {
    "slug": "for-the-best",
@@ -1128,7 +1131,9 @@
     "feinaki-2020",
     "i-love-you-forever-now",
     "cwtch"
-   ]
+   ],
+   "year": "2015",
+   "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif"
   },
   {
    "slug": "i-love-you-forever-now",
@@ -1193,7 +1198,9 @@
     "maybe-you-shouldve-swallowed",
     "2015",
     "inside-my-eyes"
-   ]
+   ],
+   "year": "2016",
+   "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif"
   },
   {
    "slug": "cwtch",
@@ -1244,7 +1251,9 @@
     "feinaki-2020",
     "inside-my-eyes",
     "2014"
-   ]
+   ],
+   "year": "2015",
+   "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg"
   },
   {
    "slug": "maybe-you-shouldve-swallowed",
@@ -1296,7 +1305,9 @@
     "for-the-best",
     "inside-my-eyes",
     "cwtch"
-   ]
+   ],
+   "year": "2014",
+   "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg"
   },
   {
    "slug": "a-man-in-love",
@@ -1360,7 +1371,9 @@
     "feinaki-2020",
     "maybe-you-shouldve-swallowed",
     "i-love-you-forever-now"
-   ]
+   ],
+   "year": "2014",
+   "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg"
   },
   {
    "slug": "feinaki-2020",
@@ -1640,7 +1653,9 @@
     "cwtch",
     "2013",
     "2010"
-   ]
+   ],
+   "year": "2022",
+   "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg"
   },
   {
    "slug": "2015",
@@ -1732,7 +1747,9 @@
     "2013",
     "feinaki-2020",
     "cwtch"
-   ]
+   ],
+   "year": "2015",
+   "cover": "media/dc4b1833339953-56a83b76543f7__crop.png"
   },
   {
    "slug": "2014-1",
@@ -1824,7 +1841,9 @@
     "maybe-you-shouldve-swallowed",
     "feinaki-2020",
     "i-love-you-forever-now"
-   ]
+   ],
+   "year": "2014",
+   "cover": "media/61b00f33339235-56a8342925abb__crop.jpg"
   },
   {
    "slug": "2014",
@@ -1888,7 +1907,9 @@
     "2010",
     "cwtch",
     "a-man-in-love"
-   ]
+   ],
+   "year": "2014",
+   "cover": "media/457afa33338245-56a82c299517e__crop.png"
   },
   {
    "slug": "2013",
@@ -1936,7 +1957,9 @@
     "2014",
     "2010",
     "maybe-you-shouldve-swallowed"
-   ]
+   ],
+   "year": "2013",
+   "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg"
   },
   {
    "slug": "2010",
@@ -1992,7 +2015,9 @@
     "a-man-in-love",
     "2014",
     "for-the-best"
-   ]
+   ],
+   "year": "2010",
+   "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg"
   }
  ]
 }
