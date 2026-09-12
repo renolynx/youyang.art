@@ -1,0 +1,6 @@
+# Full-resolution originals pulled out of Adobe Portfolio before the move.
+# Kept on disk as an archive; too heavy for the repo.
+_originals/
+_originals-new/
+_src/_unused/
+.DS_Store
