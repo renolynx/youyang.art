@@ -1,8 +1,21 @@
 # youyang.art
 
-The personal site, rebuilt as plain static files so it no longer needs an Adobe
-Creative Cloud subscription. Same design, same URLs, same content, plus the work
-made since 2023.
+Youyang Yu's personal site, built as plain static files with self-hosted images
+and fonts. The 2026 update retains the handwritten identity and complete earlier
+project archive, with a new homepage and bilingual pages for Work, Wilder Mountain
+Dojo, Writing and About.
+
+## Current structure
+
+- `/` is the English homepage; `/home/` remains a compatible alias.
+- `/zh/` is the Chinese homepage.
+- `/work/`, `/wilder-mountain-dojo/`, `/writing/`, `/about/` have matching `/zh/` pages.
+- Existing animation, sketchbook and project URLs remain available in English.
+- `/about-archive/` preserves the earlier studio notes and production material.
+
+Basecamp is described as planned for three Saturday afternoons in November 2026,
+at three Twin Cities venues, two hours per workshop. Exact dates and venues are
+not yet announced. Activity inquiries use email; there is no registration backend.
 
 ## What's here
 
@@ -24,7 +37,12 @@ Edit `_src/content/site.json`, then:
 python3 _src/build.py
 ```
 
-That rewrites every page. Nothing else to install — Python 3 is enough.
+That rewrites every page, including Chinese pages. Nothing else to install —
+Python 3 is enough. Shared English content lives on each page; `zh` overrides
+its title, description, hero and blocks. Navigation uses `label` and `labelZh`.
+
+The `hero`, `section`, `project_grid`, and `link_list` blocks power the new pages.
+Existing image, text, video and gallery blocks remain supported.
 
 To preview before pushing:
 
@@ -33,6 +51,16 @@ python3 -m http.server 8900
 ```
 
 and open http://localhost:8900
+
+Check generated navigation, assets and metadata with:
+
+```bash
+python3 _src/verify.py
+```
+
+The verifier checks static output. Before publishing, visually check the homepage,
+Chinese pages and a legacy project at desktop and mobile widths, then test the
+language switch, mobile menu and image lightbox.
 
 ## Adding an image
 
@@ -65,8 +93,10 @@ Every substitute was measured against the original: all set widths land within
 ## Going live on youyang.art
 
 1. Push to GitHub; Settings → Pages → deploy from `main` / root.
-2. When ready to move the domain, set `"customDomain": true` in
+2. Metadata currently uses `site.previewUrl`, the GitHub Pages project URL.
+   When ready to move the domain, set `"customDomain": true` in
    `_src/content/site.json`, rebuild, and push — that writes the `CNAME` file.
+   Canonical, social and sitemap URLs then use `site.url`.
 3. At the domain registrar, point `youyang.art` at GitHub Pages:
    `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
    `185.199.111.153`, and `www` as a `CNAME` to `renolynx.github.io`.

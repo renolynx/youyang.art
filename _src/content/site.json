@@ -2,21 +2,29 @@
  "site": {
   "name": "Youyang Yu",
   "logo": "yyy",
-  "description": "Animation Filmmaker/Teacher/Curator",
-  "keywords": "Personal Website,Portfolio,Animation,AI Artist,Animation Festival",
+  "description": "Animation, visual art and participatory practice by Youyang Yu. Exploring time, the body and belonging.",
+  "keywords": "Youyang Yu,俞悠洋,Animation,Visual Art,Wilder Mountain Dojo,野山道场,Participatory Art,Art Education",
   "url": "https://youyang.art",
   "email": "qingdaoyyy@gmail.com",
   "nav": [
    {
-    "label": "ANIMATION",
-    "href": "/animation"
+    "label": "WORK",
+    "labelZh": "作品",
+    "href": "/work"
    },
    {
-    "label": "SKETCH BOOK",
-    "href": "/sketch-book"
+    "label": "WILDER MOUNTAIN DOJO",
+    "labelZh": "野山道场",
+    "href": "/wilder-mountain-dojo"
+   },
+   {
+    "label": "WRITING",
+    "labelZh": "文字",
+    "href": "/writing"
    },
    {
     "label": "ABOUT",
+    "labelZh": "关于",
     "href": "/about"
    }
   ],
@@ -36,572 +44,360 @@
   ],
   "footer": "©2026",
   "ogImage": "assets/og.jpg",
-  "home": "/about"
+  "home": "/home",
+  "descriptionZh": "俞悠洋的动画、视觉艺术与参与式实践，探索时间、身体与归属。",
+  "previewUrl": "https://renolynx.github.io/youyang.art"
  },
  "pages": [
   {
    "slug": "about",
-   "type": "page",
-   "title": "",
-   "masthead": "{ Youyang Yu :-)}",
+   "type": "editorial",
+   "title": "About Youyang Yu",
+   "description": "Youyang Yu is an animation and visual artist, community organiser and art educator, working across art, education and community.",
+   "hero": {
+    "eyebrow": "About",
+    "title": "Hello, I’m Youyang.",
+    "subtitle": "Artist, filmmaker, educator & community organiser.",
+    "intro": "Born in China and educated in the UK, I work across animation, drawing, installation and participatory practice. I am interested in how inner experiences become visible, how we inhabit time, and how belonging grows between people.",
+    "image": "media/80e25e7b-8009-4875-b8b3-a2a5bbd164a5.png",
+    "imageAlt": "Youyang Yu, artist, filmmaker and educator."
+   },
    "blocks": [
     {
-     "type": "columns",
-     "cols": [
-      {
-       "flex": 1.0,
-       "blocks": [
-        {
-         "type": "image",
-         "src": "media/80e25e7b-8009-4875-b8b3-a2a5bbd164a5.png"
-        },
-        {
-         "type": "image",
-         "src": null
-        }
-       ]
-      },
-      {
-       "flex": 1.0,
-       "blocks": [
-        {
-         "type": "text",
-         "maxw": 500,
-         "pt": 36.0,
-         "pb": 0.0,
-         "width": 85.0,
-         "paras": [
-          {
-           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">Born in China and trained in the UK, Youyang received his Master&#x27;s degree in animation from the Royal College of Art in London and has exhibited his work internationally across Europe, Asia, and North </span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">&amp;</span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> South America. </span>",
-           "align": "left",
-           "lh": 40.0
-          },
-          {
-           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">In 2019 he co-founded </span><a href=\"https://www.instagram.com/feinaki/\" target=\"_blank\" rel=\"noopener\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Feinaki Beijing Animation Week</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">, an independent festival now in its seventh year. He teaches, curates and organises between China and the United States.</span>",
-           "align": "left",
-           "lh": 40.0
-          },
-          {
-           "html": "<br>",
-           "align": "left",
-           "lh": 40.0
-          }
-         ]
-        }
-       ]
-      }
-     ]
+     "type": "section",
+     "title": "Art, education and the spaces between us.",
+     "body": "<p>I received my Master’s degree in Animation from the Royal College of Art in London. My films have screened internationally and have been collected by the British Film Institute and the Li Xianting Film Fund.</p><p>Alongside making films, I teach, curate and organise. I co-founded Feinaki Beijing Animation Week in 2019. More recently, my work has included community cultural coordination at CYC in Dali and the development of Wilder Mountain Dojo.</p><p>My practice carries experiences of living across China, the UK and the United States. Animation, objects, writing and shared encounters each offer a way to explore time, identity and belonging.</p>"
     },
     {
-     "type": "text",
-     "maxw": 800,
-     "pt": 44.0,
-     "pb": 0.0,
-     "width": 95.0,
-     "paras": [
-      {
-       "html": "<span class=\"f-display\" style=\"font-weight:100;color:#4be100\">       V             </span>",
-       "align": "center",
-       "lh": 9.0
-      },
-      {
-       "html": "<span class=\"f-display\" style=\"font-size:40px;font-weight:100;color:#e13ee7\">{</span><span class=\"f-display\" style=\"font-size:40px;font-weight:100;color:#e13ee7\">)</span><span class=\"f-display\" style=\"font-size:40px;font-weight:700;color:#382d9d\">I</span><span class=\"f-display\" style=\"font-size:40px;font-weight:100;color:#e13ee7\">(}        </span>",
-       "align": "center",
-       "lh": 9.0
-      },
-      {
-       "html": "<span class=\"f-display\" style=\"font-weight:100;color:#4be100\">               WWWWWWWW</span>",
-       "align": "center"
-      },
-      {
-       "html": "<span class=\"f-nav\" style=\"font-weight:400;color:#4be100\">wwwwwwwww</span>                                .",
-       "align": "center"
-      },
-      {
-       "html": "<span class=\"f-script\" style=\"font-size:31px;font-weight:400\">        .     </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#19782c\">x</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#f83200\">*</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#3de5cf\">r </span>",
-       "align": "center"
-      },
-      {
-       "html": "<span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#4be100\"> WWW</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400\">             .   </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#4be100\">&#x27;&quot; </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\"> . .XX...</span>",
-       "align": "center"
-      },
-      {
-       "html": "<span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\">Thank you for checking me out  \\(0u0)N</span>",
-       "align": "center",
-       "lh": 50.0
-      },
-      {
-       "html": "<span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\">           . 5\\o</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400\">.   .  </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\"> .  </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#55ff00\">/ </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\">.   Z</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\">_.)  </span>",
-       "align": "center",
-       "lh": 9.0
-      },
-      {
-       "html": "<span class=\"f-script\" style=\"font-size:40px;font-weight:400;color:#55ff00\">V</span><span style=\"font-size:39px;color:#55ff00\">.   </span>",
-       "align": "center",
-       "lh": 9.0
-      }
-     ]
-    },
-    {
-     "type": "social_icons",
+     "type": "section",
+     "title": "Current practice: Wilder Mountain Dojo",
+     "body": "<p>Wilder Mountain Dojo is a participatory public art practice and an evolving world of shared practice and play. Through stories, body awareness, drawing and co-created cards, we make room for rest, expression and mutual support.</p>",
      "links": [
       {
-       "url": "https://twitter.com/FeralCliff"
+       "label": "Discover Wilder Mountain Dojo",
+       "href": "/wilder-mountain-dojo"
       },
       {
-       "url": "https://www.instagram.com/renolynx/"
-      },
-      {
-       "url": "mailto:qingdaoyyy@gmail.com"
+       "label": "Basecamp · November 2026",
+       "href": "/wilder-mountain-dojo#basecamp"
       }
      ]
     },
     {
-     "type": "columns",
-     "capAlign": "left",
-     "caption": "A snippet of my hand-drawn animation&nbsp;'<a href=\"/for-the-best\"><span class=\"f-display\">For the Best</span></a>'&nbsp;(2015), collected by the British Film Institute",
-     "cols": [
-      {
-       "flex": 1.0,
-       "blocks": [
-        {
-         "type": "image",
-         "maxw": 800,
-         "pt": 99.0,
-         "pb": 33.0,
-         "width": 100.0,
-         "capAlign": "left",
-         "caption": "A snippet of my hand-drawn animation&nbsp;'<a href=\"/for-the-best\"><span class=\"f-display\">For the Best</span></a>'&nbsp;(2015), collected by the British Film Institute",
-         "src": "media/979a9782-8ea2-4d95-bcfa-0529f060f101.gif",
-         "href": "/for-the-best"
-        },
-        {
-         "type": "image",
-         "src": null
-        }
-       ]
-      },
-      {
-       "flex": 1.0,
-       "blocks": [
-        {
-         "type": "text",
-         "maxw": 600,
-         "pt": 32.0,
-         "pb": 16.0,
-         "width": 85.0,
-         "paras": [
-          {
-           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">As a traditionally trained 2D animation artist researching the field of generative AI and multi-sensory digital transformation, I am constantly in awe of the nonstop technological breakthroughs I witness, yet often look back to my pen and brushes that inspired me to make art and build my deep emotional connections with the physical touch in the first place. </span>",
-           "align": "left",
-           "lh": 40.0
-          }
-         ]
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "type": "image",
-     "maxw": 800,
-     "pt": 70.0,
-     "pb": 47.0,
-     "width": 100.0,
-     "capAlign": "left",
-     "caption": "Still Frame from '<span class=\"f-display\"><a href=\"/for-the-best\">For the Best</a>'</span>(2015), AI transformation experiment 2022",
-     "src": "media/c8ad4454-f3f6-4312-a2e3-7db928eaffc6.gif",
-     "href": "/for-the-best"
-    },
-    {
-     "type": "columns",
-     "capAlign": "left",
-     "caption": "Clip from AI-augmented animation short '<a href=\"/inside-my-eyes\"><span class=\"f-display\">Inside My Eyes</span></a>' 2023",
-     "cols": [
-      {
-       "flex": 77.0,
-       "blocks": [
-        {
-         "type": "text",
-         "maxw": 800,
-         "pt": 10.0,
-         "pb": 36.0,
-         "width": 85.0,
-         "paras": [
-          {
-           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">I try to create art that combines both innovative digital tools and the traditional tactile artistic mediums that speak to the multitude of daring innovations and deeply bonded emotional engagement in the continuum of creative expressions. </span>",
-           "align": "left",
-           "lh": 40.0
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "flex": 123.0,
-       "blocks": [
-        {
-         "type": "image",
-         "pt": 55.0,
-         "pb": 45.0,
-         "width": 100.0,
-         "capAlign": "left",
-         "caption": "Clip from AI-augmented animation short '<a href=\"/inside-my-eyes\"><span class=\"f-display\">Inside My Eyes</span></a>' 2023",
-         "src": "media/118497de-04e2-420f-a53b-b695a1ca7b75.gif",
-         "href": "/inside-my-eyes"
-        },
-        {
-         "type": "image",
-         "src": null
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "type": "text",
-     "maxw": 800,
-     "pt": 38.0,
-     "pb": 43.0,
-     "width": 85.0,
-     "paras": [
-      {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">My recent animation film &#x27;</span><a href=\"/inside-my-eyes\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Inside My Eyes</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">&#x27;(2023) based on Japanese writer Yuko Taniguchi&#x27;s poem, explores an overwhelmed mind space organically painted in motion in the watercolor/ </span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">oil/ biogenic histology look only enabled by the power of AI image generation. </span>",
-       "align": "left",
-       "lh": 40.0
-      }
-     ]
-    },
-    {
-     "type": "grid",
-     "pt": 41.0,
-     "pb": 0.0,
-     "width": 100.0,
+     "type": "link_list",
+     "title": "Practice & background",
      "items": [
       {
-       "src": "media/5893c5b6-5ab9-4ef4-b1c9-e97b1b598fcd.png",
-       "w": 1600,
-       "h": 896
+       "title": "Animation & visual art",
+       "description": "Independent films, drawing and installation. Film pages retain their screening information and creative process notes.",
+       "href": "/work",
+       "meta": "Artistic practice"
       },
       {
-       "src": "media/f89d2125-7185-4a2a-8c1a-d835cc89694d.png",
-       "w": 1600,
-       "h": 896
+       "title": "Art education & community",
+       "description": "Art workshops and creative guidance, festival organising, and community cultural coordination.",
+       "href": "/about-archive",
+       "meta": "Teaching & organising"
       },
       {
-       "src": "media/8e4d4174-bdda-42fe-bfce-5ca7f8840d81.png",
-       "w": 1600,
-       "h": 896
+       "title": "Feinaki Beijing Animation Week",
+       "description": "Co-founder, 2019; co-founder and operational director during the 2019–2020 editions.",
+       "href": "/feinaki-2020",
+       "meta": "Festival practice"
       },
       {
-       "src": "media/c298b5b7-ebf5-4520-a70e-1ed52a334be6.png",
-       "w": 1600,
-       "h": 896
-      },
-      {
-       "src": "media/e694d217-c255-48d8-b1fa-0020ddf2bbbe.jpg",
-       "w": 1600,
-       "h": 896
-      },
-      {
-       "src": "media/d68b4de2-4bcf-48c9-bfa4-bbae085e9db7.png",
-       "w": 1600,
-       "h": 896
-      }
-     ],
-     "perRow": 2
-    },
-    {
-     "type": "text",
-     "maxw": 800,
-     "pb": 82.0,
-     "paras": [
-      {
-       "html": "Still frames from &#x27;<a href=\"/inside-my-eyes\"><span class=\"f-display\" style=\"font-weight:300\">Inside My Eyes</span></a>&#x27; 2023, img2img AI-augmentation experiment"
+       "title": "Earlier studio notes",
+       "description": "An archive of earlier introductions, animation experiments, teaching and festival photographs.",
+       "href": "/about-archive",
+       "meta": "From the previous website"
       }
      ]
     },
     {
-     "_id": "since",
-     "type": "columns",
-     "pt": 60.0,
-     "cols": [
+     "type": "section",
+     "title": "Let’s talk.",
+     "body": "<p>For screenings, exhibitions, workshops, teaching and collaborative projects, write to me. You can also get in touch for a current CV or more information about a particular work.</p>",
+     "id": "contact",
+     "links": [
       {
-       "flex": 110.0,
-       "blocks": [
-        {
-         "type": "image",
-         "width": 100.0,
-         "maxw": 900,
-         "capAlign": "left",
-         "src": "media/begin-with-pieces-still.jpg",
-         "href": "/begin-with-pieces",
-         "caption": "Still from '<span class=\"f-display\"><a href=\"/begin-with-pieces\">Begin with Pieces</a></span>', 2023"
-        }
-       ]
+       "label": "qingdaoyyy@gmail.com",
+       "href": "mailto:qingdaoyyy@gmail.com"
       },
       {
-       "flex": 90.0,
-       "blocks": [
-        {
-         "type": "text",
-         "maxw": 560,
-         "width": 85.0,
-         "paras": [
-          {
-           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">A second film followed the same year. </span><a href=\"/begin-with-pieces\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Begin with Pieces</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> (2023) takes another Yuko Taniguchi poem into a synesthetic mind-space, recited by the adolescents of the Creativity Camp Study and premiered at the Weisman Art Museum.</span>",
-           "align": "left",
-           "lh": 40.0
-          }
-         ]
-        }
-       ]
+       "label": "Instagram",
+       "href": "https://www.instagram.com/renolynx/"
       }
      ]
-    },
-    {
-     "type": "image",
-     "pt": 56.0,
-     "pb": 20.0,
-     "capAlign": "left",
-     "src": "media/inheriting-a-mountain.jpg",
-     "href": "/inheriting-a-mountain",
-     "caption": "'<span class=\"f-display\"><a href=\"/inheriting-a-mountain\">Inheriting Mountain on Land of 10,000 Lakes</a></span>', 2024, ceramic installation on the ice of Bdé Umáŋ, Minneapolis"
-    },
-    {
-     "type": "text",
-     "maxw": 800,
-     "width": 85.0,
-     "paras": [
-      {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">Away from the screen, I have been working in clay. </span><a href=\"/inheriting-a-mountain\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Inheriting a Mountain</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> (2024) answers a jade mountain looted from the Old Summer Palace in the 1890s and now sitting in a Minneapolis museum: I made my own, carried it onto a frozen lake, and sat down with it. The work was shown at the Minneapolis College of Art and Design as part of a Jerome Fellowship.</span>",
-       "align": "left",
-       "lh": 40.0
-      }
-     ],
-     "pt": 64.0
-    },
-    {
-     "type": "text",
-     "maxw": 800,
-     "width": 85.0,
-     "paras": [
-      {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">Between the films I organise. Feinaki keeps running in Beijing; in 2026 I spent half a year in Dali building a community operating system for a live-in creative space, and I run Wild Mountain Dojo, a workshop practice about making a life you would actually want to live. The animation and the organising are the same work to me — both are about getting a room full of people to imagine something together.</span>",
-       "align": "left",
-       "lh": 40.0
-      }
-     ],
-     "pt": 27.0,
-     "pb": 20.0
-    },
-    {
-     "type": "columns",
-     "capAlign": "left",
-     "caption": "Working in a film crew as onset assistant director in Sino-U.S international coproduction&nbsp;'Crazy Alien', 2017",
-     "cols": [
-      {
-       "flex": 91.0,
-       "blocks": [
-        {
-         "type": "image",
-         "pt": 18.0,
-         "pb": 40.0,
-         "width": 75.0,
-         "capAlign": "left",
-         "caption": "Working in a film crew as onset assistant director in Sino-U.S international coproduction&nbsp;'Crazy Alien', 2017",
-         "src": "media/7d463180-3818-4653-ad89-5c7fcc16dd1f.gif"
-        },
-        {
-         "type": "image",
-         "src": null
-        }
-       ]
-      },
-      {
-       "flex": 109.0,
-       "blocks": [
-        {
-         "type": "text",
-         "maxw": 800,
-         "pt": 16.0,
-         "pb": 36.0,
-         "width": 85.0,
-         "paras": [
-          {
-           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">As someone who has lived a nomadic life often traveling between distinctly different cultures, I feel like an alien body to most of the places where I live and worked, y</span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">et I believe my bilingual background and multicultural perspective equipped me to become a skilled people person who holds critical world views but can communicate with an open mind in great patience, which manifested from my diverse working experience in leading art workshops, organizing film festivals, public speaking, directing and assisting film productions.</span>",
-           "align": "left",
-           "lh": 40.0
-          }
-         ]
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "type": "image",
-     "pt": 56.0,
-     "capAlign": "left",
-     "caption": "Leading and co-instructing various art workshops in Beijing, 2018-2021",
-     "src": "media/774c5bdd-a2f9-4870-8cfe-3991391d161c.gif"
-    },
-    {
-     "type": "text",
-     "maxw": 800,
-     "pt": 64.0,
-     "pb": 78.0,
-     "width": 85.0,
-     "paras": [
-      {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">In 2020, as the operational director of </span><a href=\"https://www.cartoonbrew.com/festivals/feinaki-beijing-animation-week-an-event-thats-bringing-indie-animation-to-chinese-audiences-184054.html\" target=\"_blank\" rel=\"noopener\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Feinaki Animation Week</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">, I was invited to curate an artist talk alongside writing </span><a href=\"https://talkingshorts.com/focus/fringes-of-chinese-animation\" target=\"_blank\" rel=\"noopener\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">an article about </span></a><a href=\"https://talkingshorts.com/focus/fringes-of-chinese-animation\" target=\"_blank\" rel=\"noopener\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Chinese independent animation</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> for the International Short Film Festival Winterthur in Switzerland, which was then published on the film critic website &#x27;Talking Shorts&#x27;.</span>",
-       "align": "left",
-       "lh": 40.0
-      }
-     ]
-    },
-    {
-     "type": "image",
-     "capAlign": "left",
-     "caption": "Being a co-founder and the operational director at&nbsp;Feinaki Beijing Animation Week, 2019-2020",
-     "src": "media/369646b9-c521-4c53-9071-c752c23e0e9c.gif"
-    },
-    {
-     "type": "text",
-     "maxw": 800,
-     "pt": 71.0,
-     "pb": 0.0,
-     "width": 85.0,
-     "paras": [
-      {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">Thank you for your patience in spending time to know me, you&#x27;re most likely already my friend:)</span>",
-       "align": "left",
-       "lh": 40.0
-      },
-      {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">I am grateful for all the opportunities to connect, collaborate, learn from, and grow with the community of like-minded artists, educators, and innovators. </span>",
-       "align": "left",
-       "lh": 40.0
-      },
-      {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">I</span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">f you have any queries in mind or feel like we might click, leave me</span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> a sweet greeting message </span><br>",
-       "align": "left",
-       "lh": 40.0
-      }
-     ]
-    },
-    {
-     "type": "button",
-     "pt": 0.0,
-     "pb": 14.0,
-     "label": "↓ here ↓",
-     "btnAlign": "center"
-    },
-    {
-     "type": "form",
-     "maxw": 800,
-     "labels": [
-      "Name *",
-      "Email Address *",
-      "Message *"
-     ],
-     "submit": "Submit"
     }
    ],
-   "tagline": "Teaching Artist\nAnimation Filmmaker\nCurator↓"
+   "zh": {
+    "title": "关于俞悠洋",
+    "description": "俞悠洋，动画视觉艺术家、社区组织者与艺术教育者。",
+    "hero": {
+     "eyebrow": "关于",
+     "title": "你好，我是悠洋。",
+     "subtitle": "动画视觉艺术家、社区组织者与艺术教育者。",
+     "intro": "出生于中国，在英国学习艺术。我通过动画、绘画、装置与参与式实践，探索内在经验如何变得可见，我们如何生活在时间中，以及归属如何在人与人之间生长。",
+     "image": "media/80e25e7b-8009-4875-b8b3-a2a5bbd164a5.png",
+     "imageAlt": "俞悠洋，艺术家、动画导演与艺术教育者。"
+    },
+    "blocks": [
+     {
+      "type": "section",
+      "title": "艺术、教育，以及人与人之间的空间",
+      "body": "<p>我毕业于英国皇家艺术学院动画专业，获硕士学位。作品入选多国电影节，并被英国电影协会和栗宪庭电影基金收藏。</p><p>创作影像的同时，我也从事教学、策展和组织工作。2019 年，我共同发起费那奇北京动画周。近期的实践包括大理 CYC 社区文化协调，以及「野山道场」的持续发展。</p><p>在中国、英国和美国生活的经历，进入了我的创作。动画、物件、文字和共同的相遇，分别提供了探索时间、身份与归属的方式。</p>"
+     },
+     {
+      "type": "section",
+      "title": "正在发展的实践：野山道场",
+      "body": "<p>野山道场是一项参与式公共艺术实践，也是一个持续生长的「修行游戏」世界观。通过故事、身体感知、绘画与共创卡牌，我们为休息、表达和彼此支持创造空间。</p>",
+      "links": [
+       {
+        "label": "走进野山道场",
+        "href": "/wilder-mountain-dojo"
+       },
+       {
+        "label": "Basecamp · 2026 年 11 月",
+        "href": "/wilder-mountain-dojo#basecamp"
+       }
+      ]
+     },
+     {
+      "type": "link_list",
+      "title": "实践与经历",
+      "items": [
+       {
+        "title": "动画与视觉艺术",
+        "description": "独立动画、绘画与装置；各作品页面保留展映信息与创作过程记录。",
+        "href": "/work",
+        "meta": "艺术实践"
+       },
+       {
+        "title": "艺术教育与社区",
+        "description": "艺术工作坊、创作指导、动画节组织，以及社区文化协调。",
+        "href": "/about-archive",
+        "meta": "教学与组织"
+       },
+       {
+        "title": "费那奇北京动画周",
+        "description": "2019 年共同发起；2019–2020 年前两届共同创始人与运营总监。",
+        "href": "/feinaki-2020",
+        "meta": "动画节实践"
+       },
+       {
+        "title": "早期工作室笔记",
+        "description": "保留自原网站的个人介绍、动画实验，以及教学和动画节影像记录。",
+        "href": "/about-archive",
+        "meta": "原网站档案 · 英文"
+       }
+      ]
+     },
+     {
+      "type": "section",
+      "title": "来聊一聊",
+      "body": "<p>欢迎关于放映、展览、工作坊、教学与合作项目的交流。如需最新履历或某件作品的更多资料，也可以写信给我。</p>",
+      "id": "contact",
+      "links": [
+       {
+        "label": "qingdaoyyy@gmail.com",
+        "href": "mailto:qingdaoyyy@gmail.com"
+       },
+       {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/renolynx/"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "slug": "home",
-   "type": "gallery",
-   "title": "HOME",
-   "masthead": "{Hello! It's Youyang Yu \\(0w0)x*} I'm a...",
-   "items": [
+   "type": "editorial",
+   "title": "Youyang Yu — Artist, filmmaker & educator",
+   "description": "Animation, visual art and participatory practice by Youyang Yu. Exploring time, the body and belonging.",
+   "hero": {
+    "eyebrow": "Animation · Art · Shared practice",
+    "title": "Youyang Yu 俞悠洋",
+    "subtitle": "Making inner worlds visible.",
+    "intro": "I am an animation and visual artist, community organiser and art educator. Through moving images, drawing, installation and participatory practice, I explore time, the body and belonging.",
+    "image": "media/inheriting-a-mountain.jpg",
+    "imageAlt": "Youyang with a ceramic mountain on a frozen lake in Minneapolis.",
+    "imageCaption": "Inheriting a Mountain, 2024 · Bdé Umáŋ, Minneapolis"
+   },
+   "blocks": [
     {
-     "href": "/inheriting-a-mountain",
-     "cover": "media/inheriting-a-mountain__crop.jpg",
-     "title": "Inheriting a Mountain",
-     "meta": "2024"
+     "type": "section",
+     "title": "A place to rest. A world to grow.",
+     "body": "<p>I am developing <strong>Wilder Mountain Dojo / 野山道场</strong>, a participatory public art practice and an evolving world of shared practice and play. It invites people practising self-support amid movement, separation and uncertainty to make room for rest, expression and mutual support.</p><p><strong>Basecamp · Twin Cities · November 2026</strong><br>Three two-hour adult workshops are planned for three Saturday afternoons, supported by the Watson Foundation Enlight Fellowship.</p>",
+     "kicker": "Currently · Wilder Mountain Dojo",
+     "links": [
+      {
+       "label": "Enter Wilder Mountain Dojo",
+       "href": "/wilder-mountain-dojo"
+      },
+      {
+       "label": "Explore Basecamp",
+       "href": "/wilder-mountain-dojo#basecamp"
+      }
+     ]
     },
     {
-     "href": "/begin-with-pieces",
-     "cover": "media/begin-with-pieces__crop.jpg",
-     "title": "Begin with Pieces",
-     "meta": "2023"
+     "type": "project_grid",
+     "title": "Selected work",
+     "items": [
+      {
+       "href": "/for-the-best",
+       "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+       "title": "For the Best",
+       "meta": "2015",
+       "description": "A hand-drawn memory of unrequited love between two men."
+      },
+      {
+       "href": "/inside-my-eyes",
+       "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+       "title": "Inside My Eyes",
+       "meta": "2023",
+       "description": "Poetry, moving images and an overwhelmed inner world."
+      },
+      {
+       "href": "/inheriting-a-mountain",
+       "cover": "media/inheriting-a-mountain__crop.jpg",
+       "title": "Inheriting a Mountain",
+       "meta": "2024",
+       "description": "A ceramic mountain, a frozen lake, and questions of displacement and belonging."
+      },
+      {
+       "href": "/begin-with-pieces",
+       "cover": "media/begin-with-pieces__crop.jpg",
+       "title": "Begin with Pieces",
+       "meta": "2023",
+       "description": "A poem becomes a shared, shifting landscape of voices and images."
+      }
+     ],
+     "kicker": "Films, objects & inner landscapes"
     },
     {
-     "href": "/feinaki-2020",
-     "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg",
-     "title": "Feinaki 2020",
-     "meta": "2022"
+     "type": "section",
+     "title": "A letter, still unfolding.",
+     "body": "<blockquote>“In this age of collective sleeplessness, I struggled to write a narrative of dawn—then realised that dawn arrives of its own accord.”</blockquote><p>A work-in-progress essay on identity, time and the body, written over more than two years. Read an excerpt alongside published writing on independent animation.</p>",
+     "kicker": "Writing & research",
+     "links": [
+      {
+       "label": "Read the writing",
+       "href": "/writing"
+      }
+     ]
     },
     {
-     "href": "/inside-my-eyes",
-     "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
-     "title": "Inside My Eyes",
-     "meta": "2023"
-    },
-    {
-     "href": "/for-the-best",
-     "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
-     "title": "For the Best",
-     "meta": "2015"
-    },
-    {
-     "href": "/i-love-you-forever-now",
-     "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif",
-     "title": "I Love You Forever Now",
-     "meta": "2016"
-    },
-    {
-     "href": "/2014",
-     "cover": "media/457afa33338245-56a82c299517e__crop.png",
-     "title": "2014 turkey",
-     "meta": "2014"
-    },
-    {
-     "href": "/maybe-you-shouldve-swallowed",
-     "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg",
-     "title": "Maybe You Should've Swallowed",
-     "meta": "2014"
-    },
-    {
-     "href": "/cwtch",
-     "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg",
-     "title": "Cwtch",
-     "meta": "2015"
-    },
-    {
-     "href": "/a-man-in-love",
-     "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg",
-     "title": "A Man in Love",
-     "meta": "2014"
-    },
-    {
-     "href": "/2014-1",
-     "cover": "media/61b00f33339235-56a8342925abb__crop.jpg",
-     "title": "2014",
-     "meta": "2014"
-    },
-    {
-     "href": "/2015",
-     "cover": "media/dc4b1833339953-56a83b76543f7__crop.png",
-     "title": "2015",
-     "meta": "2015"
-    },
-    {
-     "href": "/2013",
-     "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg",
-     "title": "2013",
-     "meta": "2013"
-    },
-    {
-     "href": "/2010",
-     "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg",
-     "title": "2010",
-     "meta": "2010"
+     "type": "section",
+     "title": "Let’s make something together.",
+     "body": "<p>My practice moves between art, education and community. I welcome conversations about screenings, exhibitions, workshops and thoughtful collaborations.</p>",
+     "links": [
+      {
+       "label": "About Youyang",
+       "href": "/about"
+      },
+      {
+       "label": "Get in touch",
+       "href": "mailto:qingdaoyyy@gmail.com"
+      }
+     ]
     }
    ],
-   "tagline": "Teaching Artist\nAnimation Filmmaker\nCurator↓"
+   "zh": {
+    "title": "俞悠洋 — 动画、艺术与共同实践",
+    "description": "俞悠洋的动画、视觉艺术与参与式实践，探索时间、身体与归属。",
+    "hero": {
+     "eyebrow": "动画 · 艺术 · 共同实践",
+     "title": "俞悠洋 Youyang Yu",
+     "subtitle": "让内在经验变得可见、可感。",
+     "intro": "我是动画视觉艺术家、社区组织者与艺术教育者。通过动画、绘画、装置与参与式实践，我探索时间、身体与归属，尝试让难以言说的内在经验变得可见、可感。",
+     "image": "media/inheriting-a-mountain.jpg",
+     "imageAlt": "俞悠洋与一座陶山坐在明尼阿波利斯的冰湖上。",
+     "imageCaption": "《在万湖之州继承一座山》，2024 · 明尼阿波利斯 Bdé Umáŋ"
+    },
+    "blocks": [
+     {
+      "type": "section",
+      "title": "让休息有地方发生。",
+      "body": "<p>我正在发展<strong>「野山道场」</strong>——一项由参与者共同丰富的公共艺术实践与「修行游戏」世界观，为<strong>在聚散与动荡中练习自我支持的人</strong>，创造可以休息、表达和彼此支持的时间与空间。</p><p><strong>Basecamp · 明尼苏达双子城 · 2026 年 11 月</strong><br>计划在三个周六下午，分别举办一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起。</p>",
+      "kicker": "正在发生 · 野山道场",
+      "links": [
+       {
+        "label": "走进野山道场",
+        "href": "/wilder-mountain-dojo"
+       },
+       {
+        "label": "了解 Basecamp",
+        "href": "/wilder-mountain-dojo#basecamp"
+       }
+      ]
+     },
+     {
+      "type": "project_grid",
+      "title": "代表作品",
+      "items": [
+       {
+        "href": "/for-the-best",
+        "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+        "title": "最好结局",
+        "meta": "2015",
+        "description": "以逐帧手绘，留住两名男性之间一段未被回应的爱。"
+       },
+       {
+        "href": "/inside-my-eyes",
+        "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+        "title": "在我眼中",
+        "meta": "2023",
+        "description": "诗歌与流动影像，进入一个思绪满溢的内心世界。"
+       },
+       {
+        "href": "/inheriting-a-mountain",
+        "cover": "media/inheriting-a-mountain__crop.jpg",
+        "title": "在万湖之州继承一座山",
+        "meta": "2024",
+        "description": "一座陶山、一片冰湖，以及关于离散与归属的追问。"
+       },
+       {
+        "href": "/begin-with-pieces",
+        "cover": "media/begin-with-pieces__crop.jpg",
+        "title": "Begin with Pieces",
+        "meta": "2023",
+        "description": "诗歌、声音与绘画交织成一片不断变化的内在风景。"
+       }
+      ],
+      "kicker": "影像、物件与内在风景"
+     },
+     {
+      "type": "section",
+      "title": "一封还在展开的信。",
+      "body": "<blockquote>「在这个集体失眠的时代，我苦苦写一篇黎明的叙事，然后惊觉黎明无需叙写，它自行到来。」</blockquote><p>一篇写了两年多、仍在生长的长文，关于身份、时间与身体。这里收录写作中的节选，以及已发表的独立动画文章。</p>",
+      "kicker": "文字与研究",
+      "links": [
+       {
+        "label": "进入文字",
+        "href": "/writing"
+       }
+      ]
+     },
+     {
+      "type": "section",
+      "title": "一起做些事情。",
+      "body": "<p>我的实践往返于艺术、教育与社区。欢迎关于放映、展览、工作坊和共同创作的交流。</p>",
+      "links": [
+       {
+        "label": "关于悠洋",
+        "href": "/about"
+       },
+       {
+        "label": "联系我",
+        "href": "mailto:qingdaoyyy@gmail.com"
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "slug": "animation",
@@ -778,7 +574,7 @@
    "arrow": true,
    "year": "2024",
    "ogImage": "media/inheriting-a-mountain.webp",
-   "description": "Ceramic installation made for the ice of Bdé Umáŋ, Minneapolis, 2024.",
+   "description": "A 2024 ceramic and video installation connecting a mountain on the frozen lake of Bdé Umáŋ with histories of migration and displacement.",
    "blocks": [
     {
      "type": "image",
@@ -786,7 +582,7 @@
      "pb": 20.0,
      "capAlign": "left",
      "src": "media/inheriting-a-mountain.jpg",
-     "caption": "'Inheriting Mountain on Land of 10,000 Lakes', 2024, ceramic installation, photographed on the ice of Bdé Umáŋ, Minneapolis"
+     "caption": "'Inheriting a Mountain', 2024, ceramic and video installation; photographed on the ice of Bdé Umáŋ / Lake Harriet, Minneapolis"
     },
     {
      "type": "text",
@@ -794,7 +590,7 @@
      "width": 85.0,
      "paras": [
       {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">Minnesota is a place with no mountains.</span>",
+       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">A mountain, carried into a landscape of lakes.</span>",
        "align": "left",
        "lh": 40.0
       }
@@ -807,7 +603,7 @@
      "width": 85.0,
      "paras": [
       {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">In the 1890s a jade mountain carved for the Qianlong emperor was looted from the Old Summer Palace in Beijing. It passed through the hands of an American legation secretary, crossed the ocean, and was bought at auction by T. B. Walker — the lumber baron whose private collection became this state's first art museum. The jade mountain is still here, in the permanent collection of the Minneapolis Institute of Art, a few miles from where I have been living.</span>",
+       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">The work responds to the jade mountain in the collection of the Minneapolis Institute of Art. Its presence in Minnesota becomes a point of departure for thinking about migration, displacement, and the ways personal narratives meet larger histories.</span>",
        "align": "left",
        "lh": 40.0
       }
@@ -820,7 +616,7 @@
      "width": 85.0,
      "paras": [
       {
-       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">I made my own mountain out of clay, carried it onto the frozen lake the settlers renamed Lake Harriet, and sat down with it. The Dakota called this water Bdé Umáŋ. The piece was shown at the Minneapolis College of Art and Design as part of a Jerome Fellowship.</span>",
+       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">I made a mountain out of clay, carried it onto the frozen lake of Bdé Umáŋ, also known as Lake Harriet, and sat down with it. The ceramic and video installation brings that encounter into conversation with the histories carried by objects and people.</span>",
        "align": "left",
        "lh": 40.0
       }
@@ -2022,6 +1818,942 @@
    ],
    "year": "2010",
    "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg"
+  },
+  {
+   "slug": "work",
+   "type": "editorial",
+   "title": "Work",
+   "description": "Films, installation, community practice and drawing by Youyang Yu.",
+   "hero": {
+    "eyebrow": "The work",
+    "title": "Moving images. Shared worlds.",
+    "intro": "A collection of films, objects and drawings, alongside the spaces we make for one another."
+   },
+   "blocks": [
+    {
+     "type": "project_grid",
+     "title": "Animation & moving image",
+     "items": [
+      {
+       "href": "/begin-with-pieces",
+       "cover": "media/begin-with-pieces__crop.jpg",
+       "title": "Begin with Pieces",
+       "meta": "2023",
+       "description": "A poem becomes a shared, shifting landscape of voices and images."
+      },
+      {
+       "href": "/inside-my-eyes",
+       "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+       "title": "Inside My Eyes",
+       "meta": "2023",
+       "description": "Poetry, moving images and an overwhelmed inner world."
+      },
+      {
+       "href": "/i-love-you-forever-now",
+       "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif",
+       "title": "I Love You Forever Now",
+       "meta": "2016"
+      },
+      {
+       "href": "/for-the-best",
+       "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+       "title": "For the Best",
+       "meta": "2015",
+       "description": "A hand-drawn memory of unrequited love between two men."
+      },
+      {
+       "href": "/cwtch",
+       "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg",
+       "title": "Cwtch",
+       "meta": "2015"
+      },
+      {
+       "href": "/maybe-you-shouldve-swallowed",
+       "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg",
+       "title": "Maybe You Should've Swallowed",
+       "meta": "2014"
+      },
+      {
+       "href": "/a-man-in-love",
+       "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg",
+       "title": "A Man in Love",
+       "meta": "2014"
+      }
+     ],
+     "kicker": "01 · Films"
+    },
+    {
+     "type": "project_grid",
+     "title": "Installation",
+     "items": [
+      {
+       "href": "/inheriting-a-mountain",
+       "cover": "media/inheriting-a-mountain__crop.jpg",
+       "title": "Inheriting a Mountain",
+       "meta": "2024",
+       "description": "A ceramic mountain, a frozen lake, and questions of displacement and belonging."
+      }
+     ],
+     "kicker": "02 · Objects & place"
+    },
+    {
+     "type": "section",
+     "title": "Wilder Mountain Dojo",
+     "body": "<p>A participatory public art practice exploring rest, self-support and reciprocity through stories, body awareness, drawing and a growing collection of practice cards.</p>",
+     "kicker": "03 · Participatory practice",
+     "links": [
+      {
+       "label": "Visit the project",
+       "href": "/wilder-mountain-dojo"
+      }
+     ]
+    },
+    {
+     "type": "project_grid",
+     "title": "Festival & community",
+     "items": [
+      {
+       "href": "/feinaki-2020",
+       "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg",
+       "title": "Feinaki 2020",
+       "meta": "Festival project archive"
+      }
+     ],
+     "kicker": "04 · Organising"
+    },
+    {
+     "type": "project_grid",
+     "title": "Sketchbook",
+     "items": [
+      {
+       "href": "/2015",
+       "cover": "media/dc4b1833339953-56a83b76543f7__crop.png",
+       "title": "2015",
+       "meta": "2015"
+      },
+      {
+       "href": "/2014",
+       "cover": "media/457afa33338245-56a82c299517e__crop.png",
+       "title": "2014 turkey",
+       "meta": "2014"
+      },
+      {
+       "href": "/2014-1",
+       "cover": "media/61b00f33339235-56a8342925abb__crop.jpg",
+       "title": "2014",
+       "meta": "2014"
+      },
+      {
+       "href": "/2013",
+       "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg",
+       "title": "2013",
+       "meta": "2013"
+      },
+      {
+       "href": "/2010",
+       "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg",
+       "title": "2010",
+       "meta": "2010"
+      }
+     ],
+     "kicker": "05 · Drawing & observation"
+    }
+   ],
+   "zh": {
+    "title": "作品",
+    "description": "俞悠洋的动画、装置、社区实践与绘画。",
+    "hero": {
+     "eyebrow": "作品",
+     "title": "流动的影像，共同的世界。",
+     "intro": "动画、物件与绘画，以及我们为彼此创造的空间。"
+    },
+    "blocks": [
+     {
+      "type": "project_grid",
+      "title": "动画与动态影像",
+      "items": [
+       {
+        "href": "/begin-with-pieces",
+        "cover": "media/begin-with-pieces__crop.jpg",
+        "title": "Begin with Pieces",
+        "meta": "2023",
+        "description": "诗歌、声音与绘画交织成一片不断变化的内在风景。"
+       },
+       {
+        "href": "/inside-my-eyes",
+        "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+        "title": "在我眼中",
+        "meta": "2023",
+        "description": "诗歌与流动影像，进入一个思绪满溢的内心世界。"
+       },
+       {
+        "href": "/i-love-you-forever-now",
+        "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif",
+        "title": "我现在永远爱你",
+        "meta": "2016"
+       },
+       {
+        "href": "/for-the-best",
+        "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+        "title": "最好结局",
+        "meta": "2015",
+        "description": "以逐帧手绘，留住两名男性之间一段未被回应的爱。"
+       },
+       {
+        "href": "/cwtch",
+        "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg",
+        "title": "Cwtch",
+        "meta": "2015"
+       },
+       {
+        "href": "/maybe-you-shouldve-swallowed",
+        "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg",
+        "title": "Maybe You Should've Swallowed",
+        "meta": "2014"
+       },
+       {
+        "href": "/a-man-in-love",
+        "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg",
+        "title": "A Man in Love",
+        "meta": "2014"
+       }
+      ],
+      "kicker": "01 · 影像"
+     },
+     {
+      "type": "project_grid",
+      "title": "装置",
+      "items": [
+       {
+        "href": "/inheriting-a-mountain",
+        "cover": "media/inheriting-a-mountain__crop.jpg",
+        "title": "在万湖之州继承一座山",
+        "meta": "2024",
+        "description": "一座陶山、一片冰湖，以及关于离散与归属的追问。"
+       }
+      ],
+      "kicker": "02 · 物件与地方"
+     },
+     {
+      "type": "section",
+      "title": "野山道场",
+      "body": "<p>以故事、身体感知、绘画与共创卡牌为方法的参与式公共艺术实践，探索休息、自我支持与彼此互惠。</p>",
+      "kicker": "03 · 参与式实践",
+      "links": [
+       {
+        "label": "走进项目",
+        "href": "/wilder-mountain-dojo"
+       }
+      ]
+     },
+     {
+      "type": "project_grid",
+      "title": "动画节与社区",
+      "items": [
+       {
+        "href": "/feinaki-2020",
+        "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg",
+        "title": "Feinaki 2020",
+        "meta": "动画节项目档案"
+       }
+      ],
+      "kicker": "04 · 组织实践"
+     },
+     {
+      "type": "project_grid",
+      "title": "速写本",
+      "items": [
+       {
+        "href": "/2015",
+        "cover": "media/dc4b1833339953-56a83b76543f7__crop.png",
+        "title": "2015",
+        "meta": "2015"
+       },
+       {
+        "href": "/2014",
+        "cover": "media/457afa33338245-56a82c299517e__crop.png",
+        "title": "土耳其 · 2014",
+        "meta": "2014"
+       },
+       {
+        "href": "/2014-1",
+        "cover": "media/61b00f33339235-56a8342925abb__crop.jpg",
+        "title": "2014",
+        "meta": "2014"
+       },
+       {
+        "href": "/2013",
+        "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg",
+        "title": "2013",
+        "meta": "2013"
+       },
+       {
+        "href": "/2010",
+        "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg",
+        "title": "2010",
+        "meta": "2010"
+       }
+      ],
+      "kicker": "05 · 绘画与观察"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "wilder-mountain-dojo",
+   "type": "editorial",
+   "title": "Wilder Mountain Dojo / 野山道场",
+   "description": "A participatory public art practice for rest, expression and mutual support. Basecamp workshops are planned for the Twin Cities in November 2026.",
+   "hero": {
+    "eyebrow": "Wilder Mountain Dojo · 野山道场",
+    "title": "A space to rest. Permission to grow.",
+    "subtitle": "Basecamp: Aligning with the Time That Is Killing You",
+    "intro": "Is it the ticking clock that is chasing us, or the understanding of time we learned from society—the one that measures and disciplines us?"
+   },
+   "blocks": [
+    {
+     "type": "section",
+     "title": "A space to receive support, and catch your breath.",
+     "body": "<p>Wilder Mountain Dojo is a participatory public art practice initiated by animation and visual artist, community organiser and art educator Youyang Yu. It is also an evolving world of shared practice and play, enriched by its participants. It is for <strong>people practising self-support amid movement, separation and uncertainty</strong>.</p><p>I want to create a protected time and space with you: somewhere to slow down, sense the body, express feelings that have not yet found their form, connect with inner strength, and practise receiving and giving support. Like a newly sprouted seed, or a child learning to walk, we can be allowed to explore, be uncertain and grow, rather than be measured as finished products.</p>"
+    },
+    {
+     "type": "section",
+     "title": "Basecamp: Aligning with the Time That Is Killing You",
+     "body": "<p><strong>Twin Cities, Minnesota · November 2026</strong><br>Three two-hour adult workshops are planned at three venues, on three Saturday afternoons. Basecamp is supported by the Watson Foundation Enlight Fellowship. Exact dates and venue details will be announced.</p><p>This round, I invite you to reimagine your relationship with time, and find alignment with the rhythms of your own life.</p>",
+     "id": "basecamp",
+     "kicker": "An invitation",
+     "links": [
+      {
+       "label": "Ask about Basecamp",
+       "href": "mailto:qingdaoyyy@gmail.com?subject=Basecamp%20workshop%20enquiry"
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "title": "When even rest becomes a task.",
+     "body": "<p>When instability, the pressure to improve and a heavy workload arrive together, finding time to rest becomes difficult in itself. Even when exhaustion forces us to stop, we may still feel that we should work harder, become more efficient and optimise ourselves into someone good enough. Rest can become the next task to complete.</p>"
+    },
+    {
+     "type": "section",
+     "title": "An alliance across time.",
+     "body": "<p>We will enter through stories or dreams. Through body awareness, exploratory drawing and conversation, we will give time a form we can sense, depict and respond to. We will also try imagining the self as a collective continually changing through time, allowing who you are now to form an alliance with yourself at different stages of life: understanding the self who worked so hard in the past, caring for present needs, and leaving some room for the future self.</p><p>A rhythm of rest and work can become a promise kept between allies. Practice begins with a small, real action: acknowledging the body’s limits, protecting a little time to rest, or expressing a need. Through listening and responding together, we practise bringing those needs into relationships, exploring how to receive support, offer support and build reciprocity.</p>"
+    },
+    {
+     "type": "section",
+     "title": "Take a card. Leave a little support.",
+     "body": "<p>At each workshop, I will invite you to make a practice card of your own. You will take a creation home and leave a card in Wilder Mountain Dojo’s growing shared deck—a contribution for the next person practising self-support amid movement, separation and uncertainty.</p><p>We hope to begin with a real room and an encounter we care for together: somewhere rest can happen, and inner and collective strength can gradually grow.</p>"
+    },
+    {
+     "type": "section",
+     "title": "A practice taking shape.",
+     "body": "<p>One ink self-reflection painting workshop has taken place during Watson’s in-person immersive. Talks and exchanges at the CYC community in Dali are another part of the wider practice. Basecamp is the next invitation to gather.</p>",
+     "kicker": "So far"
+    },
+    {
+     "type": "section",
+     "title": "A name drawn from moving landscapes.",
+     "body": "<p>In a 2023 invitation to share nomadic narratives, “wild mountains” named the layered landscapes encountered through a life of movement. A dojo was imagined as a place of practice: a rehearsal room for expression, a group for autobiographical creation, and a shared narrative space. Belonging could grow through participation.</p><p><em>First, let a room become real. Then the mountain has room to grow.</em></p>",
+     "kicker": "Where it began",
+     "links": [
+      {
+       "label": "Start a conversation",
+       "href": "mailto:qingdaoyyy@gmail.com"
+      }
+     ]
+    }
+   ],
+   "zh": {
+    "title": "野山道场",
+    "description": "为在聚散与动荡中练习自我支持的人，创造休息、表达与彼此支持的空间。Basecamp 计划于 2026 年 11 月在明尼苏达双子城举办。",
+    "hero": {
+     "eyebrow": "野山道场 · Wilder Mountain Dojo",
+     "title": "与追杀你的时间，对齐",
+     "subtitle": "Basecamp · 让休息有地方发生",
+     "intro": "追赶我们的，是滴答作响的时钟，还是我们从社会中学会的、用来衡量和规训自己的时间观？"
+    },
+    "blocks": [
+     {
+      "type": "section",
+      "title": "能得到支持、也能喘息的空间",
+      "body": "<p>「野山道场」是由动画视觉艺术家、社区组织者和艺术教育者俞悠洋发起的参与式公共艺术实践，也是一个由参与者共同丰富、持续生长的「修行游戏」世界观。它面向<strong>在聚散与动荡中练习自我支持的人</strong>。</p><p>我想和你们一起创造一段被护佑的时间与空间：在这里，可以慢下来，感知身体，表达尚未成形的心声，连接内在的力量，也练习接受和给予支持。像刚发芽的种子、像孩子学习迈步那样被允许探索、不确定和生长，而不是被当成完成品来衡量。</p>"
+     },
+     {
+      "type": "section",
+      "title": "Basecamp：与追杀你的时间，对齐",
+      "body": "<p><strong>明尼苏达双子城 · 2026 年 11 月</strong><br>计划在三个场地、三个周六下午，分别举办一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起。具体日期和场地信息将另行公布。</p><p>这一轮，我邀请你和我一起，重新想象自己与时间的关系，与自己的生命节律重新对齐。</p>",
+      "id": "basecamp",
+      "kicker": "这一轮的邀请",
+      "links": [
+       {
+        "label": "咨询 Basecamp",
+        "href": "mailto:qingdaoyyy@gmail.com?subject=Basecamp%20workshop%20enquiry"
+       }
+      ]
+     },
+     {
+      "type": "section",
+      "title": "当休息，也成了一项任务",
+      "body": "<p>当生活里同时压着动荡、提升的压力和工作量的忙碌，「找到休息的时间」本身就成了一件难事。我们也许已经在筋疲力尽后被迫停下，却仍然觉得自己应该更努力、更有效率、更快优化调整成为一个足够好的人。连休息，都可能变成下一项需要完成的任务。</p>"
+     },
+     {
+      "type": "section",
+      "title": "与时间中的自己结盟",
+      "body": "<p>在工作坊里，我们会从故事或梦境进入，通过身体感知、探索性的绘画与对话，给时间一个可以感受、描绘和回应的形象。我们也会尝试把「自己」想象成一个在时间中持续变化的集体，让此刻的你与人生不同阶段的自己结盟：理解过去那个努力生活的自己，照顾此刻的需要，为未来的自己留下一些余地。</p><p>有节律的休息与工作，可以成为同盟之间的一次守约。练习从一个小而真实的行动开始：承认身体的限度，为自己保留一段休息，或说出一个需要。在共同倾听与回应中，我们也练习把这些需要带入关系，探索如何接受支持、给予支持，与彼此建立互惠。</p>"
+     },
+     {
+      "type": "section",
+      "title": "带走一张创作，留下一份助力",
+      "body": "<p>每一场工作坊，我都会邀请你制作一张属于自己的「修行」卡牌。你将带走一份创作，也在野山道场共同生长的牌堆里留下一张卡，为下一个在聚散与动荡中练习自我支持的人，留下一份助力。</p><p>我们希望从一间真实的屋子、一次共同守护的相遇开始，让休息有地方发生，让内在与集体的力量慢慢长出来。</p>"
+     },
+     {
+      "type": "section",
+      "title": "实践正在发生",
+      "body": "<p>野山道场已在 Watson 线下 immersive 举办过一场水墨自我照见绘画工作坊。在大理 CYC 社区的分享与交流，也构成了这项实践的一部分。Basecamp 是下一次共同聚集的邀请。</p>",
+      "kicker": "走到这里"
+     },
+     {
+      "type": "section",
+      "title": "名字来自流动的风景",
+      "body": "<p>2023 年的《游牧叙事征集信》以「在无根处，被看见并感到归属」为题。「野山」是离散生活中不断看见的风景的叠加；「道场」是求道之所，也可以是表达排练室、自传创作小组和一个共同的叙事空间。归属感由共同参与逐渐形成。</p><p><em>先让一间屋子真实出现，整座山才有资格慢慢长出来。</em></p>",
+      "kicker": "项目缘起",
+      "links": [
+       {
+        "label": "来聊一聊",
+        "href": "mailto:qingdaoyyy@gmail.com"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "slug": "writing",
+   "type": "editorial",
+   "title": "Writing",
+   "description": "Writing by Youyang Yu on identity, time, the body and independent animation.",
+   "hero": {
+    "eyebrow": "Writing & research",
+    "title": "Thinking in fragments, finding a thread.",
+    "intro": "Writing is part of the practice: a place to stay with questions about identity, time, the body and the worlds we make together."
+   },
+   "blocks": [
+    {
+     "type": "section",
+     "title": "A life still unfinished.",
+     "body": "<p><strong>Work in progress · Excerpt translated from the Chinese draft</strong></p><p>“I have been writing this letter for more than two years.</p><p>It began with the existential question ‘Who am I?’ and gradually found its way into the illusion of time, systemic oppression, and the hidden structures of embodied practice.</p><p>I discovered that I was only the tip of the iceberg of the conditions of my time.</p><p>… In this age of collective sleeplessness, I struggled to write a narrative of dawn—then realised that dawn arrives of its own accord.”</p><p>The Chinese working title is <em>你命运半写就，人生未完成，站在因果冰山上寻求自由</em>. This excerpt is from an ongoing, five-part writing project.</p>",
+     "id": "unfinished-life",
+     "kicker": "An ongoing letter"
+    },
+    {
+     "type": "link_list",
+     "title": "Published writing",
+     "items": [
+      {
+       "title": "Fringes of Chinese Animation",
+       "description": "An article on Chinese independent animation, written in connection with the International Short Film Festival Winterthur.",
+       "href": "https://talkingshorts.com/focus/fringes-of-chinese-animation",
+       "meta": "Talking Shorts · 2020 · English"
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "title": "From thought to practice.",
+     "body": "<p>Questions about identity, continuity and support also enter the films and the shared space of Wilder Mountain Dojo.</p>",
+     "links": [
+      {
+       "label": "Explore the work",
+       "href": "/work"
+      },
+      {
+       "label": "Enter Wilder Mountain Dojo",
+       "href": "/wilder-mountain-dojo"
+      }
+     ]
+    }
+   ],
+   "zh": {
+    "title": "文字",
+    "description": "俞悠洋关于身份、时间、身体与独立动画的写作。",
+    "hero": {
+     "eyebrow": "文字与研究",
+     "title": "从散落的念头，找到一条线。",
+     "intro": "写作也是实践的一部分。在这里，关于身份、时间、身体和共同生活的问题，可以继续展开。"
+    },
+    "blocks": [
+     {
+      "type": "section",
+      "title": "你命运半写就，人生未完成，站在因果冰山上寻求自由。",
+      "body": "<p><strong>写作中 · 节选</strong></p><p>这一封信，我写了2年多。</p><p>从拆解「我是谁」这一存在主义大问开始，逐步写入时间幻象、系统压迫与具身修行的隐秘结构。</p><p>我发现自己只是我所身处的时代症候的冰山一角。</p><p>这个既是天地间自然共存，又由社会中无数「他人面孔」交织而成的关系网络，仅用「系统」来命名，似乎并不足够精确。</p><p>我又尝试用剧本分析、日常观察、可视化案例补充概念的空洞。</p><p>冬去春来夏忙碌，又入冬逢新春夏。</p><p>生成的小径时隐时现，我走得缓慢又惊险，在这个集体失眠的时代，我苦苦写一篇黎明的叙事，然后惊觉黎明无需叙写，它自行到来。</p><p>这是一组持续写作、分为五个大章的文字。此处收录开篇节选。</p>",
+      "id": "unfinished-life",
+      "kicker": "一封还在写的信"
+     },
+     {
+      "type": "link_list",
+      "title": "已发表文章",
+      "items": [
+       {
+        "title": "Fringes of Chinese Animation",
+        "description": "关于中国独立动画的文章，结合瑞士温特图尔国际短片电影节的策展交流撰写。",
+        "href": "https://talkingshorts.com/focus/fringes-of-chinese-animation",
+        "meta": "Talking Shorts · 2020 · 英文"
+       }
+      ]
+     },
+     {
+      "type": "section",
+      "title": "从思考，走进实践",
+      "body": "<p>关于身份、连续自我与支持的问题，也进入了影像，以及野山道场共同创造的空间。</p>",
+      "links": [
+       {
+        "label": "观看作品",
+        "href": "/work"
+       },
+       {
+        "label": "走进野山道场",
+        "href": "/wilder-mountain-dojo"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "slug": "about-archive",
+   "type": "page",
+   "title": "Earlier studio notes",
+   "masthead": "Earlier studio notes",
+   "blocks": [
+    {
+     "type": "text",
+     "paras": [
+      {
+       "html": "<p>These earlier studio notes preserve animation process, teaching and festival material from the previous website. For my current practice and contact details, visit <a href=\"/about\">About</a>.</p>"
+      }
+     ]
+    },
+    {
+     "type": "columns",
+     "cols": [
+      {
+       "flex": 1.0,
+       "blocks": [
+        {
+         "type": "image",
+         "src": "media/80e25e7b-8009-4875-b8b3-a2a5bbd164a5.png"
+        },
+        {
+         "type": "image",
+         "src": null
+        }
+       ]
+      },
+      {
+       "flex": 1.0,
+       "blocks": [
+        {
+         "type": "text",
+         "maxw": 500,
+         "pt": 36.0,
+         "pb": 0.0,
+         "width": 85.0,
+         "paras": [
+          {
+           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">Born in China and trained in the UK, Youyang received his Master&#x27;s degree in animation from the Royal College of Art in London and has exhibited his work internationally across Europe, Asia, and North </span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">&amp;</span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> South America. </span>",
+           "align": "left",
+           "lh": 40.0
+          },
+          {
+           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">In 2019 he co-founded </span><a href=\"https://www.instagram.com/feinaki/\" target=\"_blank\" rel=\"noopener\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Feinaki Beijing Animation Week</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">, an independent animation festival. He teaches, curates and organises between China and the United States.</span>",
+           "align": "left",
+           "lh": 40.0
+          },
+          {
+           "html": "<br>",
+           "align": "left",
+           "lh": 40.0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "maxw": 800,
+     "pt": 44.0,
+     "pb": 0.0,
+     "width": 95.0,
+     "paras": [
+      {
+       "html": "<span class=\"f-display\" style=\"font-weight:100;color:#4be100\">       V             </span>",
+       "align": "center",
+       "lh": 9.0
+      },
+      {
+       "html": "<span class=\"f-display\" style=\"font-size:40px;font-weight:100;color:#e13ee7\">{</span><span class=\"f-display\" style=\"font-size:40px;font-weight:100;color:#e13ee7\">)</span><span class=\"f-display\" style=\"font-size:40px;font-weight:700;color:#382d9d\">I</span><span class=\"f-display\" style=\"font-size:40px;font-weight:100;color:#e13ee7\">(}        </span>",
+       "align": "center",
+       "lh": 9.0
+      },
+      {
+       "html": "<span class=\"f-display\" style=\"font-weight:100;color:#4be100\">               WWWWWWWW</span>",
+       "align": "center"
+      },
+      {
+       "html": "<span class=\"f-nav\" style=\"font-weight:400;color:#4be100\">wwwwwwwww</span>                                .",
+       "align": "center"
+      },
+      {
+       "html": "<span class=\"f-script\" style=\"font-size:31px;font-weight:400\">        .     </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#19782c\">x</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#f83200\">*</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#3de5cf\">r </span>",
+       "align": "center"
+      },
+      {
+       "html": "<span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#4be100\"> WWW</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400\">             .   </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#4be100\">&#x27;&quot; </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\"> . .XX...</span>",
+       "align": "center"
+      },
+      {
+       "html": "<span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\">Thank you for checking me out  \\(0u0)N</span>",
+       "align": "center",
+       "lh": 50.0
+      },
+      {
+       "html": "<span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\">           . 5\\o</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400\">.   .  </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\"> .  </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#55ff00\">/ </span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\">.   Z</span><span class=\"f-script\" style=\"font-size:31px;font-weight:400;color:#000000\">_.)  </span>",
+       "align": "center",
+       "lh": 9.0
+      },
+      {
+       "html": "<span class=\"f-script\" style=\"font-size:40px;font-weight:400;color:#55ff00\">V</span><span style=\"font-size:39px;color:#55ff00\">.   </span>",
+       "align": "center",
+       "lh": 9.0
+      }
+     ]
+    },
+    {
+     "type": "social_icons",
+     "links": [
+      {
+       "url": "https://twitter.com/FeralCliff"
+      },
+      {
+       "url": "https://www.instagram.com/renolynx/"
+      },
+      {
+       "url": "mailto:qingdaoyyy@gmail.com"
+      }
+     ]
+    },
+    {
+     "type": "columns",
+     "capAlign": "left",
+     "caption": "A snippet of my hand-drawn animation&nbsp;'<a href=\"/for-the-best\"><span class=\"f-display\">For the Best</span></a>'&nbsp;(2015), collected by the British Film Institute",
+     "cols": [
+      {
+       "flex": 1.0,
+       "blocks": [
+        {
+         "type": "image",
+         "maxw": 800,
+         "pt": 99.0,
+         "pb": 33.0,
+         "width": 100.0,
+         "capAlign": "left",
+         "caption": "A snippet of my hand-drawn animation&nbsp;'<a href=\"/for-the-best\"><span class=\"f-display\">For the Best</span></a>'&nbsp;(2015), collected by the British Film Institute",
+         "src": "media/979a9782-8ea2-4d95-bcfa-0529f060f101.gif",
+         "href": "/for-the-best"
+        },
+        {
+         "type": "image",
+         "src": null
+        }
+       ]
+      },
+      {
+       "flex": 1.0,
+       "blocks": [
+        {
+         "type": "text",
+         "maxw": 600,
+         "pt": 32.0,
+         "pb": 16.0,
+         "width": 85.0,
+         "paras": [
+          {
+           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">As a traditionally trained 2D animation artist researching the field of generative AI and multi-sensory digital transformation, I am constantly in awe of the nonstop technological breakthroughs I witness, yet often look back to my pen and brushes that inspired me to make art and build my deep emotional connections with the physical touch in the first place. </span>",
+           "align": "left",
+           "lh": 40.0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "maxw": 800,
+     "pt": 70.0,
+     "pb": 47.0,
+     "width": 100.0,
+     "capAlign": "left",
+     "caption": "Still Frame from '<span class=\"f-display\"><a href=\"/for-the-best\">For the Best</a>'</span>(2015), AI transformation experiment 2022",
+     "src": "media/c8ad4454-f3f6-4312-a2e3-7db928eaffc6.gif",
+     "href": "/for-the-best"
+    },
+    {
+     "type": "columns",
+     "capAlign": "left",
+     "caption": "Clip from AI-augmented animation short '<a href=\"/inside-my-eyes\"><span class=\"f-display\">Inside My Eyes</span></a>' 2023",
+     "cols": [
+      {
+       "flex": 77.0,
+       "blocks": [
+        {
+         "type": "text",
+         "maxw": 800,
+         "pt": 10.0,
+         "pb": 36.0,
+         "width": 85.0,
+         "paras": [
+          {
+           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">I try to create art that combines both innovative digital tools and the traditional tactile artistic mediums that speak to the multitude of daring innovations and deeply bonded emotional engagement in the continuum of creative expressions. </span>",
+           "align": "left",
+           "lh": 40.0
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "flex": 123.0,
+       "blocks": [
+        {
+         "type": "image",
+         "pt": 55.0,
+         "pb": 45.0,
+         "width": 100.0,
+         "capAlign": "left",
+         "caption": "Clip from AI-augmented animation short '<a href=\"/inside-my-eyes\"><span class=\"f-display\">Inside My Eyes</span></a>' 2023",
+         "src": "media/118497de-04e2-420f-a53b-b695a1ca7b75.gif",
+         "href": "/inside-my-eyes"
+        },
+        {
+         "type": "image",
+         "src": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "maxw": 800,
+     "pt": 38.0,
+     "pb": 43.0,
+     "width": 85.0,
+     "paras": [
+      {
+       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">My recent animation film &#x27;</span><a href=\"/inside-my-eyes\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Inside My Eyes</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">&#x27;(2023) based on Japanese writer Yuko Taniguchi&#x27;s poem, explores an overwhelmed mind space organically painted in motion in the watercolor/ </span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">oil/ biogenic histology look only enabled by the power of AI image generation. </span>",
+       "align": "left",
+       "lh": 40.0
+      }
+     ]
+    },
+    {
+     "type": "grid",
+     "pt": 41.0,
+     "pb": 0.0,
+     "width": 100.0,
+     "items": [
+      {
+       "src": "media/5893c5b6-5ab9-4ef4-b1c9-e97b1b598fcd.png",
+       "w": 1600,
+       "h": 896
+      },
+      {
+       "src": "media/f89d2125-7185-4a2a-8c1a-d835cc89694d.png",
+       "w": 1600,
+       "h": 896
+      },
+      {
+       "src": "media/8e4d4174-bdda-42fe-bfce-5ca7f8840d81.png",
+       "w": 1600,
+       "h": 896
+      },
+      {
+       "src": "media/c298b5b7-ebf5-4520-a70e-1ed52a334be6.png",
+       "w": 1600,
+       "h": 896
+      },
+      {
+       "src": "media/e694d217-c255-48d8-b1fa-0020ddf2bbbe.jpg",
+       "w": 1600,
+       "h": 896
+      },
+      {
+       "src": "media/d68b4de2-4bcf-48c9-bfa4-bbae085e9db7.png",
+       "w": 1600,
+       "h": 896
+      }
+     ],
+     "perRow": 2
+    },
+    {
+     "type": "text",
+     "maxw": 800,
+     "pb": 82.0,
+     "paras": [
+      {
+       "html": "Still frames from &#x27;<a href=\"/inside-my-eyes\"><span class=\"f-display\" style=\"font-weight:300\">Inside My Eyes</span></a>&#x27; 2023, img2img AI-augmentation experiment"
+      }
+     ]
+    },
+    {
+     "_id": "since",
+     "type": "columns",
+     "pt": 60.0,
+     "cols": [
+      {
+       "flex": 110.0,
+       "blocks": [
+        {
+         "type": "image",
+         "width": 100.0,
+         "maxw": 900,
+         "capAlign": "left",
+         "src": "media/begin-with-pieces-still.jpg",
+         "href": "/begin-with-pieces",
+         "caption": "Still from '<span class=\"f-display\"><a href=\"/begin-with-pieces\">Begin with Pieces</a></span>', 2023"
+        }
+       ]
+      },
+      {
+       "flex": 90.0,
+       "blocks": [
+        {
+         "type": "text",
+         "maxw": 560,
+         "width": 85.0,
+         "paras": [
+          {
+           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">A second film followed the same year. </span><a href=\"/begin-with-pieces\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Begin with Pieces</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> (2023) takes another Yuko Taniguchi poem into a synesthetic mind-space, recited by the adolescents of the Creativity Camp Study and premiered at the Weisman Art Museum.</span>",
+           "align": "left",
+           "lh": 40.0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "pt": 56.0,
+     "pb": 20.0,
+     "capAlign": "left",
+     "src": "media/inheriting-a-mountain.jpg",
+     "href": "/inheriting-a-mountain",
+     "caption": "'<span class=\"f-display\"><a href=\"/inheriting-a-mountain\">Inheriting Mountain on Land of 10,000 Lakes</a></span>', 2024, ceramic installation on the ice of Bdé Umáŋ, Minneapolis"
+    },
+    {
+     "type": "columns",
+     "capAlign": "left",
+     "caption": "Working in a film crew as onset assistant director in Sino-U.S international coproduction&nbsp;'Crazy Alien', 2017",
+     "cols": [
+      {
+       "flex": 91.0,
+       "blocks": [
+        {
+         "type": "image",
+         "pt": 18.0,
+         "pb": 40.0,
+         "width": 75.0,
+         "capAlign": "left",
+         "caption": "Working in a film crew as onset assistant director in Sino-U.S international coproduction&nbsp;'Crazy Alien', 2017",
+         "src": "media/7d463180-3818-4653-ad89-5c7fcc16dd1f.gif"
+        },
+        {
+         "type": "image",
+         "src": null
+        }
+       ]
+      },
+      {
+       "flex": 109.0,
+       "blocks": [
+        {
+         "type": "text",
+         "maxw": 800,
+         "pt": 16.0,
+         "pb": 36.0,
+         "width": 85.0,
+         "paras": [
+          {
+           "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">As someone who has lived a nomadic life often traveling between distinctly different cultures, I feel like an alien body to most of the places where I live and worked, y</span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">et I believe my bilingual background and multicultural perspective equipped me to become a skilled people person who holds critical world views but can communicate with an open mind in great patience, which manifested from my diverse working experience in leading art workshops, organizing film festivals, public speaking, directing and assisting film productions.</span>",
+           "align": "left",
+           "lh": 40.0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "pt": 56.0,
+     "capAlign": "left",
+     "caption": "Leading and co-instructing various art workshops in Beijing, 2018-2021",
+     "src": "media/774c5bdd-a2f9-4870-8cfe-3991391d161c.gif"
+    },
+    {
+     "type": "text",
+     "maxw": 800,
+     "pt": 64.0,
+     "pb": 78.0,
+     "width": 85.0,
+     "paras": [
+      {
+       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">In 2020, as the operational director of </span><a href=\"https://www.cartoonbrew.com/festivals/feinaki-beijing-animation-week-an-event-thats-bringing-indie-animation-to-chinese-audiences-184054.html\" target=\"_blank\" rel=\"noopener\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Feinaki Animation Week</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">, I was invited to curate an artist talk alongside writing </span><a href=\"https://talkingshorts.com/focus/fringes-of-chinese-animation\" target=\"_blank\" rel=\"noopener\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">an article about </span></a><a href=\"https://talkingshorts.com/focus/fringes-of-chinese-animation\" target=\"_blank\" rel=\"noopener\"><span class=\"f-display\" style=\"font-size:21px;font-weight:400\">Chinese independent animation</span></a><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> for the International Short Film Festival Winterthur in Switzerland, which was then published on the film critic website &#x27;Talking Shorts&#x27;.</span>",
+       "align": "left",
+       "lh": 40.0
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "capAlign": "left",
+     "caption": "Being a co-founder and the operational director at&nbsp;Feinaki Beijing Animation Week, 2019-2020",
+     "src": "media/369646b9-c521-4c53-9071-c752c23e0e9c.gif"
+    },
+    {
+     "type": "text",
+     "maxw": 800,
+     "pt": 71.0,
+     "pb": 0.0,
+     "width": 85.0,
+     "paras": [
+      {
+       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">Thank you for your patience in spending time to know me, you&#x27;re most likely already my friend:)</span>",
+       "align": "left",
+       "lh": 40.0
+      },
+      {
+       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">I am grateful for all the opportunities to connect, collaborate, learn from, and grow with the community of like-minded artists, educators, and innovators. </span>",
+       "align": "left",
+       "lh": 40.0
+      },
+      {
+       "html": "<span class=\"f-body\" style=\"font-size:21px;font-weight:300\">I</span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\">f you have any queries in mind or feel like we might click, leave me</span><span class=\"f-body\" style=\"font-size:21px;font-weight:300\"> a sweet greeting message </span><br>",
+       "align": "left",
+       "lh": 40.0
+      }
+     ]
+    }
+   ],
+   "tagline": "Art, animation & shared practice",
+   "description": "Earlier studio notes, animation process, teaching and festival photographs preserved from Youyang Yu’s previous website."
   }
  ]
 }

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build youyang.art from _src/content/site.json into static pages at the repo root."""
 import html, json, pathlib, re, shutil, sys
+from urllib.parse import urlsplit
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = json.loads((ROOT / '_src/content/site.json').read_text())
@@ -8,6 +9,8 @@ MEDIA = json.loads((ROOT / '_src/media.json').read_text())
 S = SITE['site']
 PAGES = SITE['pages']
 BY_SLUG = {p['slug']: p for p in PAGES}
+SITE_URL = (S['url'] if S.get('customDomain') else S.get('previewUrl', S['url'])).rstrip('/')
+LANG = 'en'
 ROW_H = 240          # justified-grid row height
 PLAIN = re.compile(r'<[^>]+>')
 
@@ -26,6 +29,24 @@ def asset(ref, prefix=''):
 def rel(depth):
     return '../' * depth
 
+def route(slug, lang='en'):
+    slug = slug.strip('/')
+    if slug in ('', 'home'):
+        return 'zh/' if lang == 'zh' else ''
+    prefix = 'zh/' if lang == 'zh' and BY_SLUG.get(slug, {}).get('zh') else ''
+    return prefix + slug + '/'
+
+def href(url, depth, lang=None):
+    """Keep links inside the project on both a domain and GitHub Pages subpath."""
+    if not url or url.startswith(('#', 'mailto:', 'tel:', 'http:', 'https:', '//')):
+        return esc(url)
+    bits = urlsplit(url)
+    path = bits.path.strip('/')
+    if path in BY_SLUG or path in ('', 'home'):
+        path = route(path, lang or LANG)
+    suffix = ('?' + bits.query if bits.query else '') + ('#' + bits.fragment if bits.fragment else '')
+    return esc((rel(depth) + path or './') + suffix)
+
 def pad(b, geom=False):
     out = []
     if b.get('pt'): out.append('padding-top:%gpx' % b['pt'])
@@ -36,8 +57,8 @@ def pad(b, geom=False):
     return ' style="%s"' % ';'.join(out) if out else ''
 
 def fix_links(s, depth):
-    """Root-relative links in content -> relative, so the build also opens from file://."""
-    return re.sub(r'href="/([a-z0-9-]*)"', lambda m: 'href="%s%s"' % (rel(depth), m.group(1) or ''), s or '')
+    """Content links follow the current language and output directory depth."""
+    return re.sub(r'href="(/[^" ]*)"', lambda m: 'href="%s"' % href(html.unescape(m.group(1)), depth), s or '')
 
 def caption(b, depth, cls='caption'):
     c = b.get('caption')
@@ -46,6 +67,7 @@ def caption(b, depth, cls='caption'):
     return '<figcaption class="%s%s">%s</figcaption>' % (cls, extra, fix_links(c, depth))
 
 def alt_from(b):
+    if b.get('alt'): return b['alt']
     c = PLAIN.sub('', b.get('caption') or '').strip()
     return c[:180]
 
@@ -60,6 +82,8 @@ def img_tag(a, alt, cls='', lazy=True, sizes=None, full=None):
 def block(b, depth, inline=False):
     p = rel(depth)
     t = b['type']
+    if t in ('section', 'project_grid', 'link_list'):
+        return editorial_block(b, depth)
     if t == 'text':
         body = ''.join(
             '<p%s>%s</p>' % (
@@ -78,7 +102,7 @@ def block(b, depth, inline=False):
         if not a: return ''
         tag = img_tag(a, alt_from(b), cls='zoomable' if not b.get('href') else '')
         if b.get('href'):
-            tag = '<a href="%s%s">%s</a>' % (p, b['href'].lstrip('/'), tag)
+            tag = '<a href="%s">%s</a>' % (href(b['href'], depth), tag)
         return '<figure class="block"%s>%s%s</figure>' % (pad(b, True), tag, caption(b, depth))
 
     if t == 'embed':
@@ -125,7 +149,7 @@ def block(b, depth, inline=False):
         return social_row(links=b.get('links'))
     if t == 'button':
         return ('<div class="block block--button"%s><a class="pill" href="%s">%s</a></div>'
-                % (pad(b, True), esc(b.get('href') or '#contact'), esc(b.get('label') or '↓ here ↓')))
+                % (pad(b, True), href(b.get('href') or '#contact', depth), esc(b.get('label') or '↓ here ↓')))
     if t == 'form':
         return contact_form(b)
     if t == 'spacer':
@@ -178,24 +202,76 @@ def contact_form(b=None):
 def cover(item, depth):
     a = asset(item.get('cover'), rel(depth))
     if not a: return ''
-    href = rel(depth) + item['href'].lstrip('/')
+    target = href(item['href'], depth)
     meta = ''
     if item.get('title') or item.get('meta'):
         meta = ('<span class="cover-meta">%s%s</span>'
                 % ('<span class="t">%s</span>' % esc(item['title']) if item.get('title') else '',
                    '<span class="d">%s</span>' % esc(item['meta']) if item.get('meta') else ''))
     return ('<a class="cover" href="%s"><span class="cover-img">%s</span>%s</a>'
-            % (href, img_tag(a, item.get('title') or '', sizes='(max-width:768px) 100vw, 50vw'), meta))
+            % (target, img_tag(a, item.get('title') or '', sizes='(max-width:768px) 100vw, 50vw'), meta))
+
+def editorial_image(b, depth, eager=False):
+    a = asset(b.get('image'), rel(depth))
+    if not a: return ''
+    caption_text = b.get('imageCaption', '')
+    return '<figure class="editorial-image">%s%s</figure>' % (
+        img_tag(a, b.get('imageAlt') or caption_text, lazy=not eager),
+        '<figcaption>%s</figcaption>' % esc(caption_text) if caption_text else '')
+
+def editorial_links(links, depth):
+    return '<div class="editorial-links">%s</div>' % ''.join(
+        '<a class="text-link" href="%s">%s<span aria-hidden="true"> ↗</span></a>' % (href(i['href'], depth), esc(i['label']))
+        for i in links) if links else ''
+
+def editorial_block(b, depth):
+    section_id = ' id="%s"' % esc(b['id']) if b.get('id') else ''
+    kicker = '<p class="eyebrow">%s</p>' % esc(b['kicker']) if b.get('kicker') else ''
+    title = '<h2>%s</h2>' % esc(b['title']) if b.get('title') else ''
+    if b['type'] == 'project_grid':
+        cards = []
+        for item in b.get('items', []):
+            a = asset(item.get('cover'), rel(depth))
+            if not a: continue
+            cards.append('<article class="project-card"><a href="%s">'
+                         '<div class="project-image">%s</div><div class="project-info">'
+                         '<h3>%s</h3><p class="project-meta">%s</p></div></a>%s</article>' % (
+                             href(item['href'], depth), img_tag(a, item.get('title', '')),
+                             esc(item.get('title')), esc(item.get('meta')),
+                             '<p class="project-description">%s</p>' % esc(item['description']) if item.get('description') else ''))
+        return '<section class="editorial-section project-section"%s>%s%s<div class="project-grid">%s</div></section>' % (section_id, kicker, title, ''.join(cards))
+    if b['type'] == 'link_list':
+        entries = ''.join('<li><a href="%s"><span class="list-meta">%s</span><h3>%s</h3><p>%s</p><span class="list-arrow" aria-hidden="true">↗</span></a></li>' % (
+            href(i['href'], depth), esc(i.get('meta')), esc(i.get('title')), esc(i.get('description'))) for i in b.get('items', []))
+        return '<section class="editorial-section"%s>%s%s<ul class="editorial-list">%s</ul></section>' % (section_id, kicker, title, entries)
+    cls = 'editorial-section' + (' section-with-image' if b.get('image') else '')
+    if b.get('id') == 'basecamp': cls += ' basecamp-section'
+    return '<section class="%s"%s><div class="section-copy">%s%s<div class="prose">%s</div>%s</div>%s</section>' % (
+        cls, section_id, kicker, title, fix_links(b.get('body', ''), depth),
+        editorial_links(b.get('links'), depth), editorial_image(b, depth))
+
+def editorial_hero(page, depth):
+    h = page.get('hero', {})
+    cls = 'editorial-hero' + (' hero-with-image' if h.get('image') else '')
+    return '<div class="%s"><div class="hero-copy">%s<h1>%s</h1>%s%s%s</div>%s</div>' % (
+        cls, '<p class="eyebrow">%s</p>' % esc(h['eyebrow']) if h.get('eyebrow') else '',
+        esc(h.get('title') or page.get('title')),
+        '<p class="hero-subtitle">%s</p>' % esc(h['subtitle']) if h.get('subtitle') else '',
+        '<p class="hero-intro">%s</p>' % esc(h['intro']) if h.get('intro') else '',
+        editorial_links(h.get('links'), depth), editorial_image(h, depth, eager=True))
 
 def head(page, depth):
     p = rel(depth)
     slug = page['slug']
-    title = S['name'] if slug == 'about' else '%s - %s' % (S['name'], page.get('title') or slug)
+    title = S['name'] + (' · 俞悠洋' if slug == 'home' else ' — ' + (page.get('title') or slug))
     desc = page.get('description') or S['description']
     og = page.get('ogImage') or S.get('ogImage')
-    canon = S['url'] + ('/' if slug == 'about' else '/%s' % slug)
+    canon = SITE_URL + '/' + route(slug, LANG)
+    alternates = ''
+    if BY_SLUG[slug].get('zh'):
+        alternates = ''.join('<link rel="alternate" hreflang="%s" href="%s/%s">\n' % (code, SITE_URL, route(slug, lng)) for code, lng in [('en','en'),('zh-Hans','zh'),('x-default','en')])
     return f'''<!doctype html>
-<html lang="en">
+<html lang="{'zh-Hans' if LANG == 'zh' else 'en'}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -203,11 +279,12 @@ def head(page, depth):
 <meta name="description" content="{esc(desc)}">
 <meta name="keywords" content="{esc(S['keywords'])}">
 <link rel="canonical" href="{esc(canon)}">
+{alternates}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{esc(canon)}">
-{f'<meta property="og:image" content="{S["url"]}/{og}">' if og else ''}
+{f'<meta property="og:image" content="{SITE_URL}/{og}">' if og else ''}
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{p}favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="{p}assets/apple-touch-icon.png">
@@ -215,23 +292,32 @@ def head(page, depth):
 <link rel="preload" as="font" type="font/woff2" href="{p}assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="{p}assets/css/site.css">
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
+<body class="{'editorial-page' if page['type'] == 'editorial' else 'archive-page'} page-{esc(slug)}">
+<a class="skip-link" href="#main">{'跳到正文' if LANG == 'zh' else 'Skip to content'}</a>
 <span id="top"></span>
 '''
 
 def header(page, depth):
     p = rel(depth)
+    current = page['slug']
+    if current not in ('home', 'work', 'wilder-mountain-dojo', 'writing', 'about'):
+        current = 'writing' if page.get('type') == 'essay' else ('about' if current == 'about-archive' else 'work')
     links = ''.join(
-        '<a href="%s%s"%s>%s</a>' % (p, n['href'].lstrip('/'),
-            ' aria-current="page"' if n['href'].lstrip('/') == page['slug'] else '', esc(n['label']))
+        '<a href="%s"%s>%s</a>' % (href(n['href'], depth),
+            ' aria-current="page"' if n['href'].strip('/') == current else '', esc(n.get('labelZh', n['label']) if LANG == 'zh' else n['label']))
         for n in S['nav'])
+    localized = bool(BY_SLUG[page['slug']].get('zh'))
+    language_target = page['slug'] if localized else 'home'
+    language = '<a class="language-switch" href="%s" lang="%s" aria-label="%s">%s</a>' % (
+        href('/' + language_target, depth, 'en' if LANG == 'zh' else 'zh'),
+        'en' if LANG == 'zh' else 'zh-Hans', 'Read in English' if LANG == 'zh' else ('阅读中文版' if localized else '前往中文首页'), 'EN' if LANG == 'zh' else '中文')
     return f'''<header class="site-header">
-<button class="nav-toggle" aria-expanded="false" aria-label="Menu" aria-controls="site-nav"><span></span><span></span><span></span></button>
+<button class="nav-toggle" aria-expanded="false" aria-label="{'菜单' if LANG == 'zh' else 'Menu'}" aria-controls="site-nav"><span></span><span></span><span></span></button>
 <nav class="site-nav" id="site-nav" data-open="false">{links}</nav>
-<div class="site-logo"><a href="{p}home">{esc(S['logo'])}</a></div>
+<div class="header-tools">{language}<a class="header-contact" href="mailto:{esc(S['email'])}">{'联系' if LANG == 'zh' else 'Contact'}</a></div>
+<div class="site-logo"><a href="{href('/', depth)}" aria-label="{'俞悠洋，首页' if LANG == 'zh' else 'Youyang Yu, home'}">{esc(S['logo'])}</a></div>
 </header>
-{'' if page.get('masthead') else '<div class="header-placeholder"></div>'}
+{'' if page.get('masthead') and page['type'] != 'editorial' else '<div class="header-placeholder"></div>'}
 '''
 
 def masthead(page):
@@ -269,9 +355,9 @@ def tail(page, depth):
     foot = page.get('footer', S['footer'])
     return f'''<footer class="site-footer">{foot}</footer>
 </div>
-<button class="to-top" aria-label="Back to top"></button>
-<div class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
-<button class="lightbox-close" aria-label="Close">&times;</button><img alt="">
+<button class="to-top" aria-label="{'返回顶部' if LANG == 'zh' else 'Back to top'}"></button>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="{'放大图片' if LANG == 'zh' else 'Enlarged image'}">
+<button class="lightbox-close" aria-label="{'关闭' if LANG == 'zh' else 'Close'}">&times;</button><img alt="">
 </div>
 <script src="{p}assets/js/site.js" defer></script>
 </body>
@@ -279,8 +365,12 @@ def tail(page, depth):
 '''
 
 def render(page, depth):
-    out = [head(page, depth), header(page, depth), masthead(page),
+    out = [head(page, depth), header(page, depth), '' if page['type'] == 'editorial' else masthead(page),
            '<div class="site-wrap"><main id="main" class="shell">']
+    if page['type'] == 'editorial':
+        out.append(editorial_hero(page, depth))
+    elif not page.get('masthead'):
+        out.append('<h1 class="archive-title">%s</h1>' % esc(page.get('title') or page['slug']))
     if page['type'] == 'gallery':
         out.append('<div class="covers">%s</div>'
                    % ''.join(cover(i, depth) for i in page['items']))
@@ -292,23 +382,33 @@ def render(page, depth):
     return ''.join(out)
 
 def main():
+    global LANG
     written = []
     for page in PAGES:
         slug = page['slug']
-        if slug == 'about':
+        LANG = 'en'
+        if '/' + slug == S.get('home', '/home'):
             (ROOT / 'index.html').write_text(render(page, 0)); written.append('index.html')
         d = ROOT / slug
         d.mkdir(exist_ok=True)
         (d / 'index.html').write_text(render(page, 1)); written.append(slug + '/index.html')
+        if page.get('zh'):
+            LANG = 'zh'
+            localized = {**page, **page['zh'], 'slug': slug}
+            d = ROOT / route(slug, 'zh')
+            d.mkdir(parents=True, exist_ok=True)
+            depth = len(d.relative_to(ROOT).parts)
+            (d / 'index.html').write_text(render(localized, depth)); written.append(str(d.relative_to(ROOT)) + '/index.html')
+    LANG = 'en'
     cname = ROOT / 'CNAME'
     if S.get('customDomain'):
         cname.write_text(S['url'].split('//')[1] + '\n')
     elif cname.exists():
         cname.unlink()
     (ROOT / '.nojekyll').write_text('')
-    (ROOT / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n' % S['url'])
-    urls = ''.join('<url><loc>%s%s</loc></url>' % (S['url'], '/' if p['slug'] == 'about' else '/' + p['slug'])
-                   for p in PAGES)
+    (ROOT / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n' % SITE_URL)
+    urls = ''.join('<url><loc>%s/%s</loc></url>' % (SITE_URL, route(p['slug'], lang))
+                   for p in PAGES for lang in (['en', 'zh'] if p.get('zh') else ['en']))
     (ROOT / 'sitemap.xml').write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">%s</urlset>\n' % urls)
