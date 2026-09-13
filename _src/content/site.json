@@ -46,7 +46,8 @@
   "ogImage": "assets/og.jpg",
   "home": "/home",
   "descriptionZh": "俞悠洋的动画、视觉艺术与参与式实践，探索时间、身体与归属。",
-  "previewUrl": "https://renolynx.github.io/youyang.art"
+  "previewUrl": "https://renolynx.github.io/youyang.art",
+  "customDomain": true
  },
  "pages": [
   {
