@@ -158,7 +158,7 @@ def verify_assets():
 def main():
     configured_base = (SETTINGS['url'] if SETTINGS.get('customDomain')
                        else SETTINGS.get('previewUrl', SETTINGS['url'])).rstrip('/')
-    outputs = {str(p.relative_to(ROOT)) for p in ROOT.rglob('index.html') if '.git' not in p.parts}
+    outputs = {str(p.relative_to(ROOT)) for p in ROOT.rglob('index.html') if not any(part in ('.git', '.desk', '_src') for part in p.relative_to(ROOT).parts)}
     for extra in outputs - EXPECTED.keys():
         error('generated output', 'unexpected stale page: ' + extra)
     for missing in EXPECTED.keys() - outputs:

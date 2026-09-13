@@ -1,0 +1,662 @@
+{
+ "site": {
+  "name": "Youyang Yu",
+  "logo": "yyy",
+  "description": "Animation, visual art and participatory practice by Youyang Yu. Exploring time, the body and belonging.",
+  "keywords": "Youyang Yu,俞悠洋,Animation,Visual Art,Wilder Mountain Dojo,野山道场,Participatory Art,Art Education",
+  "url": "https://youyang.art",
+  "email": "qingdaoyyy@gmail.com",
+  "nav": [
+   {
+    "label": "WORK",
+    "labelZh": "作品",
+    "href": "/work"
+   },
+   {
+    "label": "WILDER MOUNTAIN DOJO",
+    "labelZh": "野山道场",
+    "href": "/wilder-mountain-dojo"
+   },
+   {
+    "label": "WRITING",
+    "labelZh": "文字",
+    "href": "/writing"
+   },
+   {
+    "label": "ABOUT",
+    "labelZh": "关于",
+    "href": "/about"
+   }
+  ],
+  "social": [
+   {
+    "name": "twitter",
+    "url": "https://twitter.com/FeralCliff"
+   },
+   {
+    "name": "instagram",
+    "url": "https://www.instagram.com/renolynx/"
+   },
+   {
+    "name": "email",
+    "url": "mailto:qingdaoyyy@gmail.com"
+   }
+  ],
+  "footer": "©2026",
+  "ogImage": "assets/og.jpg",
+  "home": "/home",
+  "descriptionZh": "俞悠洋的动画、视觉艺术与参与式实践，探索时间、身体与归属。",
+  "previewUrl": "https://renolynx.github.io/youyang.art",
+  "customDomain": true
+ },
+ "pages": [
+  {
+   "slug": "about",
+   "type": "editorial",
+   "title": "About Youyang Yu",
+   "blocks": [],
+   "zh": {
+    "blocks": []
+   }
+  },
+  {
+   "slug": "home",
+   "type": "editorial",
+   "title": "Youyang Yu — Artist, filmmaker & educator",
+   "blocks": [
+    {
+     "type": "project_grid",
+     "title": "Selected work",
+     "items": [
+      {
+       "href": "/for-the-best",
+       "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+       "title": "For the Best",
+       "meta": "2015",
+       "description": "A hand-drawn memory of unrequited love between two men."
+      },
+      {
+       "href": "/inside-my-eyes",
+       "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+       "title": "Inside My Eyes",
+       "meta": "2023",
+       "description": "Poetry, moving images and an overwhelmed inner world."
+      },
+      {
+       "href": "/inheriting-a-mountain",
+       "cover": "media/inheriting-a-mountain__crop.jpg",
+       "title": "Inheriting a Mountain",
+       "meta": "2024 · with Peng Wu",
+       "description": "A ceramic mountain, a frozen lake, and questions of displacement and belonging."
+      },
+      {
+       "href": "/begin-with-pieces",
+       "cover": "media/begin-with-pieces__crop.jpg",
+       "title": "Begin with Pieces",
+       "meta": "2023",
+       "description": "A poem becomes a shared, shifting landscape of voices and images."
+      }
+     ],
+     "kicker": "Films, objects & inner landscapes"
+    }
+   ],
+   "zh": {
+    "blocks": [
+     {
+      "type": "project_grid",
+      "title": "代表作品",
+      "items": [
+       {
+        "href": "/for-the-best",
+        "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+        "title": "最好结局",
+        "meta": "2015",
+        "description": "以逐帧手绘，留住两名男性之间一段未被回应的爱。"
+       },
+       {
+        "href": "/inside-my-eyes",
+        "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+        "title": "在我眼中",
+        "meta": "2023",
+        "description": "诗歌与流动影像，进入一个思绪满溢的内心世界。"
+       },
+       {
+        "href": "/inheriting-a-mountain",
+        "cover": "media/inheriting-a-mountain__crop.jpg",
+        "title": "在万湖之州继承一座山",
+        "meta": "2024 · 与吴朋合作",
+        "description": "一座陶山、一片冰湖，以及关于离散与归属的追问。"
+       },
+       {
+        "href": "/begin-with-pieces",
+        "cover": "media/begin-with-pieces__crop.jpg",
+        "title": "Begin with Pieces",
+        "meta": "2023",
+        "description": "诗歌、声音与绘画交织成一片不断变化的内在风景。"
+       }
+      ],
+      "kicker": "影像、物件与内在风景"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "animation",
+   "type": "gallery",
+   "title": "ANIMATION",
+   "items": [
+    {
+     "href": "/begin-with-pieces",
+     "cover": "media/begin-with-pieces__crop.jpg",
+     "title": "Begin with Pieces",
+     "meta": "2023"
+    },
+    {
+     "href": "/inside-my-eyes",
+     "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+     "title": "Inside My Eyes",
+     "meta": "2023"
+    },
+    {
+     "href": "/i-love-you-forever-now",
+     "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif",
+     "title": "I Love You Forever Now",
+     "meta": "2016"
+    },
+    {
+     "href": "/for-the-best",
+     "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+     "title": "For the Best",
+     "meta": "2015"
+    },
+    {
+     "href": "/cwtch",
+     "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg",
+     "title": "Cwtch",
+     "meta": "2015"
+    },
+    {
+     "href": "/maybe-you-shouldve-swallowed",
+     "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg",
+     "title": "Maybe You Should've Swallowed",
+     "meta": "2014"
+    },
+    {
+     "href": "/a-man-in-love",
+     "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg",
+     "title": "A Man in Love",
+     "meta": "2014"
+    }
+   ]
+  },
+  {
+   "slug": "sketch-book",
+   "type": "gallery",
+   "title": "SKETCH BOOK",
+   "items": [
+    {
+     "href": "/2015",
+     "cover": "media/dc4b1833339953-56a83b76543f7__crop.png",
+     "title": "2015",
+     "meta": "2015"
+    },
+    {
+     "href": "/2014",
+     "cover": "media/457afa33338245-56a82c299517e__crop.png",
+     "title": "2014 turkey",
+     "meta": "2014"
+    },
+    {
+     "href": "/2014-1",
+     "cover": "media/61b00f33339235-56a8342925abb__crop.jpg",
+     "title": "2014",
+     "meta": "2014"
+    },
+    {
+     "href": "/2013",
+     "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg",
+     "title": "2013",
+     "meta": "2013"
+    },
+    {
+     "href": "/2010",
+     "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg",
+     "title": "2010",
+     "meta": "2010"
+    }
+   ]
+  },
+  {
+   "slug": "begin-with-pieces",
+   "type": "project",
+   "title": "Begin with Pieces",
+   "year": "2023",
+   "blocks": [],
+   "cover": "media/begin-with-pieces__crop.jpg"
+  },
+  {
+   "slug": "inheriting-a-mountain",
+   "type": "project",
+   "title": "Inheriting a Mountain",
+   "year": "2024",
+   "blocks": [],
+   "cover": "media/inheriting-a-mountain__crop.jpg"
+  },
+  {
+   "slug": "inside-my-eyes",
+   "type": "project",
+   "title": "Inside My Eyes",
+   "blocks": [],
+   "year": "2023",
+   "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png"
+  },
+  {
+   "slug": "for-the-best",
+   "type": "project",
+   "title": "For the Best",
+   "blocks": [],
+   "year": "2015",
+   "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif"
+  },
+  {
+   "slug": "i-love-you-forever-now",
+   "type": "project",
+   "title": "I Love You Forever Now",
+   "blocks": [],
+   "year": "2016",
+   "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif"
+  },
+  {
+   "slug": "cwtch",
+   "type": "project",
+   "title": "Cwtch",
+   "blocks": [],
+   "year": "2015",
+   "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg"
+  },
+  {
+   "slug": "maybe-you-shouldve-swallowed",
+   "type": "project",
+   "title": "Maybe You Should've Swallowed",
+   "blocks": [],
+   "year": "2014",
+   "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg"
+  },
+  {
+   "slug": "a-man-in-love",
+   "type": "project",
+   "title": "A Man in Love",
+   "blocks": [],
+   "year": "2014",
+   "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg"
+  },
+  {
+   "slug": "feinaki-2020",
+   "type": "project",
+   "title": "Feinaki Beijing Animation Week",
+   "blocks": [],
+   "year": "2019 –",
+   "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg"
+  },
+  {
+   "slug": "2015",
+   "type": "project",
+   "title": "2015",
+   "blocks": [],
+   "year": "2015",
+   "cover": "media/dc4b1833339953-56a83b76543f7__crop.png"
+  },
+  {
+   "slug": "2014-1",
+   "type": "project",
+   "title": "2014",
+   "blocks": [],
+   "year": "2014",
+   "cover": "media/61b00f33339235-56a8342925abb__crop.jpg"
+  },
+  {
+   "slug": "2014",
+   "type": "project",
+   "title": "2014 turkey",
+   "blocks": [],
+   "year": "2014",
+   "cover": "media/457afa33338245-56a82c299517e__crop.png"
+  },
+  {
+   "slug": "2013",
+   "type": "project",
+   "title": "2013",
+   "blocks": [],
+   "year": "2013",
+   "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg"
+  },
+  {
+   "slug": "2010",
+   "type": "project",
+   "title": "2010",
+   "blocks": [],
+   "year": "2010",
+   "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg"
+  },
+  {
+   "slug": "work",
+   "type": "editorial",
+   "title": "Work",
+   "blocks": [
+    {
+     "type": "project_grid",
+     "title": "Animation & moving image",
+     "items": [
+      {
+       "href": "/begin-with-pieces",
+       "cover": "media/begin-with-pieces__crop.jpg",
+       "title": "Begin with Pieces",
+       "meta": "2023",
+       "description": "A poem becomes a shared, shifting landscape of voices and images."
+      },
+      {
+       "href": "/inside-my-eyes",
+       "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+       "title": "Inside My Eyes",
+       "meta": "2023",
+       "description": "Poetry, moving images and an overwhelmed inner world."
+      },
+      {
+       "href": "/i-love-you-forever-now",
+       "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif",
+       "title": "I Love You Forever Now",
+       "meta": "2016"
+      },
+      {
+       "href": "/for-the-best",
+       "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+       "title": "For the Best",
+       "meta": "2015",
+       "description": "A hand-drawn memory of unrequited love between two men."
+      },
+      {
+       "href": "/cwtch",
+       "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg",
+       "title": "Cwtch",
+       "meta": "2015"
+      },
+      {
+       "href": "/maybe-you-shouldve-swallowed",
+       "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg",
+       "title": "Maybe You Should've Swallowed",
+       "meta": "2014"
+      },
+      {
+       "href": "/a-man-in-love",
+       "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg",
+       "title": "A Man in Love",
+       "meta": "2014"
+      }
+     ],
+     "kicker": "01 · Films"
+    },
+    {
+     "type": "project_grid",
+     "title": "Installation",
+     "items": [
+      {
+       "href": "/inheriting-a-mountain",
+       "cover": "media/inheriting-a-mountain__crop.jpg",
+       "title": "Inheriting a Mountain",
+       "meta": "2024 · with Peng Wu",
+       "description": "A ceramic mountain, a frozen lake, and questions of displacement and belonging."
+      }
+     ],
+     "kicker": "02 · Objects & place"
+    },
+    {
+     "type": "project_grid",
+     "title": "Community, teaching & organising",
+     "items": [
+      {
+       "href": "/feinaki-2020",
+       "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg",
+       "title": "Feinaki Beijing Animation Week",
+       "meta": "2019 – now",
+       "description": "An independent animation festival co-founded in 2019, run from Beijing with an international community of animators."
+      },
+      {
+       "href": "/cyc",
+       "cover": "media/cyc-community-2026.jpeg",
+       "title": "CYC Community, Dali",
+       "meta": "2026 –",
+       "description": "Hosting 706’s residency community in Dali and designing a “community operating system” for people who keep leaving and returning."
+      },
+      {
+       "href": "/teaching",
+       "cover": "media/doujia-art-camp-2026.jpg",
+       "title": "Teaching & workshops",
+       "meta": "2018 –",
+       "description": "Museum, camp and community workshops in the United States and China, from stop-motion for children to storyboarding for adults."
+      }
+     ],
+     "kicker": "04 · Community, teaching & organising",
+     "id": "community"
+    },
+    {
+     "type": "project_grid",
+     "title": "Sketchbook",
+     "items": [
+      {
+       "href": "/2015",
+       "cover": "media/dc4b1833339953-56a83b76543f7__crop.png",
+       "title": "2015",
+       "meta": "2015"
+      },
+      {
+       "href": "/2014",
+       "cover": "media/457afa33338245-56a82c299517e__crop.png",
+       "title": "2014 turkey",
+       "meta": "2014"
+      },
+      {
+       "href": "/2014-1",
+       "cover": "media/61b00f33339235-56a8342925abb__crop.jpg",
+       "title": "2014",
+       "meta": "2014"
+      },
+      {
+       "href": "/2013",
+       "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg",
+       "title": "2013",
+       "meta": "2013"
+      },
+      {
+       "href": "/2010",
+       "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg",
+       "title": "2010",
+       "meta": "2010"
+      }
+     ],
+     "kicker": "05 · Drawing & observation"
+    }
+   ],
+   "zh": {
+    "blocks": [
+     {
+      "type": "project_grid",
+      "title": "动画与动态影像",
+      "items": [
+       {
+        "href": "/begin-with-pieces",
+        "cover": "media/begin-with-pieces__crop.jpg",
+        "title": "Begin with Pieces",
+        "meta": "2023",
+        "description": "诗歌、声音与绘画交织成一片不断变化的内在风景。"
+       },
+       {
+        "href": "/inside-my-eyes",
+        "cover": "media/928a5665-8d6c-48fd-8895-47e2b6915a2a__crop.png",
+        "title": "在我眼中",
+        "meta": "2023",
+        "description": "诗歌与流动影像，进入一个思绪满溢的内心世界。"
+       },
+       {
+        "href": "/i-love-you-forever-now",
+        "cover": "media/08e4082e-fb35-45f8-ac85-405d2b74aa41.gif",
+        "title": "我现在永远爱你",
+        "meta": "2016"
+       },
+       {
+        "href": "/for-the-best",
+        "cover": "media/9da1bf63-f7e0-47f1-94a4-d41d1e8def80.gif",
+        "title": "最好结局",
+        "meta": "2015",
+        "description": "以逐帧手绘，留住两名男性之间一段未被回应的爱。"
+       },
+       {
+        "href": "/cwtch",
+        "cover": "media/19d7be33331053-56a7f2ca739d0__crop.jpg",
+        "title": "Cwtch",
+        "meta": "2015"
+       },
+       {
+        "href": "/maybe-you-shouldve-swallowed",
+        "cover": "media/ff917933331757-56a7f77b5d88f__crop.jpg",
+        "title": "Maybe You Should've Swallowed",
+        "meta": "2014"
+       },
+       {
+        "href": "/a-man-in-love",
+        "cover": "media/138b6534033976-56c1f4c26a3d7__crop.jpg",
+        "title": "A Man in Love",
+        "meta": "2014"
+       }
+      ],
+      "kicker": "01 · 影像"
+     },
+     {
+      "type": "project_grid",
+      "title": "装置",
+      "items": [
+       {
+        "href": "/inheriting-a-mountain",
+        "cover": "media/inheriting-a-mountain__crop.jpg",
+        "title": "在万湖之州继承一座山",
+        "meta": "2024 · 与吴朋合作",
+        "description": "一座陶山、一片冰湖，以及关于离散与归属的追问。"
+       }
+      ],
+      "kicker": "02 · 物件与地方"
+     },
+     {
+      "type": "project_grid",
+      "title": "社区、教学与组织",
+      "items": [
+       {
+        "href": "/feinaki-2020",
+        "cover": "media/d78f56a4-cef3-4860-be5b-50009570464c__crop.jpg",
+        "title": "费那奇北京动画周",
+        "meta": "2019 至今",
+        "description": "2019 年共同发起的独立动画节，从北京连接国际独立动画创作者社区。"
+       },
+       {
+        "href": "/cyc",
+        "cover": "media/cyc-community-2026.jpeg",
+        "title": "大理 CYC 社区",
+        "meta": "2026 –",
+        "description": "主理 706 驻地大理的社区，为不断离开又回来的人设计一套「社区操作系统」。"
+       },
+       {
+        "href": "/teaching",
+        "cover": "media/doujia-art-camp-2026.jpg",
+        "title": "教学与工作坊",
+        "meta": "2018 –",
+        "description": "在中美两地的美术馆、营地与社区空间教学，从儿童定格动画到成人分镜创作。"
+       }
+      ],
+      "kicker": "04 · 社区、教学与组织",
+      "id": "community"
+     },
+     {
+      "type": "project_grid",
+      "title": "速写本",
+      "items": [
+       {
+        "href": "/2015",
+        "cover": "media/dc4b1833339953-56a83b76543f7__crop.png",
+        "title": "2015",
+        "meta": "2015"
+       },
+       {
+        "href": "/2014",
+        "cover": "media/457afa33338245-56a82c299517e__crop.png",
+        "title": "土耳其 · 2014",
+        "meta": "2014"
+       },
+       {
+        "href": "/2014-1",
+        "cover": "media/61b00f33339235-56a8342925abb__crop.jpg",
+        "title": "2014",
+        "meta": "2014"
+       },
+       {
+        "href": "/2013",
+        "cover": "media/56c9fc33324127-56a7d1ded0f00__crop.jpg",
+        "title": "2013",
+        "meta": "2013"
+       },
+       {
+        "href": "/2010",
+        "cover": "media/e90f1d33323137-56a7cf6747d38__crop.jpg",
+        "title": "2010",
+        "meta": "2010"
+       }
+      ],
+      "kicker": "05 · 绘画与观察"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "wilder-mountain-dojo",
+   "type": "editorial",
+   "title": "Wilder Mountain Dojo / 野山道场",
+   "blocks": [],
+   "zh": {
+    "blocks": []
+   }
+  },
+  {
+   "slug": "writing",
+   "type": "editorial",
+   "title": "Writing",
+   "blocks": [],
+   "zh": {
+    "blocks": []
+   }
+  },
+  {
+   "slug": "about-archive",
+   "type": "page",
+   "title": "Earlier studio notes",
+   "blocks": []
+  },
+  {
+   "slug": "cyc",
+   "type": "project",
+   "title": "CYC Community, Dali",
+   "year": "2026 –",
+   "cover": "media/cyc-community-2026.jpeg",
+   "blocks": []
+  },
+  {
+   "slug": "teaching",
+   "type": "project",
+   "title": "Teaching & workshops",
+   "year": "2018 –",
+   "cover": "media/doujia-art-camp-2026.jpg",
+   "blocks": []
+  },
+  {
+   "slug": "cv",
+   "type": "cv",
+   "title": "CV"
+  }
+ ]
+}

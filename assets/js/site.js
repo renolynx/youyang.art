@@ -128,3 +128,24 @@
     });
   }
 })();
+
+// Filters are a view of the same collection. URLs retain search when returning from a work.
+(() => {
+ const tools=document.querySelector('.work-tools'); if(!tools)return;
+ const sections=[...document.querySelectorAll('#main > .editorial-section')];
+ const search=document.querySelector('#work-search'), buttons=[...tools.querySelectorAll('[data-filter]')];
+ let active='all'; const zh=document.documentElement.lang.startsWith('zh');
+ function apply(write=true){
+  const q=search.value.trim().toLocaleLowerCase(); let visible=0;
+  sections.forEach((section,i)=>{const inGroup=active==='all'||active===String(i); const cards=[...section.querySelectorAll('.project-card')];
+   if(cards.length){cards.forEach(c=>{c.hidden=!(inGroup&&c.textContent.toLocaleLowerCase().includes(q));if(!c.hidden)visible++});section.hidden=cards.every(c=>c.hidden)}
+   else {section.hidden=!(inGroup&&section.textContent.toLocaleLowerCase().includes(q));if(!section.hidden)visible++}
+  });
+  buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===active)));
+  document.querySelector('#work-empty').hidden=visible>0;
+  document.querySelector('#work-count').textContent=zh?`${visible} 项内容`:`${visible} ${visible===1?'item':'items'}`;
+  if(write){const u=new URL(location.href);q?u.searchParams.set('q',search.value):u.searchParams.delete('q');active==='all'?u.searchParams.delete('view'):u.searchParams.set('view',active);history.replaceState(null,'',u)}
+ }
+ function restore(){const u=new URL(location.href);search.value=u.searchParams.get('q')||'';active=u.searchParams.get('view')||'all';if(!buttons.some(b=>b.dataset.filter===active))active='all';apply(false)}
+ tools.hidden=false;buttons.forEach(b=>b.onclick=()=>{active=b.dataset.filter;apply()});search.addEventListener('input',()=>apply());window.addEventListener('popstate',restore);restore();
+})();

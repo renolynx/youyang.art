@@ -21,7 +21,7 @@ not yet announced. Activity inquiries use email; there is no registration backen
 
 ```
 index.html, about/, home/, animation/, sketch-book/, <project>/   built pages
-assets/css, assets/js, assets/fonts                               the design system
+assets/css, assets/js, assets/fonts                               site visual language
 media/                                                            every image, as WebP
 _src/content/site.json                                            ← all the content lives here
 _src/build.py                                                     turns that JSON into the pages
@@ -47,10 +47,10 @@ Existing image, text, video and gallery blocks remain supported.
 To preview before pushing:
 
 ```bash
-python3 -m http.server 8900
+python3 _src/edit.py --no-open
 ```
 
-and open http://localhost:8900
+and open http://127.0.0.1:8766/site/. The desk serves only public assets and preview routes; private CV inputs and draft history are not exposed as files.
 
 Check generated navigation, assets and metadata with:
 
@@ -90,29 +90,54 @@ typefaces were replaced with open-licence ones, self-hosted in `assets/fonts`:
 Every substitute was measured against the original: all set widths land within
 3% of what Adobe was rendering, except the nav, which is 7% narrower.
 
-## Going live on youyang.art
+## Content studio (September 2026)
 
-1. Push to GitHub; Settings → Pages → deploy from `main` / root.
-2. Metadata currently uses `site.previewUrl`, the GitHub Pages project URL.
-   When ready to move the domain, set `"customDomain": true` in
-   `_src/content/site.json`, rebuild, and push — that writes the `CNAME` file.
-   Canonical, social and sitemap URLs then use `site.url`.
-3. At the domain registrar, point `youyang.art` at GitHub Pages:
-   `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
-   `185.199.111.153`, and `www` as a `CNAME` to `renolynx.github.io`.
-4. Back in Settings → Pages, set the custom domain and tick "Enforce HTTPS".
+```bash
+python3 _src/edit.py
+```
 
-Only after step 3 does the Adobe site stop being the one people see.
+Open http://127.0.0.1:8766. The desk uses the site's own fonts and a quiet green
+workspace; it is a project-specific interface, not a full 野山 design recipe adoption.
 
-## Editing without touching JSON
+1. Search the content library, then open a work or website page. Card and list
+   views share the same records. New content can be a work, event, practice card
+   or note; add its reference to a page's card group when it is ready to appear.
+2. Edit title, cover and summary once. Home, Work and the old galleries read
+   references to the same record. Intentional local differences and Chinese copy
+   stay in `overrides` and `cardZh`. Existing URLs stay fixed.
+3. Reuse an image from the library or upload new ones. Images get unique names;
+   new derivatives fit their longest edge within 1800 px (1280 for animation).
+4. Edits autosave to `.desk/draft.json`, **not** the public content file. The side
+   preview uses the actual site renderer with the current input. “另窗预览” shows
+   the saved draft. Save failures keep input; stale versions cannot overwrite
+   another tab. History keeps recent drafts; “载入最新正本” archives the current
+   input and loads canonical content after an external edit.
+5. “检查与发布” builds an isolated copy, verifies links/assets/languages, and shows
+   affected records. Confirming publishes verified output, commits only named
+   content/build/media files and pushes to the existing GitHub Pages repository.
+   Push and live deployment are distinct; `release.json` identifies the content
+   revision. The desk checks the online marker while it remains open.
 
-    python3 _src/edit.py
+The public site uses https://youyang.art, deployed from `main` / root on GitHub
+Pages. Domain setup is complete. Code/design changes are committed separately;
+ordinary content publishing deliberately excludes unrelated source edits.
 
-opens a local content desk at http://127.0.0.1:8766 (styled with the 野山 design
-tokens). Pick a page, edit any text, drop photos onto a slot — they are optimised
-into `media/` and written into `site.json` — then **保存并重建** (build + verify)
-and **发布到 GitHub** (commit + push). Nothing on the public site changes until
-you publish. A static site has no server, so this desk only runs on your own Mac.
+`_src/content_model.py` owns card resolution and validation. `desk_store.py`
+owns draft revisions, history and verified releases. `_src/desk/` owns the editor.
+The content document remains the canonical local source; generated HTML is not
+edited by hand. Commit/push failures leave the draft available for retry.
+
+For isolated tests, set `YOUYANG_ROOT=/path/to/copy EDIT_PORT=18767`. Do not test
+publication against the production remote. Regression checks:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s _src -p 'test_*.py'
+python3 _src/build.py
+python3 _src/verify.py
+```
+
+This is a local, single-editor CMS. It does not yet implement multiuser accounts,
+review assignments, scheduled publication or a contributor/series database.
 
 ## The CV page (`/cv/`)
 

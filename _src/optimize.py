@@ -15,8 +15,9 @@ MAX_STILL, MAX_ANIM = 1800, 1280
 EXT = ('.jpg', '.jpeg', '.png', '.gif', '.webp')
 
 def fit(w, h, cap):
-    if w <= cap: return w, h
-    return cap, max(1, round(h * cap / w))
+    if max(w, h) <= cap: return w, h
+    scale = cap / max(w, h)
+    return max(1, round(w * scale)), max(1, round(h * scale))
 
 def optimize_one(src, manifest):
     """Optimize one file into media/<stem>.webp; returns (stem, entry)."""

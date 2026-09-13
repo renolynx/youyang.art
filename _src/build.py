@@ -3,8 +3,12 @@
 import base64, hashlib, html, json, os, pathlib, re, secrets, shutil, subprocess, sys
 from urllib.parse import urlsplit
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from content_model import card as resolve_card, validate
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = json.loads((ROOT / '_src/content/site.json').read_text())
+validate(SITE)
 MEDIA = json.loads((ROOT / '_src/media.json').read_text())
 S = SITE['site']
 PAGES = SITE['pages']
@@ -200,6 +204,7 @@ def contact_form(b=None):
             '</form></div>' % (esc(S['email']), esc(S['email'])))
 
 def cover(item, depth):
+    item = resolve_card(item, PAGES, LANG)
     a = asset(item.get('cover'), rel(depth))
     if not a: return ''
     target = href(item['href'], depth)
@@ -238,12 +243,13 @@ def editorial_block(b, depth):
     if b['type'] == 'project_grid':
         cards = []
         for item in b.get('items', []):
+            item = resolve_card(item, PAGES, LANG)
             a = asset(item.get('cover'), rel(depth)) if item.get('cover') else None
             cards.append('<article class="project-card%s"><a href="%s">'
                          '%s<div class="project-info">'
-                         '<h3>%s</h3><p class="project-meta">%s</p></div></a>%s</article>' % (
+                         '<h3>%s</h3><p class="project-meta">%s</p>%s</div><span class="card-open" aria-hidden="true">→</span></a></article>' % (
                              '' if a else ' project-card--text', href(item['href'], depth),
-                             '<div class="project-image">%s</div>' % img_tag(a, item.get('title', '')) if a else '',
+                             '<div class="project-image">%s</div>' % img_tag(a, '') if a else '',
                              esc(item.get('title')), esc(item.get('meta')),
                              '<p class="project-description">%s</p>' % esc(item['description']) if item.get('description') else ''))
         return '<section class="editorial-section project-section"%s>%s%s<div class="project-grid">%s</div></section>' % (section_id, kicker, title, ''.join(cards))
@@ -382,7 +388,7 @@ def related(page, depth):
         pg = BY_SLUG.get(s)
         if not pg: continue
         cov = pg.get('cover') or next((i['cover'] for g in PAGES if g['type'] == 'gallery'
-                                       for i in g['items'] if i['href'].lstrip('/') == s), None)
+                                       for raw in g['items'] for i in [resolve_card(raw, PAGES, LANG)] if i['href'].lstrip('/') == s), None)
         items.append(cover({'href': '/' + s, 'cover': cov,
                             'title': pg.get('title'), 'meta': pg.get('year', '')}, depth))
     if not items: return ''
@@ -405,11 +411,25 @@ def tail(page, depth):
 </html>
 '''
 
+def work_tools(page):
+    zh = LANG == 'zh'
+    groups = [(str(i), b.get('title', '')) for i, b in enumerate(page.get('blocks', []))]
+    return ('<div class="work-tools" hidden><div class="work-filters" role="group" aria-label="%s">'
+            '<button type="button" data-filter="all" aria-pressed="true">%s</button>%s</div>'
+            '<label class="work-search"><span>%s</span><input type="search" id="work-search" placeholder="%s"></label>'
+            '<p id="work-count" role="status" aria-live="polite"></p></div>'
+            '<p id="work-empty" hidden>%s</p>') % (
+                '按类别浏览' if zh else 'Browse by practice', '全部' if zh else 'All work',
+                ''.join('<button type="button" data-filter="%s" aria-pressed="false">%s</button>' % (key, esc(title)) for key, title in groups),
+                '搜索作品' if zh else 'Find something', '标题、年份或关键词' if zh else 'Title, year or a word…',
+                '没有找到，试试其他词或类别。' if zh else 'No matches. Try another word or category.')
+
 def render(page, depth):
     out = [head(page, depth), header(page, depth), '' if page['type'] == 'editorial' else masthead(page),
            '<div class="site-wrap"><main id="main" class="shell">']
     if page['type'] == 'editorial':
         out.append(editorial_hero(page, depth))
+        if page['slug'] == 'work': out.append(work_tools(page))
     elif page['type'] == 'cv':
         out.append(cv_page(page, depth))
     elif not page.get('masthead'):
