@@ -56,6 +56,8 @@ class H(SimpleHTTPRequestHandler):
             self.wfile.write(UI.encode()); return
         if p == '/api/site':
             self.send_json({'site': json.loads(SITE.read_text()), 'media': optimize.load_manifest()}); return
+        if p == '/api/health':
+            self.send_json({'service': 'youyang-desk', 'root': str(ROOT)}); return
         if p == '/ds/theme.css':
             f = DS / 'theme.css'
             if f.exists():
