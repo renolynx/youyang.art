@@ -54,7 +54,7 @@
    "slug": "about",
    "type": "editorial",
    "title": "About Youyang Yu",
-   "description": "Youyang Yu is an animation and visual artist, community organiser and art educator, working across art, education and community.",
+   "description": "Youyang Yu is an animation filmmaker, community organiser and art educator, working across art, education and community.",
    "hero": {
     "eyebrow": "About",
     "title": "Hello, I’m Youyang.",
@@ -72,7 +72,7 @@
     {
      "type": "section",
      "title": "Current practice: Wilder Mountain Dojo",
-     "body": "<p>Wilder Mountain Dojo is a participatory public art practice and an evolving world of shared practice and play. Through stories, body awareness, drawing and co-created cards, we make room for rest, expression and mutual support.</p>",
+     "body": "<p>Wilder Mountain Dojo is a participatory public art project and a “life cultivation game” that invites people to see time as a flowing landscape, and to cultivate and play within. Through stories, body awareness, drawing and co-created cards, we make room for rest, expression and mutual support.</p>",
      "links": [
       {
        "label": "Discover Wilder Mountain Dojo",
@@ -143,11 +143,11 @@
    ],
    "zh": {
     "title": "关于俞悠洋",
-    "description": "俞悠洋，动画视觉艺术家、社区组织者与艺术教育者。",
+    "description": "俞悠洋，动画导演、社区组织者与艺术教育者。",
     "hero": {
      "eyebrow": "关于",
      "title": "你好，我是悠洋。",
-     "subtitle": "动画视觉艺术家、社区组织者与艺术教育者。",
+     "subtitle": "动画导演、社区组织者与艺术教育者。",
      "intro": "出生于中国，在英国学习艺术。我通过动画、绘画、装置与参与式实践，探索内在经验如何变得可见，我们如何生活在时间中，以及归属如何在人与人之间生长。",
      "image": "media/80e25e7b-8009-4875-b8b3-a2a5bbd164a5.png",
      "imageAlt": "俞悠洋，艺术家、动画导演与艺术教育者。"
@@ -161,7 +161,7 @@
      {
       "type": "section",
       "title": "正在发展的实践：野山道场",
-      "body": "<p>野山道场是一项参与式公共艺术实践，也是一个持续生长的「修行游戏」世界观。通过故事、身体感知、绘画与共创卡牌，我们为休息、表达和彼此支持创造空间。</p>",
+      "body": "<p>野山道场是一个参与式公共艺术项目，也是一场「人生修行游戏」，邀请大家把时间认作流动的大地，修行其间，在玩耍里成长。通过故事、身体感知、绘画与共创卡牌，我们为休息、表达和彼此支持创造空间。</p>",
       "links": [
        {
         "label": "走进野山道场",
@@ -242,7 +242,7 @@
     "eyebrow": "Animation · Art · Shared practice",
     "title": "Youyang Yu 俞悠洋",
     "subtitle": "Making inner worlds visible.",
-    "intro": "I am an animation and visual artist, community organiser and art educator. Through moving images, drawing, installation and participatory practice, I explore time, the body and belonging.",
+    "intro": "I am an animation filmmaker, community organiser and art educator. Through moving images, drawing, installation and participatory practice, I explore time, the body and belonging.",
     "image": "media/inheriting-a-mountain.jpg",
     "imageAlt": "Youyang with a ceramic mountain on a frozen lake in Minneapolis.",
     "imageCaption": "Inheriting a Mountain, 2024, with Peng Wu · Bdé Umáŋ, Minneapolis"
@@ -251,7 +251,7 @@
     {
      "type": "section",
      "title": "A place to rest. A world to grow.",
-     "body": "<p>I am developing <strong>Wilder Mountain Dojo / 野山道场</strong>, a participatory public art practice and an evolving world of shared practice and play. It invites people practising self-support through partings, reunions and upheaval to make room for rest, expression and mutual support.</p><p><strong>Basecamp · Twin Cities · November 2026</strong><br>Three two-hour adult workshops are planned for three Saturday afternoons, supported by the Watson Foundation Enlight Fellowship.</p>",
+     "body": "<p>I am developing <strong>Wilder Mountain Dojo / 野山道场</strong>, a participatory public art project and a “life cultivation game” that invites people to see time as a flowing landscape, and to cultivate and play within. It makes room for rest, expression and mutual support for people practising self-support through partings, reunions and upheaval.</p><p><strong>Basecamp · Twin Cities · November 2026</strong><br>Three two-hour adult workshops are planned for three Saturday afternoons, supported by the Watson Foundation Enlight Fellowship.</p>",
      "kicker": "Currently · Wilder Mountain Dojo",
      "links": [
       {
@@ -318,7 +318,7 @@
      "eyebrow": "动画 · 艺术 · 共同实践",
      "title": "俞悠洋 Youyang Yu",
      "subtitle": "让内在经验变得可见、可感。",
-     "intro": "我是动画视觉艺术家、社区组织者与艺术教育者。通过动画、绘画、装置与参与式实践，我探索时间、身体与归属，尝试让难以言说的内在经验变得可见、可感。",
+     "intro": "我是动画导演、社区组织者与艺术教育者。通过动画、绘画、装置与参与式实践，我探索时间、身体与归属，尝试让难以言说的内在经验变得可见、可感。",
      "image": "media/inheriting-a-mountain.jpg",
      "imageAlt": "俞悠洋与一座陶山坐在明尼阿波利斯的冰湖上。",
      "imageCaption": "《在万湖之州继承一座山》，2024，与吴朋合作 · 明尼阿波利斯 Bdé Umáŋ"
@@ -327,7 +327,7 @@
      {
       "type": "section",
       "title": "让休息有地方发生。",
-      "body": "<p>我正在发展<strong>「野山道场」</strong>——一项由参与者共同丰富的公共艺术实践与「修行游戏」世界观，为<strong>在聚散与动荡中练习自我支持的人</strong>，创造可以休息、表达和彼此支持的时间与空间。</p><p><strong>Basecamp · 明尼苏达双子城 · 2026 年 11 月</strong><br>计划在三个周六下午，分别举办一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起。</p>",
+      "body": "<p>我正在发展<strong>「野山道场」</strong>——一个参与式公共艺术项目，也是一场「人生修行游戏」，邀请大家把时间认作流动的大地，修行其间，在玩耍里成长；为<strong>在聚散与动荡中练习自我支持的人</strong>，创造可以休息、表达和彼此支持的时间与空间。</p><p><strong>Basecamp · 明尼苏达双子城 · 2026 年 11 月</strong><br>计划在三个周六下午，分别举办一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起。</p>",
       "kicker": "正在发生 · 野山道场",
       "links": [
        {
@@ -1936,7 +1936,7 @@
     {
      "type": "section",
      "title": "Wilder Mountain Dojo",
-     "body": "<p>A participatory public art practice exploring rest, self-support and reciprocity through stories, body awareness, drawing and a growing collection of practice cards.</p>",
+     "body": "<p>A participatory public art project and “life cultivation game”, exploring rest, self-support and reciprocity through stories, body awareness, drawing and a growing collection of practice cards.</p>",
      "kicker": "03 · Participatory practice",
      "links": [
       {
@@ -2035,7 +2035,7 @@
      {
       "type": "section",
       "title": "野山道场",
-      "body": "<p>以故事、身体感知、绘画与共创卡牌为方法的参与式公共艺术实践，探索休息、自我支持与彼此互惠。</p>",
+      "body": "<p>一个参与式公共艺术项目，也是一场「人生修行游戏」：以故事、身体感知、绘画与共创卡牌为方法，探索休息、自我支持与彼此互惠。</p>",
       "kicker": "03 · 参与式实践",
       "links": [
        {
@@ -2091,22 +2091,22 @@
    "slug": "wilder-mountain-dojo",
    "type": "editorial",
    "title": "Wilder Mountain Dojo / 野山道场",
-   "description": "A participatory public art practice for rest, expression and mutual support. Basecamp workshops are planned for the Twin Cities in November 2026.",
+   "description": "A participatory public art project and “life cultivation game” for rest, expression and mutual support. Basecamp workshops are planned for the Twin Cities in November 2026.",
    "hero": {
     "eyebrow": "Wilder Mountain Dojo · 野山道场",
     "title": "A space to rest. Permission to grow.",
-    "subtitle": "Basecamp: To Align with Time that Is Murdering You.",
-    "intro": "Is it the ticking clock chasing after us, or a way of seeing time we learned from society and now use to measure and discipline ourselves?"
+    "subtitle": "Basecamp: To Play with Time that Is… Murdering Us",
+    "intro": "Is it the ticking clock that is chasing us, or the meaning of time we adopted from society that is measuring and managing us?"
    },
    "blocks": [
     {
      "type": "section",
      "title": "A space to receive support, and catch your breath.",
-     "body": "<p>Wilder Mountain Dojo is a participatory public art practice initiated by animation and visual artist, community organiser and art educator Youyang Yu. It is also an evolving world of shared practice and play, enriched by its participants. It is for <strong>people practising self-support through partings, reunions and upheaval</strong>.</p><p>I want to create a protected time and space with you: somewhere to slow down, sense the body, express feelings that have not yet found their form, connect with inner strength, and practise receiving and giving support. Like a newly sprouted seed, or a child learning to walk, we can be allowed to explore, be uncertain and grow, rather than be measured as finished products.</p>"
+     "body": "<p>Wilder Mountain Dojo is a participatory public art project and a “life cultivation game” that invites people to see time as a flowing landscape, and to cultivate and play within. It is created and led by Youyang Yu, an animation filmmaker, community organiser and art educator who lives a transnational life between China, the UK and the US.</p><p><em>To my fellow diasporic friends, doing our best to support ourselves while navigating change, restlessness and uncertainty.</em></p><p>I want to create a protected time and space with you: somewhere to slow down, sense the body, express feelings that have not yet found their form, connect with inner strength, and practise receiving and giving support. Like a newly sprouted seed, or a child learning to walk, we can be allowed to explore, be uncertain and grow, rather than be measured as finished products.</p>"
     },
     {
      "type": "section",
-     "title": "Basecamp: To Align with Time that Is Murdering You.",
+     "title": "Basecamp: To Play with Time that Is… Murdering Us",
      "body": "<p><strong>Twin Cities, Minnesota · November 2026</strong><br>Three two-hour adult workshops are planned at three venues, on three Saturday afternoons. Basecamp is supported by the Watson Foundation Enlight Fellowship. Exact dates and venue details will be announced.</p><p>This round, I invite you to reimagine your relationship with time, and find alignment with the rhythms of your own life.</p>",
      "id": "basecamp",
      "kicker": "An invitation",
@@ -2156,19 +2156,19 @@
     "description": "为在聚散与动荡中练习自我支持的人，创造休息、表达与彼此支持的空间。Basecamp 计划于 2026 年 11 月在明尼苏达双子城举办。",
     "hero": {
      "eyebrow": "野山道场 · Wilder Mountain Dojo",
-     "title": "与追杀你的时间，对齐",
+     "title": "和追杀我们的​时间，切磋切磋",
      "subtitle": "Basecamp · 让休息有地方发生",
-     "intro": "追赶我们的，是滴答作响的时钟，还是我们从社会中学会的、用来衡量和规训自己的时间观？"
+     "intro": "追杀我们的，是滴答作响的时钟，还是我们从社会中接受的、正在衡量和管理我们的那套时间意义？"
     },
     "blocks": [
      {
       "type": "section",
       "title": "能得到支持、也能喘息的空间",
-      "body": "<p>「野山道场」是由动画视觉艺术家、社区组织者和艺术教育者俞悠洋发起的参与式公共艺术实践，也是一个由参与者共同丰富、持续生长的「修行游戏」世界观。它面向<strong>在聚散与动荡中练习自我支持的人</strong>。</p><p>我想和你们一起创造一段被护佑的时间与空间：在这里，可以慢下来，感知身体，表达尚未成形的心声，连接内在的力量，也练习接受和给予支持。像刚发芽的种子、像孩子学习迈步那样被允许探索、不确定和生长，而不是被当成完成品来衡量。</p>"
+      "body": "<p>野山道场是一个参与式公共艺术项目，也是一场「人生修行游戏」，邀请大家把时间认作流动的大地，修行其间，在玩耍里成长。它由在中国、英国和美国之间跨国流动生活的动画导演、社区组织者和艺术教育者俞悠洋发起并带领。</p><p><em>给在变化、不停歇与不确定中，努力撑住自己的离乡同路人。</em></p><p>我想和你们一起创造一段被护佑的时间与空间：在这里，可以慢下来，感知身体，表达尚未成形的心声，连接内在的力量，也练习接受和给予支持。像刚发芽的种子、像孩子学习迈步那样被允许探索、不确定和生长，而不是被当成完成品来衡量。</p>"
      },
      {
       "type": "section",
-      "title": "Basecamp：与追杀你的时间，对齐",
+      "title": "Basecamp：和追杀我们的时间，切磋切磋",
       "body": "<p><strong>明尼苏达双子城 · 2026 年 11 月</strong><br>计划在三个场地、三个周六下午，分别举办一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起。具体日期和场地信息将另行公布。</p><p>这一轮，我邀请你和我一起，重新想象自己与时间的关系，与自己的生命节律重新对齐。</p>",
       "id": "basecamp",
       "kicker": "这一轮的邀请",

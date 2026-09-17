@@ -268,7 +268,8 @@ def editorial_hero(page, depth):
     cls = 'editorial-hero' + (' hero-with-image' if h.get('image') else '')
     return '<div class="%s"><div class="hero-copy">%s<h1>%s</h1>%s%s%s</div>%s</div>' % (
         cls, '<p class="eyebrow">%s</p>' % esc(h['eyebrow']) if h.get('eyebrow') else '',
-        re.sub(r'([\u3400-\u9fff]+)', r'<span class="nowrap">\1</span>', esc(h.get('title') or page.get('title'))),
+        # 中文词组不拆开；句读跟着前面的字走，免得「，」「。」落到行首（2026-09-16 实测手机上「和追杀我们的时间 / ，切磋切磋」）
+        re.sub(r'([\u3400-\u9fff]+[，。、；：！？）」』》]*)', r'<span class="nowrap">\1</span>', esc(h.get('title') or page.get('title'))),
         '<p class="hero-subtitle">%s</p>' % esc(h['subtitle']) if h.get('subtitle') else '',
         '<p class="hero-intro">%s</p>' % esc(h['intro']) if h.get('intro') else '',
         editorial_links(h.get('links'), depth), editorial_image(h, depth, eager=True))
