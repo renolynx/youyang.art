@@ -54,7 +54,7 @@
    "slug": "about",
    "type": "editorial",
    "title": "About Youyang Yu",
-   "description": "Youyang Yu is an animation filmmaker, community organiser and art educator, working across art, education and community.",
+   "description": "Youyang Yu is an artist, educator and community organiser, working across art, education and community.",
    "hero": {
     "eyebrow": "About",
     "title": "Hello, I’m Youyang.",
@@ -143,14 +143,14 @@
    ],
    "zh": {
     "title": "关于俞悠洋",
-    "description": "俞悠洋，动画导演、社区组织者与艺术教育者。",
+    "description": "俞悠洋，艺术家、教育者与社区组织者。",
     "hero": {
      "eyebrow": "关于",
      "title": "你好，我是悠洋。",
-     "subtitle": "动画导演、社区组织者与艺术教育者。",
+     "subtitle": "艺术家、教育者与社区组织者。",
      "intro": "出生于中国，在英国学习艺术。我通过动画、绘画、装置与参与式实践，探索内在经验如何变得可见，我们如何生活在时间中，以及归属如何在人与人之间生长。",
      "image": "media/80e25e7b-8009-4875-b8b3-a2a5bbd164a5.png",
-     "imageAlt": "俞悠洋，艺术家、动画导演与艺术教育者。"
+     "imageAlt": "俞悠洋，艺术家、教育者与社区组织者。"
     },
     "blocks": [
      {
@@ -242,7 +242,7 @@
     "eyebrow": "Animation · Art · Shared practice",
     "title": "Youyang Yu 俞悠洋",
     "subtitle": "Making inner worlds visible.",
-    "intro": "I am an animation filmmaker, community organiser and art educator. Through moving images, drawing, installation and participatory practice, I explore time, the body and belonging.",
+    "intro": "I am an artist, educator and community organiser. Through moving images, drawing, installation and participatory practice, I explore time, the body and belonging.",
     "image": "media/inheriting-a-mountain.jpg",
     "imageAlt": "Youyang with a ceramic mountain on a frozen lake in Minneapolis.",
     "imageCaption": "Inheriting a Mountain, 2024, with Peng Wu · Bdé Umáŋ, Minneapolis"
@@ -318,7 +318,7 @@
      "eyebrow": "动画 · 艺术 · 共同实践",
      "title": "俞悠洋 Youyang Yu",
      "subtitle": "让内在经验变得可见、可感。",
-     "intro": "我是动画导演、社区组织者与艺术教育者。通过动画、绘画、装置与参与式实践，我探索时间、身体与归属，尝试让难以言说的内在经验变得可见、可感。",
+     "intro": "我是艺术家、教育者与社区组织者。通过动画、绘画、装置与参与式实践，我探索时间、身体与归属，尝试让难以言说的内在经验变得可见、可感。",
      "image": "media/inheriting-a-mountain.jpg",
      "imageAlt": "俞悠洋与一座陶山坐在明尼阿波利斯的冰湖上。",
      "imageCaption": "《在万湖之州继承一座山》，2024，与吴朋合作 · 明尼阿波利斯 Bdé Umáŋ"
@@ -2102,7 +2102,7 @@
     {
      "type": "section",
      "title": "A space to receive support, and catch your breath.",
-     "body": "<p>Wilder Mountain Dojo is a participatory public art project and a “life cultivation game” that invites people to see time as a flowing landscape, and to cultivate and play within. It is created and led by Youyang Yu, an animation filmmaker, community organiser and art educator who lives a transnational life between China, the UK and the US.</p><p><em>To my fellow diasporic friends, doing our best to support ourselves while navigating change, restlessness and uncertainty.</em></p><p>I want to create a protected time and space with you: somewhere to slow down, sense the body, express feelings that have not yet found their form, connect with inner strength, and practise receiving and giving support. Like a newly sprouted seed, or a child learning to walk, we can be allowed to explore, be uncertain and grow, rather than be measured as finished products.</p>"
+     "body": "<p>Wilder Mountain Dojo is a participatory public art project and a “life cultivation game” that invites people to see time as a flowing landscape, and to cultivate and play within. It is created and led by Youyang Yu, an artist, educator and community organiser who lives a transnational life between China, the UK and the US.</p><p><em>To my fellow diasporic friends, doing our best to support ourselves while navigating change, restlessness and uncertainty.</em></p><p>I want to create a protected time and space with you: somewhere to slow down, sense the body, express feelings that have not yet found their form, connect with inner strength, and practise receiving and giving support. Like a newly sprouted seed, or a child learning to walk, we can be allowed to explore, be uncertain and grow, rather than be measured as finished products.</p>"
     },
     {
      "type": "section",
@@ -2164,7 +2164,7 @@
      {
       "type": "section",
       "title": "能得到支持、也能喘息的空间",
-      "body": "<p>野山道场是一个参与式公共艺术项目，也是一场「人生修行游戏」，邀请大家把时间认作流动的大地，修行其间，在玩耍里成长。它由在中国、英国和美国之间跨国流动生活的动画导演、社区组织者和艺术教育者俞悠洋发起并带领。</p><p><em>给在变化、不停歇与不确定中，努力撑住自己的离乡同路人。</em></p><p>我想和你们一起创造一段被护佑的时间与空间：在这里，可以慢下来，感知身体，表达尚未成形的心声，连接内在的力量，也练习接受和给予支持。像刚发芽的种子、像孩子学习迈步那样被允许探索、不确定和生长，而不是被当成完成品来衡量。</p>"
+      "body": "<p>野山道场是一个参与式公共艺术项目，也是一场「人生修行游戏」，邀请大家把时间认作流动的大地，修行其间，在玩耍里成长。它由在中国、英国和美国之间跨国生活的艺术家、教育者和社区组织者俞悠洋发起并带领。</p><p><em>给在变化、不停歇与不确定中，努力撑住自己的离乡同路人。</em></p><p>我想和你们一起创造一段被护佑的时间与空间：在这里，可以慢下来，感知身体，表达尚未成形的心声，连接内在的力量，也练习接受和给予支持。像刚发芽的种子、像孩子学习迈步那样被允许探索、不确定和生长，而不是被当成完成品来衡量。</p>"
      },
      {
       "type": "section",
