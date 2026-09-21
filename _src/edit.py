@@ -41,6 +41,9 @@ def broker_url(value):
     parsed.port
     return value
 
+from activity_device import ActivityDevice, DeviceError
+ACTIVITY=ActivityDevice(broker_url(os.environ.get('YOUYANG_BROKER_URL','https://dojo.youyang.art/cms/connect'))) if os.environ.get('YOUYANG_BROKER_URL','https://dojo.youyang.art/cms/connect') else None
+
 class PreviewSnapshots:
     """Short-lived rendered documents, never tokens or writable content records."""
     def __init__(self): self.lock=threading.Lock();self.items={}
@@ -179,7 +182,8 @@ class H(Responses):
                 return self.file(asset)
             if p=='/api/health': return self.send_json({'service':'youyang-desk','version':3})
             if p=='/api/activity-config':
-                return self.send_json({'brokerUrl':broker_url(os.environ.get('YOUYANG_BROKER_URL','https://dojo.youyang.art/cms/connect')),'cmsOrigin':f'http://{self.headers.get("Host")}'})
+                return self.send_json({'brokerUrl':broker_url(os.environ.get('YOUYANG_BROKER_URL','https://dojo.youyang.art/cms/connect')),'cmsOrigin':f'http://{self.headers.get("Host")}','localDevice':bool(ACTIVITY and os.environ.get('YOUYANG_BROKER_URL','https://dojo.youyang.art/cms/connect')==ACTIVITY.origin+'/cms/connect'),'deskToken':TOKEN})
+            if p=='/api/activity/status' and ACTIVITY: return self.send_json(ACTIVITY.status())
             if p=='/api/site': return self.send_json({**STORE.read(),'media':optimize.load_manifest(),'token':TOKEN,'published':json.loads(STORE.source.read_text())})
             if p=='/api/history': return self.send_json(STORE.history())
             if re.fullmatch(r'/api/history/[0-9]+',p): return self.file(STORE.private/'history'/(p.rsplit('/',1)[1]+'.json'))
@@ -203,6 +207,7 @@ class H(Responses):
             asset=public_asset(p)
             if asset: return self.file(asset)
             self.send_error(404)
+        except DeviceError as e: self.send_json({'error':str(e)},e.status)
         except (ValueError,KeyError) as e: self.send_json({'error':str(e)},400)
     def do_POST(self):
         if not self.trusted_request(): return self.send_json({'error':'Invalid origin'},403)
@@ -213,6 +218,16 @@ class H(Responses):
             if size>32*1024*1024: return self.send_json({'error':'单次上传请小于 32 MB'},413)
             if self.path=='/api/upload': return self.upload()
             data=json.loads(self.rfile.read(size) or b'{}')
+            if self.path.startswith('/api/activity/') and ACTIVITY:
+                if not isinstance(data,dict): raise DeviceError('活动请求格式无效',400)
+                if self.path=='/api/activity/prepare' and not data: return self.send_json(ACTIVITY.prepare())
+                if self.path=='/api/activity/commit' and set(data)=={'nonce'}: return self.send_json(ACTIVITY.commit(data['nonce']))
+                if self.path=='/api/activity/forget' and not data: return self.send_json(ACTIVITY.forget())
+                if self.path=='/api/activity/request' and set(data)=={'operation','payload'}:
+                    result=ACTIVITY.remote(data['operation'],data['payload'])
+                    if isinstance(result,tuple): return self.send_bytes(result[0],result[1])
+                    return self.send_json(result)
+                raise DeviceError('活动请求字段无效',400)
             if self.path=='/api/site': return self.send_json(STORE.save(data['site'],data['revision'],data['sourceRevision']))
             if self.path=='/api/reload-source': return self.send_json(STORE.reload_source(data['revision'],data.get('site')))
             if self.path=='/api/preview':
@@ -224,6 +239,7 @@ class H(Responses):
             if self.path=='/api/publish': return self.send_json(STORE.release(data['revision']))
             self.send_error(404)
         except PreviewUnavailable as e: self.send_json({'error':str(e),'code':'frozen_preview_unavailable','recoverable':True},503)
+        except DeviceError as e: self.send_json({'error':str(e)},e.status)
         except Conflict as e: self.send_json({'error':str(e)},409)
         except (ValueError,KeyError,TypeError) as e: self.send_json({'error':str(e)},400)
         except Exception as e: self.send_json({'error':str(e)},500)

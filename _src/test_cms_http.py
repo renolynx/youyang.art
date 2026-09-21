@@ -64,13 +64,18 @@ class CmsHttpTests(unittest.TestCase):
         self.assertEqual(status,200)
         self.assertIn(self.edit.TOKEN,json.loads(body)['token'])
         self.assertIn('no-store',headers['Cache-Control'])
-        for endpoint in ('/api/site','/api/history','/api/activity-config','/api/health'):
+        for endpoint in ('/api/site','/api/history','/api/activity-config','/api/activity/status','/api/health'):
             for metadata in ({'Origin':self.preview_origin},{'Origin':'https://invalid.example'}, {'Sec-Fetch-Site':'same-site','Sec-Fetch-Mode':'no-cors'}):
                 with self.subTest(endpoint=endpoint,metadata=metadata):
                     status,headers,body=self.request(endpoint,headers=metadata)
                     self.assertEqual(status,403)
                     self.assertNotIn(self.edit.TOKEN.encode(),body)
                     self.assertNotIn('Access-Control-Allow-Origin',headers)
+
+    def test_activity_device_writes_require_csrf(self):
+        for endpoint in ('prepare','commit','forget','request'):
+            for headers in ({},{'Origin':'https://foreign.test','X-Desk-Token':self.edit.TOKEN}):
+                self.assertEqual(self.request('/api/activity/'+endpoint,'POST',{},headers)[0],403)
 
     def test_02_write_requires_origin_and_process_token(self):
         before=self.edit.STORE.read()['revision']
@@ -126,7 +131,7 @@ class CmsHttpTests(unittest.TestCase):
 
     def test_07_configuration_is_explicit_fixed_and_recoverable(self):
         with patch.dict(os.environ,{'YOUYANG_BROKER_URL':''}):
-            self.assertEqual(json.loads(self.request('/api/activity-config')[2]),{'brokerUrl':'','cmsOrigin':self.origin})
+            self.assertEqual(json.loads(self.request('/api/activity-config')[2]),{'brokerUrl':'','cmsOrigin':self.origin,'localDevice':False,'deskToken':self.edit.TOKEN})
         valid='https://fixture.example/cms/connect'
         with patch.dict(os.environ,{'YOUYANG_BROKER_URL':valid}): self.assertEqual(json.loads(self.request('/api/activity-config')[2])['brokerUrl'],valid)
         for value in ('http://external.example/cms/connect','https://owner:secret@fixture.example/cms/connect','https://fixture.example/api/proxy','https://fixture.example/cms/connect?owner=owner','https://fixture.example/cms/connect#token','javascript:alert(1)'):
