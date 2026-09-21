@@ -179,7 +179,7 @@ class H(Responses):
                 return self.file(asset)
             if p=='/api/health': return self.send_json({'service':'youyang-desk','version':3})
             if p=='/api/activity-config':
-                return self.send_json({'brokerUrl':broker_url(os.environ.get('YOUYANG_BROKER_URL','')),'cmsOrigin':f'http://{self.headers.get("Host")}'})
+                return self.send_json({'brokerUrl':broker_url(os.environ.get('YOUYANG_BROKER_URL','https://dojo.youyang.art/cms/connect')),'cmsOrigin':f'http://{self.headers.get("Host")}'})
             if p=='/api/site': return self.send_json({**STORE.read(),'media':optimize.load_manifest(),'token':TOKEN,'published':json.loads(STORE.source.read_text())})
             if p=='/api/history': return self.send_json(STORE.history())
             if re.fullmatch(r'/api/history/[0-9]+',p): return self.file(STORE.private/'history'/(p.rsplit('/',1)[1]+'.json'))

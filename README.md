@@ -14,7 +14,7 @@ The approved B2 website and content studio presentation is now maintained here, 
 - Content studio: http://127.0.0.1:8766/
 - Read-only draft preview: http://127.0.0.1:8767/site/
 
-Continue content and design work in this repository only. The B1/B2, design-capability and Auis work directories are historical material; do not use them as release sources. The content studio runs locally and is not published as a public admin service. Its activity connector is optional and requires a configured, compatible production broker; the historical demo is not a production backend.
+Continue content and design work in this repository only. The B1/B2, design-capability and Auis work directories are historical material; do not use them as release sources. The content studio runs locally and is not published as a public admin service. Activity management connects to https://dojo.youyang.art/cms/connect. Open http://127.0.0.1:8766/#activities and connect with the organizer email. Cloudflare D1/R2 remains the business data source; Python does not store remote credentials. Build the admin island from the adjacent canonical yeshan-workshops repository with `node scripts/build-cms-admin.mjs`. The historical demo is not a runtime dependency.
 
 The presentation snapshot and its future update boundary are described in `_src/design/README.md`. `python3 _src/build.py` and `_src/verify.py` work without any old process directory.
 
