@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-21",
+  "localSite": "http://127.0.0.1:8767/site/",
+  "localDesk": "http://127.0.0.1:8766/",
+  "visual": "Desktop homepage and 390px Chinese Dojo page inspected; approved dark B2 presentation with current narrative",
+  "browser": [
+    "Work search Begin: 17 to 1 result",
+    "390px menu open and Escape close",
+    "Legacy artwork lightbox open, Escape close and focus return",
+    "CMS current content visible, unchanged draft save, real iframe preview, release preparation passes"
+  ],
+  "tests": "31 Python regression tests passed; 31 pages and 1075 local references verified at configured/Pages/custom domain bases",
+  "limits": [
+    "Activity connector not connected to production in this website release",
+    "No full historical strict matrix rerun"
+  ],
+  "contentPreservation": {
+    "pagesCompared": 31,
+    "changedRenderedText": [],
+    "protectedSourceBytes": {
+      "_src/content/site.json": true,
+      "_src/media.json": true,
+      "_src/content/cv.html": true,
+      "_src/cv-password.txt": true
+    },
+    "draftContentEqualsCanonical": true,
+    "sourceBase": "4193a07c2e09f06626857dc0c4ca6f1a9c55e503"
+  }
+}

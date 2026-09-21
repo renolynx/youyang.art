@@ -1,0 +1,545 @@
+{
+  "recipe": {
+    "id": "36a058a5-26cb-4229-8843-593112893db7",
+    "name": "裂口陶器 · 图像配方",
+    "savedAt": "2026-09-10T17:57:58.880Z",
+    "appearance": {
+      "theme": "dark",
+      "panel": "clear",
+      "card": "clear",
+      "accent": "#9C6752",
+      "background": "#262725",
+      "foreground": "#F6F7F2",
+      "contrast": 67,
+      "font": "interface",
+      "textSize": 16,
+      "lineHeight": 1.75,
+      "tracking": 0.025,
+      "weight": 380,
+      "padding": 23,
+      "duration": 460,
+      "densityMode": "comfortable",
+      "densityPresets": {
+        "compact": {
+          "padding": 16,
+          "rowHeight": 36,
+          "cardRatio": 1.8,
+          "lineHeight": 1.5,
+          "tracking": 0,
+          "textSize": 14,
+          "gap": 8
+        },
+        "comfortable": {
+          "padding": 23,
+          "rowHeight": 56,
+          "cardRatio": 1.1,
+          "lineHeight": 1.75,
+          "tracking": 0.025,
+          "textSize": 16,
+          "gap": 21
+        },
+        "editorial": {
+          "padding": 28,
+          "rowHeight": 52,
+          "cardRatio": 1.1,
+          "lineHeight": 1.9,
+          "tracking": 0.015,
+          "textSize": 18,
+          "gap": 28
+        }
+      },
+      "rowHeight": 56,
+      "cardRatio": 1.1,
+      "previewBackdrop": "page",
+      "buttonStyle": "soft",
+      "applications": {
+        "version": 1,
+        "site": {
+          "metal": {
+            "preset": "chromatic",
+            "strength": 1
+          },
+          "gooey": {
+            "blur": 4
+          }
+        },
+        "workbench": {},
+        "reference": {}
+      },
+      "palettes": {
+        "dark": {
+          "accent": "#9C6752",
+          "background": "#262725",
+          "foreground": "#F6F7F2",
+          "panel": "#1C1D1A",
+          "muted": "#C8C8C6",
+          "border": "#686562",
+          "hover": "#91604C",
+          "active": "#895B48",
+          "focus": "#9C6752",
+          "onAccent": "#FFFFFF",
+          "inputBackground": "#363734",
+          "inputForeground": "#F6F7F2",
+          "inputBorder": "#73706D",
+          "inputOpacity": 36,
+          "borderOpacity": 100,
+          "inputBorderOpacity": 100,
+          "navBackground": "#1C1D1A",
+          "navSelected": "#3B3C38",
+          "navForeground": "#C8C8C6",
+          "navActiveForeground": "#F6F7F2",
+          "navOpacity": 91,
+          "controlBackground": "#1C1D1A",
+          "controlHover": "#323330",
+          "controlForeground": "#F6F7F2",
+          "controlOpacity": 78,
+          "surfaceBackgroundMode": "solid",
+          "surfaceGradient": {
+            "backgroundMode": "linear",
+            "angle": 130,
+            "blend": 70,
+            "centerX": 49,
+            "centerY": 12,
+            "stops": [
+              "#242b27",
+              "#333b30",
+              "#25363d"
+            ],
+            "weights": null,
+            "positions": [
+              0,
+              46,
+              100
+            ],
+            "anchors": [
+              {
+                "x": 10,
+                "y": 75
+              },
+              {
+                "x": 78,
+                "y": 70
+              },
+              {
+                "x": 50,
+                "y": 50
+              }
+            ]
+          },
+          "backgroundMode": "radial",
+          "angle": 102,
+          "positions": [
+            81,
+            34,
+            8,
+            73,
+            72,
+            0
+          ],
+          "weights": [
+            48,
+            41.02322949318091,
+            4.152948566269794,
+            0.7784883094588646,
+            1.6054092678812317,
+            4.439924363209196
+          ],
+          "centerX": 100,
+          "centerY": 100,
+          "blend": 100,
+          "anchors": [
+            {
+              "x": 35.092592592592595,
+              "y": 6.507105459985041
+            },
+            {
+              "x": 52.5,
+              "y": 63.79955123410621
+            },
+            {
+              "x": 53.148148148148145,
+              "y": 56.99326851159312
+            },
+            {
+              "x": 57.68518518518518,
+              "y": 51.757666417352276
+            },
+            {
+              "x": 46.111111111111114,
+              "y": 41.361256544502616
+            },
+            {
+              "x": 40.27777777777778,
+              "y": 52.80478683620045
+            }
+          ],
+          "accentMode": "gradient",
+          "accentGradient": {
+            "backgroundMode": "linear",
+            "angle": 183,
+            "blend": 100,
+            "centerX": 50,
+            "centerY": 50,
+            "stops": [
+              "#5f7c65",
+              "#779861",
+              "#80d67a"
+            ],
+            "weights": null,
+            "positions": [
+              44,
+              77,
+              100
+            ],
+            "anchors": [
+              {
+                "x": 15,
+                "y": 20
+              },
+              {
+                "x": 78,
+                "y": 70
+              },
+              {
+                "x": 50,
+                "y": 50
+              }
+            ]
+          },
+          "stops": [
+            "#2B2724",
+            "#080906",
+            "#533E41",
+            "#674E50",
+            "#6E4B3C",
+            "#565355"
+          ]
+        },
+        "light": {
+          "accent": "#9C6752",
+          "background": "#F4F4F4",
+          "foreground": "#171C19",
+          "panel": "#ECECEB",
+          "muted": "#393C3A",
+          "border": "#252421",
+          "hover": "#91604C",
+          "active": "#895B48",
+          "focus": "#9C6752",
+          "onAccent": "#FFFFFF",
+          "inputBackground": "#FBFBFB",
+          "inputForeground": "#171C19",
+          "inputBorder": "#252421",
+          "inputOpacity": 100,
+          "borderOpacity": 100,
+          "inputBorderOpacity": 100,
+          "navBackground": "#ECECEB",
+          "navSelected": "#CECFCE",
+          "navForeground": "#393C3A",
+          "navActiveForeground": "#171C19",
+          "navOpacity": 86,
+          "controlBackground": "#ECECEB",
+          "controlHover": "#D7D7D6",
+          "controlForeground": "#171C19",
+          "controlOpacity": 100,
+          "surfaceBackgroundMode": "solid",
+          "surfaceGradient": {
+            "backgroundMode": "linear",
+            "angle": 130,
+            "blend": 70,
+            "centerX": 50,
+            "centerY": 50,
+            "stops": [
+              "#f5ede0",
+              "#d6e7df",
+              "#dfe5f5"
+            ],
+            "weights": null,
+            "positions": [
+              0,
+              50,
+              100
+            ],
+            "anchors": [
+              {
+                "x": 10,
+                "y": 75
+              },
+              {
+                "x": 78,
+                "y": 70
+              },
+              {
+                "x": 50,
+                "y": 50
+              }
+            ]
+          },
+          "backgroundMode": "linear",
+          "angle": 90,
+          "positions": [
+            0,
+            20,
+            40,
+            60,
+            80,
+            100
+          ],
+          "weights": [
+            45.411104368932044,
+            40.50364077669904,
+            7.827669902912623,
+            2.6319781553398065,
+            2.601638349514564,
+            1.023968446601942
+          ],
+          "centerX": 50,
+          "centerY": 50,
+          "blend": 70,
+          "anchors": [
+            {
+              "x": 35.092592592592595,
+              "y": 6.507105459985041
+            },
+            {
+              "x": 52.5,
+              "y": 63.79955123410621
+            },
+            {
+              "x": 53.148148148148145,
+              "y": 56.99326851159312
+            },
+            {
+              "x": 57.68518518518518,
+              "y": 51.757666417352276
+            },
+            {
+              "x": 46.111111111111114,
+              "y": 41.361256544502616
+            },
+            {
+              "x": 40.27777777777778,
+              "y": 52.80478683620045
+            }
+          ],
+          "accentMode": "solid",
+          "accentGradient": {
+            "backgroundMode": "linear",
+            "angle": 120,
+            "blend": 70,
+            "centerX": 50,
+            "centerY": 50,
+            "stops": [
+              "#82b895",
+              "#84b6d7",
+              "#b496d4"
+            ],
+            "weights": null,
+            "positions": [
+              23,
+              62,
+              95
+            ],
+            "anchors": [
+              {
+                "x": 15,
+                "y": 20
+              },
+              {
+                "x": 78,
+                "y": 70
+              },
+              {
+                "x": 50,
+                "y": 50
+              }
+            ]
+          },
+          "stops": [
+            "#A8A6A5",
+            "#A6A6A5",
+            "#ADA4A5",
+            "#B1A3A5",
+            "#BF9F93",
+            "#A8A6A8"
+          ]
+        }
+      },
+      "surfaces": {
+        "panel": {
+          "plain": {
+            "opacity": 100,
+            "blur": 0,
+            "refraction": 0,
+            "shadow": 0,
+            "border": 1
+          },
+          "frosted": {
+            "opacity": 82,
+            "blur": 20,
+            "refraction": 0,
+            "shadow": 12,
+            "border": 1
+          },
+          "clear": {
+            "opacity": 32,
+            "blur": 11,
+            "refraction": 90,
+            "shadow": 12,
+            "border": 1
+          }
+        },
+        "card": {
+          "plain": {
+            "opacity": 100,
+            "blur": 0,
+            "refraction": 0,
+            "shadow": 0,
+            "border": 1
+          },
+          "frosted": {
+            "opacity": 82,
+            "blur": 20,
+            "refraction": 0,
+            "shadow": 12,
+            "border": 1
+          },
+          "clear": {
+            "opacity": 92,
+            "blur": 17,
+            "refraction": 89,
+            "shadow": 22,
+            "border": 1
+          }
+        }
+      }
+    },
+    "layout": {
+      "radii": {
+        "input": 8,
+        "button": 40,
+        "card": 23,
+        "panel": 29,
+        "editor": 20,
+        "highlight": 10,
+        "tabs": 28
+      },
+      "gap": 21,
+      "small": 103,
+      "tabs": "gooey",
+      "link": {
+        "mode": "inverse",
+        "radius": 6,
+        "spread": 3,
+        "opacity": 12,
+        "duration": 260,
+        "color": "auto"
+      },
+      "units": {}
+    },
+    "imageSource": {
+      "colors": [
+        {
+          "hex": "#080906",
+          "share": 0.4050364077669903
+        },
+        {
+          "hex": "#2B2724",
+          "share": 0.45411104368932037
+        },
+        {
+          "hex": "#6E5255",
+          "share": 0.026319781553398057
+        },
+        {
+          "hex": "#533E41",
+          "share": 0.07827669902912622
+        },
+        {
+          "hex": "#9C6752",
+          "share": 0.02601638349514563
+        },
+        {
+          "hex": "#5E5B5E",
+          "share": 0.010239684466019418
+        }
+      ],
+      "primary": 1,
+      "accent": 4,
+      "relationship": "明暗对比",
+      "families": [
+        {
+          "name": "深灰与近黑",
+          "share": 0.9374241504854369,
+          "colors": [
+            "#080906",
+            "#2B2724",
+            "#533E41"
+          ]
+        },
+        {
+          "name": "红与玫红",
+          "share": 0.026319781553398057,
+          "colors": [
+            "#6E5255"
+          ]
+        },
+        {
+          "name": "陶土与橙褐",
+          "share": 0.02601638349514563,
+          "colors": [
+            "#9C6752"
+          ]
+        },
+        {
+          "name": "中性灰",
+          "share": 0.010239684466019418,
+          "colors": [
+            "#5E5B5E"
+          ]
+        }
+      ],
+      "imageId": "609:01",
+      "name": "裂口陶器",
+      "method": "Oklab 最近候选色像素归属；透明像素按覆盖度计权",
+      "checks": [
+        {
+          "mode": "dark",
+          "text": 15.729389938563084,
+          "button": 4.692189750018971,
+          "input": 14.000766080593783,
+          "minimumBackground": 7.0103836560016495
+        },
+        {
+          "mode": "light",
+          "text": 14.602017543535766,
+          "button": 4.692189750018971,
+          "input": 16.681090194975607,
+          "minimumBackground": 7.065635461388643
+        }
+      ],
+      "region": {
+        "id": "full",
+        "label": "全图",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "layout": {
+    "variant": "split",
+    "contentWidth": 1200,
+    "padding": 32,
+    "gap": 28,
+    "titleSize": 56,
+    "bodySize": 18,
+    "columns": 3,
+    "align": "left",
+    "ratio": "16/9",
+    "motion": "subtle"
+  },
+  "theme": "dark"
+}

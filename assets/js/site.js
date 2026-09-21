@@ -45,7 +45,7 @@
   }
 
   /* masthead arrow scrolls past the masthead */
-  var arrow = d.querySelector('.masthead-arrow'), wrap = d.querySelector('.site-wrap');
+  var arrow = d.querySelector('.masthead-arrow'), wrap = d.getElementById('main');
   if (arrow && wrap) {
     arrow.addEventListener('click', function () {
       window.scrollTo({ top: wrap.offsetTop, behavior: reducedMotion.matches ? 'auto' : 'smooth' });

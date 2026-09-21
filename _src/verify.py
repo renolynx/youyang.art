@@ -93,7 +93,7 @@ def verify_documents(texts, base, scenario):
             error(label, 'expected exactly one h1')
         if len(doc.select('main')) != 1:
             error(label, 'expected exactly one main landmark')
-        if doc.select('html') != [{'lang': language}]:
+        if len(doc.select('html')) != 1 or doc.select('html')[0].get('lang') != language:
             error(label, 'incorrect document language')
         for name, count in doc.ids.items():
             if count > 1:
@@ -165,11 +165,16 @@ def main():
         error('generated output', 'missing page: ' + missing)
     texts = {p: (ROOT / p).read_text() for p in EXPECTED if (ROOT / p).is_file()}
     verify_documents(texts, configured_base, 'generated output')
-    urls = [e.text for e in ElementTree.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]
+    try:
+        urls = [e.text for e in ElementTree.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]
+    except (OSError, ElementTree.ParseError) as exc:
+        urls = []
+        error('sitemap.xml', 'missing or invalid output: ' + str(exc))
     expected_urls = {configured_base + '/' + info[2] for info in EXPECTED.values()}
     if set(urls) != expected_urls or len(urls) != len(set(urls)):
         error('sitemap.xml', 'canonical URL set or uniqueness is incorrect')
-    if 'Sitemap: ' + configured_base + '/sitemap.xml' not in (ROOT / 'robots.txt').read_text():
+    robots = (ROOT / 'robots.txt').read_text() if (ROOT / 'robots.txt').is_file() else ''
+    if 'Sitemap: ' + configured_base + '/sitemap.xml' not in robots:
         error('robots.txt', 'sitemap base is incorrect')
     if not (ROOT / '.nojekyll').exists():
         error('deployment', 'missing .nojekyll')

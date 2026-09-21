@@ -1,0 +1,25 @@
+/* Native CMS host adaptation. Shared Output + application-kit own appearance and roles. */
+:root{--bg:var(--ys-canvas);--panel:var(--recipe-panel-fill);--ink:var(--ys-text);--muted:var(--ys-muted);--line:var(--recipe-border);--accent:var(--ys-accent);--soft:var(--recipe-control-bg);--bad:var(--ds-semantic-color-feedback-danger,var(--ys-text));--font:var(--ys-font)}
+body{font:var(--recipe-weight) var(--recipe-font-size)/var(--recipe-line-height) var(--ys-font);background:var(--ys-canvas);background-image:var(--recipe-background-image);color:var(--ys-text)}
+.rail,.top{background-color:var(--recipe-panel-fill);background-image:var(--recipe-surface-image);border-color:var(--recipe-border);backdrop-filter:var(--recipe-panel-blur)}
+.ys-app .workspace{max-width:none;padding-top:0;padding-bottom:0}.ys-app .rail nav{color:var(--recipe-nav-text)}
+.ys-app button{border-radius:var(--layout-radius-button);min-height:var(--app-control-height);background:var(--recipe-control-bg);color:var(--recipe-control-text);border-color:var(--recipe-input-border)}
+.ys-app button:hover{background:var(--recipe-control-hover)}.ys-app button.primary{background:var(--recipe-button-background);color:var(--ys-on-accent);border-color:transparent}
+.ys-app[data-button-style=soft] button.primary{background:var(--recipe-control-bg);color:var(--recipe-control-text);border-color:var(--recipe-input-border)}.ys-app[data-button-style=outline] button.primary{background:transparent;color:var(--ys-accent);border-color:var(--ys-accent)}
+.ys-app .rail nav button.active{background:transparent;color:var(--recipe-nav-active-text)}.ys-app .search{border-radius:var(--layout-radius-input);background:var(--ys-input-background)}
+.ys-app .library-card{border-radius:var(--layout-radius-card);padding:8px 8px 16px;background:var(--recipe-card-fill);box-shadow:var(--recipe-card-shadow);border-color:var(--recipe-border)}.ys-app .library-card:hover{background:var(--recipe-card-fill);box-shadow:var(--recipe-card-shadow)}
+.ys-app .library-card .cover,.ys-app .media-tile img{border-radius:var(--layout-radius-card)}.ys-app .library-card .no-cover{color:var(--ys-muted)}
+.ys-app :is(.card,.preview-panel,dialog){border-radius:var(--layout-radius-panel);background-color:var(--recipe-panel-fill);border-color:var(--recipe-border);box-shadow:var(--recipe-panel-shadow)}.ys-app dialog{background:var(--ys-panel)}.ys-app dialog::backdrop{background:color-mix(in srgb,var(--ys-canvas) 70%,transparent)}
+.ys-app .preview-panel{border-radius:0;padding:0}.ys-app .preview-toolbar{background:var(--ys-panel)}.ys-app #preview-frame{border-radius:var(--layout-radius-panel);border-color:var(--recipe-border);background:var(--ys-canvas);box-shadow:var(--recipe-panel-shadow)}
+.ys-app :is(.tag,.reused,.drop,.thumb,.filter-row button){border-radius:var(--layout-radius-highlight)}.ys-app .signature{font-family:var(--signature-font,'Parisienne',cursive)}.ys-app .dot{background:var(--ys-accent);border-radius:var(--layout-radius-highlight)}
+.ys-app .danger,.ys-app #status.bad{color:var(--bad);background:var(--recipe-control-bg)}.ys-app [data-design-surface=cms] .workspace{margin-left:0}.ys-app #activity-workspace{padding:24px 32px}.ys-app #activity-workspace .connection-panel{margin-bottom:20px}
+@media(max-width:650px){.ys-app #activity-workspace{padding:20px}.ys-app .workspace{padding-inline:0}.ys-app .top{flex-wrap:wrap}.ys-app #activity-workspace .workspace{padding-inline:0}}
+.ys-app .activity-connection{display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:16px;border:1px solid var(--recipe-border);border-radius:var(--layout-radius-panel);margin-bottom:20px;background:var(--recipe-panel-fill)}
+.ys-app .activity-connection>div{flex:1;min-width:180px}.ys-app .activity-connection h2{font-size:20px;margin:0 0 6px}.ys-app .activity-connection p{margin:0;color:var(--ys-muted)}
+.ys-app .activity-nav{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0;align-items:center}.ys-app .activity-nav button[aria-selected=true],.ys-app .activity-nav button[aria-pressed=true]{background:var(--recipe-nav-active);color:var(--recipe-nav-active-text)}
+.ys-app .activity-admin-shell .app-shell>.topbar{position:static;padding-inline:0}.ys-app .activity-admin-shell .nav-line{top:76px}.ys-app .activity-admin-shell .camp-header{position:static}
+.ys-app .library-card .cover{background:var(--recipe-control-bg)}
+.ys-app .reused{background:var(--recipe-control-bg);color:var(--recipe-control-text);border:1px solid var(--recipe-border)}
+.ys-app .rail-bottom button{background:transparent;border:0;color:var(--ys-text)}
+.ys-app .page-nav{--ymt-track:var(--recipe-nav-bg);--ymt-label:var(--recipe-nav-text);--ymt-indicator:var(--recipe-nav-active);scroll-padding-inline:8px}
+@media(max-width:650px){.ys-app .page-nav{padding-inline:8px}.ys-app .page-nav button{scroll-margin-inline:8px}}

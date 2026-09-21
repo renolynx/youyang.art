@@ -5,6 +5,7 @@ from urllib.parse import urlsplit
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from content_model import card as resolve_card, validate
+from motion_inventory import annotate as annotate_motion
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = json.loads((ROOT / '_src/content/site.json').read_text())
@@ -198,7 +199,7 @@ def contact_form(b=None):
             '<input id="cf-email" name="email" type="email" placeholder="Your Email Address..." required>'
             '<label for="cf-msg">Message *</label>'
             '<textarea id="cf-msg" name="message" placeholder="Your Message..." required></textarea>'
-            '<button type="submit">Submit</button>'
+            '<button type="submit" class="sample-primary ys-button">Submit</button>'
             '<p class="form-note">This opens your mail app with the message ready to send. '
             'Prefer to write directly? <a href="mailto:%s">%s</a></p>'
             '</form></div>' % (esc(S['email']), esc(S['email'])))
@@ -265,10 +266,9 @@ def editorial_block(b, depth):
 
 def editorial_hero(page, depth):
     h = page.get('hero', {})
-    cls = 'editorial-hero' + (' hero-with-image' if h.get('image') else '')
-    return '<div class="%s"><div class="hero-copy">%s<h1>%s</h1>%s%s%s</div>%s</div>' % (
+    cls = 'editorial-hero web-hero' + (' hero-with-image' if h.get('image') else '')
+    return '<div class="%s"><div class="hero-copy ds-title">%s<h1>%s</h1>%s%s%s</div>%s</div>' % (
         cls, '<p class="eyebrow">%s</p>' % esc(h['eyebrow']) if h.get('eyebrow') else '',
-        # 中文词组不拆开；句读跟着前面的字走，免得「，」「。」落到行首（2026-09-16 实测手机上「和追杀我们的时间 / ，切磋切磋」）
         re.sub(r'([\u3400-\u9fff]+[，。、；：！？）」』》]*)', r'<span class="nowrap">\1</span>', esc(h.get('title') or page.get('title'))),
         '<p class="hero-subtitle">%s</p>' % esc(h['subtitle']) if h.get('subtitle') else '',
         '<p class="hero-intro">%s</p>' % esc(h['intro']) if h.get('intro') else '',
@@ -294,18 +294,27 @@ def cv_page(page, depth):
     zh = LANG == 'zh'
     if not (CV_SOURCE.exists() and CV_PASSWORD.exists()):
         print('  ! cv: need _src/content/cv.html and _src/cv-password.txt (both untracked)', file=sys.stderr)
-        return '<div class="editorial-hero"><div class="hero-copy"><p class="eyebrow">CV</p><h1>Curriculum vitae</h1><p class="hero-intro">Available on request — <a href="mailto:%s">%s</a>.</p></div></div>' % (esc(S['email']), esc(S['email']))
+        return '<div class="editorial-hero"><div class="hero-copy"><p class="eyebrow">CV</p><h1 class="ds-title">Curriculum vitae</h1><p class="hero-intro">Available on request — <a href="mailto:%s">%s</a>.</p></div></div>' % (esc(S['email']), esc(S['email']))
     blob = encrypt_cv(CV_PASSWORD.read_text().strip(), CV_SOURCE.read_text())
-    return (f'''<div class="editorial-hero cv-lock" id="cv-lock"><div class="hero-copy"><p class="eyebrow">CV · 2026</p>
-<h1>Curriculum vitae</h1>
+    return (f'''<div class="editorial-hero web-hero cv-lock" id="cv-lock"><div class="hero-copy"><p class="eyebrow">CV · 2026</p>
+<h1 class="ds-title">Curriculum vitae</h1>
 <p class="hero-intro">This page is shared on request. Enter the password, or <a href="mailto:{esc(S['email'])}?subject=CV">write to me</a> for one.</p>
 <form class="cv-form" id="cv-form" autocomplete="off"><label for="cv-pass" class="visually-hidden">Password</label>
 <input id="cv-pass" type="password" placeholder="Password" required autocomplete="current-password">
-<button type="submit" class="cv-button">Open CV</button><p class="cv-error" id="cv-error" role="alert" hidden>That password didn’t work.</p></form>
+<button type="submit" class="cv-button sample-primary ys-button">Open CV</button><p class="cv-error" id="cv-error" role="alert" hidden>That password didn’t work.</p></form>
 </div></div>
 <article class="cv" id="cv-content" hidden></article>
 <script type="application/json" id="cv-blob">{json.dumps(blob)}</script>
 <script src="{rel(depth)}assets/js/cv.js" defer></script>''')
+
+def design_profile():
+    file = ROOT / '_src/design/website-profile.json'
+    if not file.is_file():
+        raise RuntimeError('Shared website design missing; run node _src/sync_design.mjs with YESHAN_DESIGN_ROOT.')
+    return json.loads(file.read_text())
+
+def design_inline():
+    return (ROOT / '_src/design/website-inline.css').read_text()
 
 def head(page, depth):
     p = rel(depth)
@@ -318,7 +327,7 @@ def head(page, depth):
     if BY_SLUG[slug].get('zh'):
         alternates = ''.join('<link rel="alternate" hreflang="%s" href="%s/%s">\n' % (code, SITE_URL, route(slug, lng)) for code, lng in [('en','en'),('zh-Hans','zh'),('x-default','en')])
     return f'''<!doctype html>
-<html lang="{'zh-Hans' if LANG == 'zh' else 'en'}">
+<html lang="{'zh-Hans' if LANG == 'zh' else 'en'}" data-theme="{design_profile()['theme']}" data-button-style="{design_profile()['recipe']['appearance']['buttonStyle']}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -339,6 +348,9 @@ def head(page, depth):
 <link rel="preload" as="font" type="font/woff2" href="{p}assets/fonts/hanken-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="{p}assets/fonts/archivo-latin.woff2" crossorigin>
 <link rel="stylesheet" href="{p}assets/css/site.css">
+<link rel="stylesheet" href="{p}assets/css/design.css">
+<link rel="stylesheet" href="{p}assets/css/website.css">
+<style id="youyang-recipe-projection">{design_inline()}</style>
 </head>
 <body class="{'editorial-page' if page['type'] in ('editorial', 'cv') else 'archive-page'} page-{esc(slug)}">
 <a class="skip-link" href="#main">{'跳到正文' if LANG == 'zh' else 'Skip to content'}</a>
@@ -359,8 +371,8 @@ def header(page, depth):
     language = '<a class="language-switch" href="%s" lang="%s" aria-label="%s">%s</a>' % (
         href('/' + language_target, depth, 'en' if LANG == 'zh' else 'zh'),
         'en' if LANG == 'zh' else 'zh-Hans', 'Read in English' if LANG == 'zh' else ('阅读中文版' if localized else '前往中文首页'), 'EN' if LANG == 'zh' else '中文')
-    return f'''<header class="site-header">
-<button class="nav-toggle" aria-expanded="false" aria-label="{'菜单' if LANG == 'zh' else 'Menu'}" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    return f'''<header class="site-header ds-masthead">
+<button class="nav-toggle" aria-expanded="false" aria-label="{'菜单' if LANG == 'zh' else 'Menu'}" aria-controls="site-nav"><svg class="menu-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
 <nav class="site-nav" id="site-nav" data-open="false">{links}<div class="nav-extras">{language.replace('class="language-switch"', 'class="nav-language"')}<a class="header-contact" href="mailto:{esc(S['email'])}">{'联系' if LANG == 'zh' else 'Contact'}</a></div></nav>
 <div class="header-tools">{language}<a class="header-contact" href="mailto:{esc(S['email'])}">{'联系' if LANG == 'zh' else 'Contact'}</a></div>
 <div class="site-logo"><a href="{href('/', depth)}" aria-label="{'俞悠洋，首页' if LANG == 'zh' else 'Youyang Yu, home'}">{esc(S['logo'])}</a></div>
@@ -373,9 +385,9 @@ def masthead(page):
     tag = ('<p class="tagline">%s</p>' % esc(page['tagline'])) if page.get('tagline') else ''
     arrow = ('<button class="masthead-arrow" aria-label="Scroll to content"></button>'
              if page.get('arrow') else '')
-    return f'''<div class="masthead">
+    return f'''<div class="masthead web-hero">
 <div class="masthead-inner">
-<h1>{esc(page['masthead'])}</h1>
+<h1 class="ds-title">{esc(page['masthead'])}</h1>
 {tag}{arrow}
 </div>
 </div>
@@ -401,12 +413,13 @@ def related(page, depth):
 def tail(page, depth):
     p = rel(depth)
     foot = page.get('footer', S['footer'])
-    return f'''<footer class="site-footer">{foot}</footer>
+    return f'''<footer class="site-footer ds-footer">{foot}</footer>
 </div>
 <button class="to-top" aria-label="{'返回顶部' if LANG == 'zh' else 'Back to top'}"></button>
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="{'放大图片' if LANG == 'zh' else 'Enlarged image'}">
 <button class="lightbox-close" aria-label="{'关闭' if LANG == 'zh' else 'Close'}">&times;</button><img alt="">
 </div>
+<script src="{p}assets/js/design.js" defer></script>
 <script src="{p}assets/js/site.js" defer></script>
 </body>
 </html>
@@ -425,16 +438,16 @@ def work_tools(page):
                 '搜索作品' if zh else 'Find something', '标题、年份或关键词' if zh else 'Title, year or a word…',
                 '没有找到，试试其他词或类别。' if zh else 'No matches. Try another word or category.')
 
-def render(page, depth):
-    out = [head(page, depth), header(page, depth), '' if page['type'] == 'editorial' else masthead(page),
-           '<div class="site-wrap"><main id="main" class="shell">']
+def render(page, depth, motion_preview=False):
+    out = [head(page, depth), '<div class="site-wrap ds-document sample-web" data-link-feedback>', header(page, depth), '' if page['type'] == 'editorial' else masthead(page),
+           '<main id="main" class="shell">']
     if page['type'] == 'editorial':
         out.append(editorial_hero(page, depth))
         if page['slug'] == 'work': out.append(work_tools(page))
     elif page['type'] == 'cv':
         out.append(cv_page(page, depth))
     elif not page.get('masthead'):
-        out.append('<h1 class="archive-title">%s</h1>' % esc(page.get('title') or page['slug']))
+        out.append('<div class="web-hero"><h1 class="archive-title ds-title">%s</h1></div>' % esc(page.get('title') or page['slug']))
     if page['type'] == 'gallery':
         out.append('<div class="covers">%s</div>'
                    % ''.join(cover(i, depth) for i in page['items']))
@@ -443,11 +456,30 @@ def render(page, depth):
     out.append('</main>')
     out.append(related(page, depth))
     out.append(tail(page, depth))
-    return ''.join(out)
+    route_key = ('index.html' if depth == 0 else (page['slug']+'/' if LANG=='en' else route(page['slug'], LANG)) + 'index.html')
+    return annotate_motion(''.join(out), route_key, preview=motion_preview)
 
 def main():
     global LANG
     written = []
+    website_css = (ROOT / "_src/design/website.css").read_bytes()
+    target_css = ROOT / "assets/css/website.css"
+    if not target_css.exists() or target_css.read_bytes() != website_css:
+        target_css.write_bytes(website_css)
+    # A source snapshot omits private CV inputs by design. Preserve the existing
+    # encrypted output exactly instead of silently publishing a degraded fallback.
+    preserve_cv = not (CV_SOURCE.exists() and CV_PASSWORD.exists())
+    frozen_cv = {}
+    if preserve_cv:
+        for page in PAGES:
+            if page.get('type') != 'cv': continue
+            destinations = [page['slug'] + '/index.html']
+            if page.get('zh'): destinations.append(route(page['slug'], 'zh') + 'index.html')
+            for name in destinations:
+                frozen = ROOT / name
+                if not frozen.is_file():
+                    raise RuntimeError('Frozen CV output missing: ' + name + '; retain the existing public artifact. Private credentials are not requested.')
+                frozen_cv[name] = frozen.read_bytes()
     for page in PAGES:
         slug = page['slug']
         LANG = 'en'
@@ -455,14 +487,23 @@ def main():
             (ROOT / 'index.html').write_text(render(page, 0)); written.append('index.html')
         d = ROOT / slug
         d.mkdir(exist_ok=True)
-        (d / 'index.html').write_text(render(page, 1)); written.append(slug + '/index.html')
+        destination = slug + '/index.html'
+        if destination not in frozen_cv:
+            (d / 'index.html').write_text(render(page, 1))
+        written.append(destination)
         if page.get('zh'):
             LANG = 'zh'
             localized = {**page, **page['zh'], 'slug': slug}
             d = ROOT / route(slug, 'zh')
             d.mkdir(parents=True, exist_ok=True)
             depth = len(d.relative_to(ROOT).parts)
-            (d / 'index.html').write_text(render(localized, depth)); written.append(str(d.relative_to(ROOT)) + '/index.html')
+            destination = str(d.relative_to(ROOT)) + '/index.html'
+            if destination not in frozen_cv:
+                (d / 'index.html').write_text(render(localized, depth))
+            written.append(destination)
+    for name, original in frozen_cv.items():
+        if (ROOT / name).read_bytes() != original:
+            raise RuntimeError('Frozen CV output changed: ' + name)
     LANG = 'en'
     cname = ROOT / 'CNAME'
     if S.get('customDomain'):

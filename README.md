@@ -5,6 +5,19 @@ and fonts. The 2026 update retains the handwritten identity and complete earlier
 project archive, with a new homepage and bilingual pages for Work, Wilder Mountain
 Dojo, Writing and About.
 
+## Current release and sole working copy · 2026-09-21
+
+The approved B2 website and content studio presentation is now maintained here, on `main`. All existing narrative content, media, private CV inputs and the September Chinese-title punctuation fix were retained.
+
+- Public website: https://youyang.art
+- Canonical editable repository: `/Users/a1-6/Documents/youyang.art`
+- Content studio: http://127.0.0.1:8766/
+- Read-only draft preview: http://127.0.0.1:8767/site/
+
+Continue content and design work in this repository only. The B1/B2, design-capability and Auis work directories are historical material; do not use them as release sources. The content studio runs locally and is not published as a public admin service. Its activity connector is optional and requires a configured, compatible production broker; the historical demo is not a production backend.
+
+The presentation snapshot and its future update boundary are described in `_src/design/README.md`. `python3 _src/build.py` and `_src/verify.py` work without any old process directory.
+
 ## Current structure
 
 - `/` is the English homepage; `/home/` remains a compatible alias.
@@ -96,8 +109,7 @@ Every substitute was measured against the original: all set widths land within
 python3 _src/edit.py
 ```
 
-Open http://127.0.0.1:8766. The desk uses the site's own fonts and a quiet green
-workspace; it is a project-specific interface, not a full 野山 design recipe adoption.
+Open http://127.0.0.1:8766. The desk uses the adopted dark ceramic palette and shared controls, with the site's own content structure. The adopted snapshot does not claim current full-system certification.
 
 1. Search the content library, then open a work or website page. Card and list
    views share the same records. New content can be a work, event, practice card
