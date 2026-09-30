@@ -316,6 +316,41 @@ def design_profile():
 def design_inline():
     return (ROOT / '_src/design/website-inline.css').read_text()
 
+def localized(slug):
+    page = BY_SLUG.get(slug) or {}
+    return {**page, **page['zh']} if LANG == 'zh' and page.get('zh') else page
+
+def person():
+    """Who the site belongs to, taken from the About page and the site's own social links."""
+    about = localized('about')
+    hero = about.get('hero', {})
+    node = {'@type': 'Person', '@id': SITE_URL + '/#person', 'name': S['name'], 'alternateName': '俞悠洋',
+            'url': SITE_URL + '/',
+            'description': about.get('description') or (S['descriptionZh'] if LANG == 'zh' else S['description'])}
+    if hero.get('subtitle'):
+        node['jobTitle'] = hero['subtitle'].rstrip('.。')
+    image = asset(hero.get('image'))
+    if image:
+        node['image'] = SITE_URL + '/' + image['src']
+    node['sameAs'] = [x['url'] for x in S.get('social', []) if x.get('url', '').startswith(('http:', 'https:'))]
+    return node
+
+def structured_data(page):
+    """Name card for search engines and AI search, on the home and About pages only."""
+    slug = page['slug']
+    if slug not in ('home', 'about'):
+        return ''
+    me = {'@id': SITE_URL + '/#person'}
+    if slug == 'home':
+        first = {'@type': 'WebSite', '@id': SITE_URL + '/#website', 'url': SITE_URL + '/', 'name': S['name'],
+                 'alternateName': '俞悠洋', 'inLanguage': ['en', 'zh-Hans'], 'publisher': me}
+    else:
+        url = SITE_URL + '/' + route(slug, LANG)
+        first = {'@type': 'ProfilePage', '@id': url + '#page', 'url': url,
+                 'inLanguage': 'zh-Hans' if LANG == 'zh' else 'en', 'mainEntity': me}
+    data = json.dumps({'@context': 'https://schema.org', '@graph': [first, person()]}, ensure_ascii=False)
+    return '\n<script type="application/ld+json">%s</script>' % data.replace('</', '<\\/')
+
 def head(page, depth):
     p = rel(depth)
     slug = page['slug']
@@ -342,7 +377,7 @@ def head(page, depth):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{esc(canon)}">
 {f'<meta property="og:image" content="{SITE_URL}/{og}">' if og else ''}
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary_large_image">{structured_data(page)}
 <link rel="icon" href="{p}favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="{p}assets/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="{p}assets/fonts/hanken-latin.woff2" crossorigin>

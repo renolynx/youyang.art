@@ -27,6 +27,8 @@ class Document(HTMLParser):
         self.elements = []
         self.ids = Counter()
         self.headings = []
+        self.structured = []
+        self._structured = None
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
@@ -36,6 +38,17 @@ class Document(HTMLParser):
             self.ids[attrs['id']] += 1
         if re.fullmatch(r'h[1-6]', tag):
             self.headings.append(int(tag[1]))
+        if tag == 'script' and attrs.get('type') == 'application/ld+json':
+            self._structured = []
+
+    def handle_data(self, data):
+        if self._structured is not None:
+            self._structured.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == 'script' and self._structured is not None:
+            self.structured.append(''.join(self._structured))
+            self._structured = None
 
     def select(self, tag=None, **attrs):
         return [a for t, a in self.elements
@@ -116,6 +129,21 @@ def verify_documents(texts, base, scenario):
         if ({a.get('hreflang'): a.get('href') for a in alternates} != expected_alternates
                 or len(alternates) != len(expected_alternates)):
             error(label, 'incorrect language alternates')
+        if page['slug'] in ('home', 'about'):
+            try:
+                graph = json.loads(doc.structured[0])['@graph'] if len(doc.structured) == 1 else []
+            except (ValueError, KeyError, TypeError):
+                graph = []
+            person = next((n for n in graph if isinstance(n, dict) and n.get('@type') == 'Person'), {})
+            social = [s['url'] for s in SETTINGS.get('social', []) if s.get('url', '').startswith(('http:', 'https:'))]
+            if (person.get('@id') != base + '#person' or person.get('url') != base
+                    or person.get('name') != SETTINGS['name'] or person.get('sameAs') != social):
+                error(label, 'incorrect structured data name card')
+            image = local_target(person.get('image', ''), base, label)
+            if image and not (ROOT / image[0]).is_file():
+                error(label, 'missing structured data image: ' + person['image'])
+        elif doc.structured:
+            error(label, 'unexpected structured data')
         switches = [a for a in doc.select('a')
                     if 'language-switch' in a.get('class', '').split()]
         switch_target = ((base + english_path) if language == 'zh-Hans'
