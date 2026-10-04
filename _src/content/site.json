@@ -72,7 +72,7 @@
     {
      "type": "section",
      "title": "Current practice: Wilder Mountain Dojo",
-     "body": "<p>Wilder Mountain Dojo is a participatory public art project and a “life cultivation game” that invites people to see time as a flowing landscape, and to cultivate and play within. Through stories, body awareness, drawing and co-created cards, we make room for rest, expression and mutual support.</p>",
+     "body": "<p>Wilder Mountain Dojo is an inner-growth venture for people who have decided to set out after their own dream and are living through changes of place, work and way of life: body-and-mind care, tools for a practice you can sustain, and a community where support can flow both ways. The way to a dream begins by embracing the present: we arrive along the way.</p>",
      "links": [
       {
        "label": "Discover Wilder Mountain Dojo",
@@ -161,7 +161,7 @@
      {
       "type": "section",
       "title": "正在发展的实践：野山道场",
-      "body": "<p>野山道场是一个参与式公共艺术项目，也是一场「人生修行游戏」，邀请大家把时间认作流动的大地，修行其间，在玩耍里成长。通过故事、身体感知、绘画与共创卡牌，我们为休息、表达和彼此支持创造空间。</p>",
+      "body": "<p>野山道场是一项心灵成长平台事业：为决定启程追求人生梦想、正在经历环境、事业和生活模式变化的人，提供身心照护、可持续实践的支持工具，构建互惠的社区关系。抵达梦想之途是拥抱当下：我们在路途上抵达。</p>",
       "links": [
        {
         "label": "走进野山道场",
@@ -251,7 +251,7 @@
     {
      "type": "section",
      "title": "A place to rest. A world to grow.",
-     "body": "<p>I am developing <strong>Wilder Mountain Dojo / 野山道场</strong>, a participatory public art project and a “life cultivation game” that invites people to see time as a flowing landscape, and to cultivate and play within. It makes room for rest, expression and mutual support for people practising self-support through partings, reunions and upheaval.</p><p><strong>Basecamp · Twin Cities · November 2026</strong><br>Three two-hour adult workshops are planned for three Saturday afternoons, supported by the Watson Foundation Enlight Fellowship.</p>",
+     "body": "<p>I am developing <strong>Wilder Mountain Dojo / 野山道场</strong>, an inner-growth venture for life pioneers, content creators and community leaders out on the road: people who have decided to set out after their own dream and are living through changes of place, work and way of life. It offers body-and-mind care, tools for a practice you can sustain, and a community where support can flow both ways.</p><p><strong>Basecamp · Twin Cities · November 2026</strong><br>Three two-hour adult workshops on three Saturday afternoons, supported by the Watson Foundation Enlight Fellowship. <a href=\"https://dojo.youyang.art/basecamp\">Details and registration at dojo.youyang.art</a></p>",
      "kicker": "Currently · Wilder Mountain Dojo",
      "links": [
       {
@@ -327,7 +327,7 @@
      {
       "type": "section",
       "title": "让休息有地方发生。",
-      "body": "<p>我正在发展<strong>「野山道场」</strong>——一个参与式公共艺术项目，也是一场「人生修行游戏」，邀请大家把时间认作流动的大地，修行其间，在玩耍里成长；为<strong>在聚散与动荡中练习自我支持的人</strong>，创造可以休息、表达和彼此支持的时间与空间。</p><p><strong>Basecamp · 明尼苏达双子城 · 2026 年 11 月</strong><br>计划在三个周六下午，分别举办一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起。</p>",
+      "body": "<p>我正在发展<strong>「野山道场」</strong>——一项心灵成长平台事业，为<strong>在远征路上的人生开拓者、内容创作者、组织带领者</strong>：决定启程追求人生梦想、正在经历环境、事业和生活模式变化的人，提供身心照护、可持续实践的支持工具，构建互惠的社区关系。</p><p><strong>Basecamp · 明尼苏达双子城 · 2026 年 11 月</strong><br>三个周六下午，各一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起。<a href=\"https://dojo.youyang.art/basecamp\">详情与报名见 dojo.youyang.art</a></p>",
       "kicker": "正在发生 · 野山道场",
       "links": [
        {
@@ -1936,7 +1936,7 @@
     {
      "type": "section",
      "title": "Wilder Mountain Dojo",
-     "body": "<p>A participatory public art project and “life cultivation game”, exploring rest, self-support and reciprocity through stories, body awareness, drawing and a growing collection of practice cards.</p>",
+     "body": "<p>An inner-growth venture for people setting out after their own dream: body-and-mind care, tools for a sustainable practice, and a community where support flows both ways.</p>",
      "kicker": "03 · Participatory practice",
      "links": [
       {
@@ -2035,7 +2035,7 @@
      {
       "type": "section",
       "title": "野山道场",
-      "body": "<p>一个参与式公共艺术项目，也是一场「人生修行游戏」：以故事、身体感知、绘画与共创卡牌为方法，探索休息、自我支持与彼此互惠。</p>",
+      "body": "<p>一项心灵成长平台事业：为决定启程追梦、正在经历变化的人，提供身心照护、可持续实践的支持工具，构建互惠的社区关系。</p>",
       "kicker": "03 · 参与式实践",
       "links": [
        {
@@ -2091,7 +2091,7 @@
    "slug": "wilder-mountain-dojo",
    "type": "editorial",
    "title": "Wilder Mountain Dojo / 野山道场",
-   "description": "A participatory public art project and “life cultivation game” for rest, expression and mutual support. Basecamp workshops are planned for the Twin Cities in November 2026.",
+   "description": "An inner-growth venture for people setting out after their own dream: body-and-mind care, tools for a sustainable practice, and a community where support flows both ways. Basecamp workshops: Twin Cities, November 2026.",
    "hero": {
     "eyebrow": "Wilder Mountain Dojo · 野山道场",
     "title": "A space to rest. Permission to grow.",
@@ -2101,16 +2101,20 @@
    "blocks": [
     {
      "type": "section",
-     "title": "A space to receive support, and catch your breath.",
-     "body": "<p>Wilder Mountain Dojo is a participatory public art project and a “life cultivation game” that invites people to see time as a flowing landscape, and to cultivate and play within. It is created and led by Youyang Yu, an artist, educator and community organiser who lives a transnational life between China, the UK and the US.</p><p><em>To my fellow diasporic friends, doing our best to support ourselves while navigating change, restlessness and uncertainty.</em></p><p>I want to create a protected time and space with you: somewhere to slow down, sense the body, express feelings that have not yet found their form, connect with inner strength, and practise receiving and giving support. Like a newly sprouted seed, or a child learning to walk, we can be allowed to explore, be uncertain and grow, rather than be measured as finished products.</p>"
+     "title": "A space to feel, to spark, and to meet",
+     "body": "<p>Wilder Mountain Dojo is an inner-growth venture for people who have decided to set out after their own dream and are living through changes of place, work and way of life. It offers body-and-mind care, tools for a practice you can sustain, and a community where support can flow both ways. It was founded and is led by Youyang Yu, an artist, educator and community organiser living between China, the UK and the US.</p><p><em>To life pioneers, content creators and community leaders out on the road: what we want to support is a way of chasing a dream that still leaves room for your life.</em></p><p>Wilder Mountain is not only somewhere to step away when a dream wears you out. It is also where the wish to make things comes back, and where imagination, skills, work and relationships get room to grow. The way to a dream begins by embracing the present: we arrive along the way. Think of it as micro-dosing your dream.</p>"
     },
     {
      "type": "section",
      "title": "Basecamp: To Play with Time that Is… Murdering Us",
-     "body": "<p><strong>Twin Cities, Minnesota · November 2026</strong><br>Three two-hour adult workshops are planned at three venues, on three Saturday afternoons. Basecamp is supported by the Watson Foundation Enlight Fellowship. Dates: Saturdays 7, 14 and 21 November, 1–3 pm. Venue details will be announced.</p><p>This round, I invite you to reimagine your relationship with time, and find alignment with the rhythms of your own life.</p>",
+     "body": "<p><strong>Twin Cities, Minnesota · November 2026</strong><br>Three two-hour adult workshops at three venues, on three Saturday afternoons: 7, 14 and 21 November, 1–3 pm. Basecamp is supported by the Watson Foundation Enlight Fellowship. Venue details will be announced.</p><p>Two working titles: <em>To Play with Time that Is… Murdering Us</em>, and <em>Dwelling in the Negative Space of Professional Life, with the Perpetually Foreign Alien Working Artist’s Full-Time Husband</em>.</p>",
      "id": "basecamp",
      "kicker": "An invitation",
      "links": [
+      {
+       "label": "Details and registration",
+       "href": "https://dojo.youyang.art/basecamp"
+      },
       {
        "label": "Ask about Basecamp",
        "href": "mailto:qingdaoyyy@gmail.com?subject=Basecamp%20workshop%20enquiry"
@@ -2119,8 +2123,8 @@
     },
     {
      "type": "section",
-     "title": "When even rest becomes a task.",
-     "body": "<p>When instability, the pressure to improve and a heavy workload arrive together, finding time to rest becomes difficult in itself. Even when exhaustion forces us to stop, we may still feel that we should work harder, become more efficient and optimise ourselves into someone good enough. Rest can become the next task to complete.</p>"
+     "title": "On stage, and off it.",
+     "body": "<p>We keep our heads down doing the work, and we keep explaining to others what we are doing. All that self-examination and self-proving wears us out, as if we first had to become someone complete, certain and fully explainable before we were allowed to start the life we actually want. But being reliable on stage and in chaos backstage can both be true.</p><p>When instability, the pressure to improve and a heavy workload arrive together, finding time to rest becomes difficult in itself. Even when exhaustion forces us to stop, we may still feel that we should work harder, become more efficient and optimise ourselves into someone good enough. Rest can become the next task to complete.</p>"
     },
     {
      "type": "section",
@@ -2135,8 +2139,8 @@
     },
     {
      "type": "section",
-     "title": "Make two cards. Leave a little support.",
-     "body": "<p>At each workshop, I will invite you to make two practice cards of your own: one for a pattern of action you keep repeating and don’t like, and one for a repeated action you like, one that supports you and the people around you across time. We close by sharing our cards and what we noticed. You will take a creation home and can leave a card in Wilder Mountain Dojo’s growing shared deck—a contribution for the next person practising self-support through partings, reunions and upheaval.</p><p>We hope to begin with a real room and an encounter we care for together: somewhere rest can happen, and inner and collective strength can gradually grow.</p>"
+     "title": "Make two cards. The workshop is complete in itself.",
+     "body": "<p>In every session I will invite you to make two pattern cards of your own: one for a pattern of action you keep repeating and don't like, and one for a repeated action you like, one that supports you and the people around you over time. We close by sitting together and sharing our cards and what we noticed. The workshop is complete in itself: you don't need to become a user of any tool, contribute anything public, or join a later collaboration for it to count, and you don't have to explain any drawing. If you like, you can leave a card in Wilder Mountain Dojo's growing deck for the next person on the road.</p><p>Dreams can stay big. We want to start from one real room, so that the road towards them slowly grows places that can hold a life.</p>"
     },
     {
      "type": "section",
@@ -2159,26 +2163,30 @@
    ],
    "zh": {
     "title": "野山道场",
-    "description": "为在聚散与动荡中练习自我支持的人，创造休息、表达与彼此支持的空间。Basecamp 计划于 2026 年 11 月在明尼苏达双子城举办。",
+    "description": "一项心灵成长平台事业，为决定启程追梦、正在经历变化的人提供身心照护、可持续实践的支持工具与互惠关系。Basecamp 于 2026 年 11 月在明尼苏达双子城举办。",
     "hero": {
      "eyebrow": "野山道场 · Wilder Mountain Dojo",
      "title": "和追杀我们的​时间，切磋切磋",
-     "subtitle": "Basecamp · 让休息有地方发生",
+     "subtitle": "Basecamp · 能够感受、激发和相遇的空间",
      "intro": "追杀我们的，是滴答作响的时钟，还是我们从社会中接受的、正在衡量和管理我们的那套时间意义？"
     },
     "blocks": [
      {
       "type": "section",
-      "title": "能得到支持、也能喘息的空间",
-      "body": "<p>野山道场是一个参与式公共艺术项目，也是一场「人生修行游戏」，邀请大家把时间认作流动的大地，修行其间，在玩耍里成长。它由在中国、英国和美国之间跨国生活的艺术家、教育者和社区组织者俞悠洋发起并带领。</p><p><em>给在变化、不停歇与不确定中，努力撑住自己的离乡同路人。</em></p><p>我想和你们一起创造一段被护佑的时间与空间：在这里，可以慢下来，感知身体，表达尚未成形的心声，连接内在的力量，也练习接受和给予支持。像刚发芽的种子、像孩子学习迈步那样被允许探索、不确定和生长，而不是被当成完成品来衡量。</p>"
+      "title": "能够感受、激发和相遇的空间",
+      "body": "<p>野山道场是一项心灵成长平台事业：为决定启程追求人生梦想、正在经历环境、事业和生活模式变化的人，提供身心照护、可持续实践的支持工具，构建互惠的社区关系。它由在中国、英国和美国之间跨国生活的艺术家、教育者和社区组织者俞悠洋发起并带领。</p><p><em>给在远征路上的人生开拓者、内容创作者、组织带领者：我们想支持的，是一条能够容纳生活的追梦之路。</em></p><p>野山不是只在梦想令人疲惫时，提供一处暂时退出的地方。它也要让人重新获得想做事的力量，让想象、能力、作品与关系有机会生长。抵达梦想之途是拥抱当下：我们在路途上抵达。</p>"
      },
      {
       "type": "section",
       "title": "Basecamp：和追杀我们的时间，切磋切磋",
-      "body": "<p><strong>明尼苏达双子城 · 2026 年 11 月</strong><br>计划在三个场地、三个周六下午，分别举办一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起。日期：11 月 7、14、21 日，三个周六下午 1–3 点；场地信息将另行公布。</p><p>这一轮，我邀请你和我一起，重新想象自己与时间的关系，与自己的生命节律重新对齐。</p>",
+      "body": "<p><strong>明尼苏达双子城 · 2026 年 11 月</strong><br>三个场地、三个周六下午（11 月 7、14、21 日，下午 1–3 点），各一场两小时的成人工作坊，由 Watson Foundation Enlight Fellowship 支持发起；场地信息将另行公布。</p><p>两个题目还在并行：「和追杀我们的时间，切磋切磋」，以及 <em>Dwelling in the Negative Space of Professional Life, with the Perpetually Foreign Alien Working Artist’s Full-Time Husband</em>。</p>",
       "id": "basecamp",
       "kicker": "这一轮的邀请",
       "links": [
+       {
+        "label": "详情与报名",
+        "href": "https://dojo.youyang.art/basecamp"
+       },
        {
         "label": "咨询 Basecamp",
         "href": "mailto:qingdaoyyy@gmail.com?subject=Basecamp%20workshop%20enquiry"
@@ -2187,8 +2195,8 @@
      },
      {
       "type": "section",
-      "title": "当休息，也成了一项任务",
-      "body": "<p>当生活里同时压着动荡、提升的压力和工作量的忙碌，「找到休息的时间」本身就成了一件难事。我们也许已经在筋疲力尽后被迫停下，却仍然觉得自己应该更努力、更有效率、更快优化调整成为一个足够好的人。连休息，都可能变成下一项需要完成的任务。</p>"
+      "title": "台上与台下",
+      "body": "<p>我们需要持续埋头做事，也需要不断向别人说明自己正在做什么。反复的自我审视和自我证明让人疲惫：好像必须先成为一个完整、确定、能够充分解释自己的人，才有资格开始真正想要的生活。可是「台上的职业可靠」和「台下的兵荒马乱」，也许同时成立。</p><p>当生活里同时压着动荡、提升的压力和工作量的忙碌，「找到休息的时间」本身就成了一件难事。我们也许已经在筋疲力尽后被迫停下，却仍然觉得自己应该更努力、更有效率、更快优化调整成为一个足够好的人。连休息，都可能变成下一项需要完成的任务。</p>"
      },
      {
       "type": "section",
@@ -2203,8 +2211,8 @@
      },
      {
       "type": "section",
-      "title": "带走一张创作，留下一份助力",
-      "body": "<p>每一场工作坊，我都会邀请你创作两张属于自己的「修行」卡牌：一张写下你不喜欢、却一再重复的行动模式，一张写下你喜欢的、跨越时间支持自己和身边人的重复行动。最后，我们围坐分享各自的卡与觉察。你将带走一份创作，也可以在野山道场共同生长的牌堆里留下一张卡，为下一个在聚散与动荡中练习自我支持的人，留下一份助力。</p><p>我们希望从一间真实的屋子、一次共同守护的相遇开始，让休息有地方发生，让内在与集体的力量慢慢长出来。</p>"
+      "title": "做两张卡；工作坊本身就是完整的",
+      "body": "<p>每一场，我都会邀请你创作两张自己的模式卡：一张写下你不喜欢、却一再重复的行动模式，一张写下你喜欢的、跨越时间支持自己和身边人的重复行动。最后我们围坐分享各自的卡与觉察。工作坊本身就是一份完整的交付：你不必成为任何工具的用户、贡献可以公开的内容，或加入后续合作，这次参与就已经有意义；也不必解释每一幅画。愿意的话，可以在野山道场共同生长的牌堆里留下一张卡，给下一个在路上的人。</p><p>梦想仍然可以很大。我们希望从一间真实的屋子开始，让走向梦想的过程，逐渐长出能够容纳生活的地方。</p>"
      },
      {
       "type": "section",
